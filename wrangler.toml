@@ -1,10 +1,28 @@
+# Worker name must match the Workers Builds CI project name (e.g. "doaas") to avoid config mismatch.
+# Cloudflare supports both wrangler.toml and wrangler.jsonc; jsonc is recommended for new projects.
+# $schema = "node_modules/wrangler/config-schema.json"
 name = "doaas"
 main = "src/index.ts"
-compatibility_date = "2024-06-01"
+compatibility_date = "2025-03-07"
+compatibility_flags = ["nodejs_compat"]
 workers_dev = true
 # account_id = "<YOUR_ACCOUNT_ID>"
 
+# Disable Preview URLs to avoid default enablement when workers_dev is true (optional).
+# preview_urls = false
+
+# Observability (Cloudflare recommendation: enabled = true, head_sampling_rate = 1 for logs).
+# https://developers.cloudflare.com/workers/observability/logs/workers-logs/
+[observability]
+enabled = true
+[observability.logs]
+enabled = true
+invocation_logs = true
+head_sampling_rate = 1
+
 [env.production]
-# route = "doaas.dev/*"
-# zone_id = "<YOUR_ZONE_ID>"
-# Or use zone_name: routes = [{ pattern = "doaas.dev/*", zone_name = "doaas.dev" }]
+# Custom Domain: Cloudflare manages DNS and certs for doaas.dev.
+# https://developers.cloudflare.com/workers/configuration/routing/custom-domains/
+[[routes]]
+pattern = "doaas.dev"
+custom_domain = true
