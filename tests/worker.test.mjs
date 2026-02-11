@@ -94,9 +94,9 @@ async function testRandomWithMode() {
   assert.strictEqual(res.status, 200);
   const json = await res.json();
   assert.strictEqual(json.mode, "toxic");
-  const toxicEndpoints = Object.keys(ENDPOINTS).filter(
-    (k) => k !== "random" && ENDPOINTS[k].modes.includes("toxic")
-  );
+  const toxicEndpoints = Object.entries(ENDPOINTS)
+    .filter(([name, ep]) => name !== "random" && ep.modes.includes("toxic"))
+    .map(([name]) => name);
   assert(
     toxicEndpoints.includes(json.name),
     `random with mode=toxic should be one of ${toxicEndpoints.join(", ")}`
