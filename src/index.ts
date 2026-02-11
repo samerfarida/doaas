@@ -16,6 +16,8 @@ function getRandomElement<T>(arr: readonly T[]): T {
 }
 
 function getExamplesForMode(endpoint: EndpointsMap[string], mode: Mode): readonly string[] {
+  // mode is typed as Mode and validated against endpoint.modes; safe for property access
+  // eslint-disable-next-line security/detect-object-injection
   const modeExamples = endpoint.examplesByMode?.[mode];
   if (modeExamples && modeExamples.length > 0) return modeExamples;
   return endpoint.examples;

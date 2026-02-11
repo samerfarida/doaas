@@ -12,7 +12,11 @@ async function generate() {
 
   for (const file of files) {
     if (!file.endsWith(".json") || file.startsWith("_")) continue;
-    const content = await fs.readFile(path.join(endpointsDir, file), "utf-8");
+    // Reject path traversal: only allow basenames from readdir (no path separators)
+    if (file.includes(path.sep) || file === "." || file === "..") continue;
+    const filePath = path.join(endpointsDir, file);
+    // eslint-disable-next-line security/detect-non-literal-fs-filename -- path from readdir, basename validated above
+    const content = await fs.readFile(filePath, "utf-8");
     const json = JSON.parse(content);
     const expectedName = file.replace(/\.json$/, "");
     if (json.name !== expectedName) {
