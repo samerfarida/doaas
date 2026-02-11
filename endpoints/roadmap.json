@@ -1,0 +1,21 @@
+{
+  "name": "roadmap",
+  "description": "Roadmap updates and priorities",
+  "modes": ["normal", "corporate"],
+  "examples": [
+    "Next milestone: feature complete by end of month.",
+    "Focus on bug fixes in sprint 5."
+  ],
+  "examplesByMode": {
+    "normal": [
+      "Next milestone: feature complete by end of month.",
+      "Focus on bug fixes in sprint 5.",
+      "Planning for Q3 initiatives underway."
+    ],
+    "corporate": [
+      "Roadmap has been updated; Q3 priorities are locked.",
+      "Strategic initiatives are reflected in the product roadmap.",
+      "Stakeholders have visibility into the next two quarters."
+    ]
+  }
+}

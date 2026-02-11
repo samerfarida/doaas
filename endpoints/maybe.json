@@ -1,0 +1,17 @@
+{
+  "name": "maybe",
+  "description": "Uncertain or tentative responses",
+  "modes": ["normal"],
+  "examples": [
+    "Maybe, let's discuss further.",
+    "Possibly, needs more info.",
+    "Not sure yet, will update soon."
+  ],
+  "examplesByMode": {
+    "normal": [
+      "Maybe, let's discuss further.",
+      "Possibly, needs more info.",
+      "Not sure yet, will update soon."
+    ]
+  }
+}

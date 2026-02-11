@@ -1,0 +1,9 @@
+{
+  "name": "random",
+  "description": "Return a random response from any endpoint",
+  "modes": ["normal"],
+  "examples": ["(random)"],
+  "examplesByMode": {
+    "normal": ["(random)"]
+  }
+}

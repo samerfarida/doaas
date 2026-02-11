@@ -1,0 +1,11 @@
+Contact: mailto:samer.farida@yahoo.com
+Encryption: openpgp4fpr:6775BF3F439A2A8A198DE10D4FC5342A979BD358
+Expires: 2026-10-27T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://github.com/samerfarida/doaas/.well-known/security.txt
+Policy: https://github.com/samerfarida/doaas/blob/main/SECURITY.md
+
+
+# Additional Security Documentation
+https://github.com/samerfarida/doaas
+

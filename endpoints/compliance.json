@@ -1,0 +1,26 @@
+{
+  "name": "compliance",
+  "description": "Compliance reminders and checks",
+  "modes": ["normal", "corporate", "security"],
+  "examples": [
+    "Ensure GDPR compliance in data handling.",
+    "Audit logs must be retained for 90 days."
+  ],
+  "examplesByMode": {
+    "normal": [
+      "Ensure GDPR compliance in data handling.",
+      "Audit logs must be retained for 90 days.",
+      "Follow company policy for access control."
+    ],
+    "corporate": [
+      "All changes must follow the compliance framework.",
+      "Document retention policy applies to this dataset.",
+      "Regulatory requirements are documented in the handbook."
+    ],
+    "security": [
+      "Access must comply with least-privilege policy.",
+      "Encryption at rest and in transit is mandatory.",
+      "MFA required for production access."
+    ]
+  }
+}

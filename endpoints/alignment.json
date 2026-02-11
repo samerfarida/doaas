@@ -1,0 +1,21 @@
+{
+  "name": "alignment",
+  "description": "Team alignment messages",
+  "modes": ["normal", "corporate"],
+  "examples": [
+    "Let's align on project goals this week.",
+    "Ensure everyone understands the roadmap."
+  ],
+  "examplesByMode": {
+    "normal": [
+      "Let's align on project goals this week.",
+      "Ensure everyone understands the roadmap.",
+      "Sync up with stakeholders regularly."
+    ],
+    "corporate": [
+      "We need to ensure strategic alignment across Q3 objectives.",
+      "Stakeholder alignment is critical for delivery.",
+      "Let's sync our KPIs with the broader org."
+    ]
+  }
+}

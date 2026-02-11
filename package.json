@@ -1,0 +1,54 @@
+{
+  "name": "doaas",
+  "version": "1.0.0",
+  "description": "DevOps-as-a-Service Cloudflare Worker",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "generate": "node scripts/generate-endpoints.mjs",
+    "validate": "node scripts/validate.mjs",
+    "build": "npm run generate && tsc",
+    "test": "npm run build && node tests/worker.test.mjs",
+    "test:e2e": "npm run build && node tests/e2e.mjs",
+    "test:stress": "node tests/stress.mjs",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky",
+    "lint:md": "npx markdownlint-cli \"**/*.md\"",
+    "lint:md:fix": "npx markdownlint-cli \"**/*.md\" --fix",
+    "audit": "npm audit"
+  },
+  "dependencies": {
+    "ajv": "^8.12.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241127.0",
+    "@eslint/js": "^9.15.0",
+    "@types/node": "^20.4.1",
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-security": "^3.0.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "markdownlint-cli": "^0.47.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.1.6",
+    "typescript-eslint": "^8.15.0",
+    "wrangler": "^4.64.0"
+  },
+  "lint-staged": {
+    "*.{ts,mjs,js}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{json,yml,yaml}": "prettier --write",
+    "*.md": [
+      "prettier --write",
+      "npx markdownlint-cli --fix"
+    ]
+  }
+}

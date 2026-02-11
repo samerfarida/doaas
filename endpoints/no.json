@@ -1,0 +1,17 @@
+{
+  "name": "no",
+  "description": "Negative responses",
+  "modes": ["normal"],
+  "examples": [
+    "No, that won't work.",
+    "I don't think that's feasible.",
+    "Negative, please reconsider."
+  ],
+  "examplesByMode": {
+    "normal": [
+      "No, that won't work.",
+      "I don't think that's feasible.",
+      "Negative, please reconsider."
+    ]
+  }
+}

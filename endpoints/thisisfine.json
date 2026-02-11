@@ -1,0 +1,23 @@
+{
+  "name": "thisisfine",
+  "description": "Humorous 'this is fine' style messages",
+  "modes": ["normal", "chaos", "sarcastic"],
+  "examples": ["Everything is on fire but this is fine.", "Keep calm and carry on."],
+  "examplesByMode": {
+    "normal": [
+      "Everything is on fire but this is fine.",
+      "Keep calm and carry on.",
+      "Ignoring problems won't make them go away."
+    ],
+    "chaos": [
+      "The dashboard is red. I'm choosing to see it as festive.",
+      "Yes, prod is down. No, I'm not panicking. Much.",
+      "This is fine. We're fine. Everything is fine."
+    ],
+    "sarcastic": [
+      "Clearly this is a feature, not a bug.",
+      "We'll fix it in the next sprint. So never.",
+      "I've decided to be optimistic. The bar is low."
+    ]
+  }
+}

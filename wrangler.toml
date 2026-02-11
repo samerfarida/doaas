@@ -1,0 +1,10 @@
+name = "doaas-worker"
+main = "src/index.ts"
+compatibility_date = "2024-06-01"
+workers_dev = true
+# account_id = "<YOUR_ACCOUNT_ID>"
+
+[env.production]
+# route = "doaas.dev/*"
+# zone_id = "<YOUR_ZONE_ID>"
+# Or use zone_name: routes = [{ pattern = "doaas.dev/*", zone_name = "doaas.dev" }]

@@ -1,0 +1,19 @@
+{
+  "name": "lgtm",
+  "description": "LGTM (Looks Good To Me) approvals",
+  "modes": ["normal", "sarcastic", "devops"],
+  "examples": ["LGTM! Ready to merge.", "Code looks good, approved."],
+  "examplesByMode": {
+    "normal": ["LGTM! Ready to merge.", "Code looks good, approved.", "No issues found, LGTM."],
+    "sarcastic": [
+      "LGTM. I didn't read it but the CI is green.",
+      "Ship it. What could possibly go wrong?",
+      "LGTM. My lawyer says I can't say more."
+    ],
+    "devops": [
+      "LGTM. Pipeline green, coverage acceptable.",
+      "Approved. Merge when checks pass.",
+      "LGTM; deploy to staging first per process."
+    ]
+  }
+}

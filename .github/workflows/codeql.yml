@@ -1,0 +1,60 @@
+name: CodeQL Analysis
+
+# Top-level permissions set to read-only for OSSF Scorecard Token-Permissions check
+permissions:
+  contents: read
+  packages: read
+  actions: read
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '38 19 * * 2' # Every Tuesday at 19:38 UTC
+
+jobs:
+  analyze:
+    name: Analyze (${{ matrix.language }})
+    runs-on: ubuntu-latest
+    permissions:
+      # Required for all workflows
+      security-events: write
+
+      # Required to fetch internal or private CodeQL packs
+      packages: read
+
+      # Only required for workflows in private repositories
+      actions: read
+      contents: read
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - language: javascript
+            build-mode: none
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@a293a9afd2b8a145f70242d88df6ea3113570be0 # v4
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: ${{ matrix.build-mode }}
+
+      - name: Run manual build steps
+        if: matrix.build-mode == 'manual'
+        shell: bash
+        run: |
+          echo 'Manual build mode not supported for this project'
+          exit 1
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@a293a9afd2b8a145f70242d88df6ea3113570be0 # v4
+        with:
+          category: "/language:${{ matrix.language }}"
+

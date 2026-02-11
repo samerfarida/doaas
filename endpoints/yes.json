@@ -1,0 +1,9 @@
+{
+  "name": "yes",
+  "description": "Affirmative responses",
+  "modes": ["normal"],
+  "examples": ["Yes, let's proceed.", "Absolutely, good idea.", "Confirmed, moving forward."],
+  "examplesByMode": {
+    "normal": ["Yes, let's proceed.", "Absolutely, good idea.", "Confirmed, moving forward."]
+  }
+}

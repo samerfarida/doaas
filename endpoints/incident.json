@@ -1,0 +1,33 @@
+{
+  "name": "incident",
+  "description": "Incident reports and updates",
+  "modes": ["normal", "chaos", "corporate", "security", "devops"],
+  "examples": ["Incident #1234 is being investigated.", "Root cause analysis in progress."],
+  "examplesByMode": {
+    "normal": [
+      "Incident #1234 is being investigated.",
+      "Root cause analysis in progress.",
+      "Incident resolved, system fully operational."
+    ],
+    "chaos": [
+      "Everything is on fire. We're on it. Maybe.",
+      "Incident declared. Caffeine levels critical.",
+      "We have no idea yet. Stand by."
+    ],
+    "corporate": [
+      "A major incident has been declared; war room convened.",
+      "Post-incident review scheduled within 48 hours.",
+      "Stakeholders have been notified per comms plan."
+    ],
+    "security": [
+      "Potential security incident under investigation.",
+      "Containment in progress; no data exfil detected.",
+      "Security incident closed; remediation and hardening completed."
+    ],
+    "devops": [
+      "Pager fired; on-call investigating.",
+      "Rollback in progress; monitoring error rates.",
+      "Incident resolved; runbook updated."
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "risk",
+  "description": "Risk assessment statements",
+  "modes": ["normal", "corporate", "security"],
+  "examples": [
+    "High risk of delay due to dependencies.",
+    "Potential security vulnerabilities detected."
+  ],
+  "examplesByMode": {
+    "normal": [
+      "High risk of delay due to dependencies.",
+      "Potential security vulnerabilities detected.",
+      "Resource constraints may impact delivery."
+    ],
+    "corporate": [
+      "Risk register updated; mitigation owners assigned.",
+      "Delivery risk is elevated; escalation path documented.",
+      "Dependency risk has been flagged to program."
+    ],
+    "security": [
+      "Critical risk: unpatched dependency in the supply chain.",
+      "Risk accepted with compensating controls; documented.",
+      "Security assessment identified medium residual risk."
+    ]
+  }
+}

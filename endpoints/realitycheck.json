@@ -1,0 +1,23 @@
+{
+  "name": "realitycheck",
+  "description": "Reality check statements to ground the team",
+  "modes": ["normal", "corporate", "sarcastic"],
+  "examples": ["Remember, deadlines are firm.", "We have limited resources, plan accordingly."],
+  "examplesByMode": {
+    "normal": [
+      "Remember, deadlines are firm.",
+      "We have limited resources, plan accordingly.",
+      "Quality is more important than speed."
+    ],
+    "corporate": [
+      "Scope and timeline are fixed; adjust scope or extend timeline.",
+      "Resource allocation is constrained; prioritize accordingly.",
+      "We are accountable to the committed delivery date."
+    ],
+    "sarcastic": [
+      "Sure, we can do that. And I can grow wings.",
+      "The deadline is when it is. Physics doesn't care.",
+      "We have two options: do it right or do it twice."
+    ]
+  }
+}

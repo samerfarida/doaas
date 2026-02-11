@@ -1,0 +1,26 @@
+{
+  "name": "policy",
+  "description": "Company policy statements",
+  "modes": ["normal", "corporate", "security"],
+  "examples": [
+    "Remote work is allowed up to 3 days a week.",
+    "Code reviews must be done before merging."
+  ],
+  "examplesByMode": {
+    "normal": [
+      "Remote work is allowed up to 3 days a week.",
+      "Code reviews must be done before merging.",
+      "Use strong passwords and enable MFA."
+    ],
+    "corporate": [
+      "All remote work must comply with the flexible work policy.",
+      "Merges require approval per the code review standard.",
+      "Access and authentication follow the identity policy."
+    ],
+    "security": [
+      "Production access requires MFA and justification.",
+      "Secrets must be stored in the vault; no env vars.",
+      "Patching SLA is 7 days for critical CVEs."
+    ]
+  }
+}

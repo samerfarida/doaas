@@ -1,0 +1,11 @@
+{
+  "name": "DOaaS Development Container",
+  "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:0-20",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
+  "postCreateCommand": "npm install",
+  "remoteUser": "node"
+}
