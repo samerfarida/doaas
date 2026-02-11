@@ -24,6 +24,7 @@ head_sampling_rate = 1
 enabled = false
 
 [env.production]
+name = "doaas"
 # Custom Domain: Cloudflare manages DNS and certs for doaas.dev.
 # https://developers.cloudflare.com/workers/configuration/routing/custom-domains/
 [[routes]]
