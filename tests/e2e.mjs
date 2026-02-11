@@ -1,19 +1,21 @@
 /**
- * End-to-end tests: run against a real dev server (wrangler dev).
- * Spawns the server, waits for it to be ready, runs HTTP requests, then exits.
+ * End-to-end tests: run against a real HTTP server.
+ * - In CI (or E2E_FAST=1): starts a fast Node HTTP server that uses the built handleRequest (no wrangler).
+ * - Otherwise: spawns wrangler dev, waits for it, then runs the same tests.
  *
  * Usage:
- *   npm run test:e2e          — builds, starts wrangler dev, runs E2E, stops server
- *   BASE=http://localhost:8787 node tests/e2e.mjs  — server already running (e.g. in another terminal)
- *
- * For CI: npm run test:e2e runs the full flow.
+ *   npm run test:e2e                    — build, start server (fast in CI, wrangler locally), run E2E
+ *   BASE=http://localhost:8787 node tests/e2e.mjs  — use existing server
+ *   E2E_FAST=1 node tests/e2e.mjs       — use fast Node server (requires prior npm run build)
  */
 
 import assert from "assert";
+import { createServer } from "http";
 import { spawn } from "child_process";
 
 const BASE = process.env.BASE || "http://localhost:8787";
 const START_SERVER = !process.env.BASE;
+const USE_FAST_SERVER = !!(process.env.CI || process.env.E2E_FAST);
 const PORT = 8787;
 const READY_TIMEOUT_MS = 30_000;
 const POLL_MS = 200;
@@ -178,14 +180,61 @@ function spawnWrangler() {
   return child;
 }
 
+/** In-process HTTP server using built handleRequest; used in CI for fast E2E. */
+async function startFastHttpServer() {
+  const { TextDecoder } = await import("util");
+  global.TextDecoder = TextDecoder;
+  const { handleRequest } = await import("../dist/index.js");
+
+  return new Promise((resolve, reject) => {
+    const server = createServer(async (req, res) => {
+      try {
+        const url = `http://${req.headers.host || `localhost:${PORT}`}${req.url || "/"}`;
+        const hasBody = req.method !== "GET" && req.method !== "HEAD";
+        const options = { method: req.method, headers: req.headers };
+        if (hasBody) {
+          const chunks = [];
+          for await (const chunk of req) chunks.push(chunk);
+          options.body = Buffer.concat(chunks);
+        }
+        const request = new Request(url, options);
+        const response = await handleRequest(request);
+        res.writeHead(response.status, Object.fromEntries(response.headers.entries()));
+        if (response.body) {
+          const reader = response.body.getReader();
+          for (;;) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            res.write(Buffer.from(value));
+          }
+        }
+        res.end();
+      } catch (err) {
+        console.error(err);
+        res.writeHead(500);
+        res.end();
+      }
+    });
+    server.on("error", reject);
+    server.listen(PORT, "127.0.0.1", () => resolve(server));
+  });
+}
+
 async function main() {
   let child = null;
+  let httpServer = null;
 
   if (START_SERVER) {
-    console.log("Starting wrangler dev on port", PORT, "...");
-    child = spawnWrangler();
-    console.log("Waiting for server to be ready...");
-    await waitForServer();
+    if (USE_FAST_SERVER) {
+      console.log("Starting fast E2E server (handleRequest) on port", PORT, "...");
+      httpServer = await startFastHttpServer();
+      console.log("Server ready.");
+    } else {
+      console.log("Starting wrangler dev on port", PORT, "...");
+      child = spawnWrangler();
+      console.log("Waiting for server to be ready...");
+      await waitForServer();
+    }
   } else {
     console.log("Using existing server at", BASE);
     await waitForServer();
@@ -198,6 +247,9 @@ async function main() {
       child.kill("SIGTERM");
       await sleep(500);
       if (child.exitCode === null) child.kill("SIGKILL");
+    }
+    if (httpServer) {
+      await new Promise((r) => httpServer.close(r));
     }
   }
 }

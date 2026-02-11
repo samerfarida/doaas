@@ -60,5 +60,5 @@ jobs:
       - name: Stress test (10k requests)
         run: npm run test:stress
 
-      - name: E2E test (dev server)
-        run: npm run test:e2e
+      - name: E2E test
+        run: node tests/e2e.mjs
