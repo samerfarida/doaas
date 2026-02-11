@@ -107,11 +107,21 @@ async function testBlameModeSpecific() {
 }
 
 async function testRandomWithMode() {
+  const helpRes = await fetch(`${BASE}/help`);
+  assert.strictEqual(helpRes.status, 200);
+  const helpJson = await helpRes.json();
+  const toxicEndpoints = (helpJson.endpoints || [])
+    .filter((ep) => ep.name !== "random" && (ep.modes || []).includes("toxic"))
+    .map((ep) => ep.name);
+
   const res = await fetch(`${BASE}/random?mode=toxic&format=json`);
   assert.strictEqual(res.status, 200);
   const json = await res.json();
   assert.strictEqual(json.mode, "toxic");
-  assert(["blame", "motivate"].includes(json.name));
+  assert(
+    toxicEndpoints.includes(json.name),
+    `random with mode=toxic should be one of ${toxicEndpoints.join(", ")}`
+  );
   assert(typeof json.example === "string" && json.example.length > 0);
 }
 
