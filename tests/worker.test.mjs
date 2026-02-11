@@ -94,7 +94,10 @@ async function testRandomWithMode() {
   assert.strictEqual(res.status, 200);
   const json = await res.json();
   assert.strictEqual(json.mode, "toxic");
-  assert(["blame", "motivate"].includes(json.name), "random with mode=toxic should be blame or motivate");
+  assert(
+    ["blame", "motivate"].includes(json.name),
+    "random with mode=toxic should be blame or motivate"
+  );
   assert(typeof json.example === "string" && json.example.length > 0);
 }
 
@@ -113,11 +116,7 @@ async function testAllEndpointsJson() {
   for (const name of names) {
     const req = new Request(`https://example.com/${name}?format=json`);
     const res = await handleRequest(req);
-    assert.strictEqual(
-      res.status,
-      200,
-      `expected 200 for /${name}, got ${res.status}`
-    );
+    assert.strictEqual(res.status, 200, `expected 200 for /${name}, got ${res.status}`);
     const json = await res.json();
     assert.strictEqual(json.name, name);
     assert(typeof json.example === "string" && json.example.length > 0);
@@ -188,11 +187,11 @@ async function runTests() {
   await testBlameModeSpecific();
   await testRandomWithMode();
   await testRandomWithUnsupportedMode();
-   await testAllEndpointsJson();
-   await testDefaultFormatJson();
-   await testEndpointModeFallback();
-   await testPathNormalization();
-   await testCorsOnGet();
+  await testAllEndpointsJson();
+  await testDefaultFormatJson();
+  await testEndpointModeFallback();
+  await testPathNormalization();
+  await testCorsOnGet();
   await testOptionsCors();
   console.log("All tests passed.");
 }

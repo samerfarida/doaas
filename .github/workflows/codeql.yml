@@ -12,7 +12,7 @@ on:
   pull_request:
     branches: [main]
   schedule:
-    - cron: '38 19 * * 2' # Every Tuesday at 19:38 UTC
+    - cron: "38 19 * * 2" # Every Tuesday at 19:38 UTC
 
 jobs:
   analyze:
@@ -57,4 +57,3 @@ jobs:
         uses: github/codeql-action/analyze@a293a9afd2b8a145f70242d88df6ea3113570be0 # v4
         with:
           category: "/language:${{ matrix.language }}"
-

@@ -1,2 +1,16 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Fast security check on dependencies
 npm audit --audit-level=high
+
+# Auto-fix and lint staged files (Prettier, ESLint, markdownlint)
 npx lint-staged
+
+# Run full-project checks that CI enforces
+npm run lint
+npm run lint:md
+npm run format:check
+
+# Run test suite (build + worker tests)
+npm test
