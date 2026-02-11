@@ -1,7 +1,7 @@
 {
   "name": "audit",
   "description": "Audit reminders and results",
-  "modes": ["normal", "corporate", "security"],
+  "modes": ["normal", "corporate", "security", "chaos", "sarcastic"],
   "examples": [
     "Audit completed with no critical findings.",
     "Next audit scheduled for next quarter."
@@ -10,17 +10,42 @@
     "normal": [
       "Audit completed with no critical findings.",
       "Next audit scheduled for next quarter.",
-      "Please review audit logs for anomalies."
+      "Please review audit logs for anomalies.",
+      "Quarterly audit passed; minor findings documented.",
+      "Audit trail complete; no unauthorized access.",
+      "Internal audit wrapped; report in the shared drive."
     ],
     "corporate": [
       "Internal audit has been completed; report available in the portal.",
       "Compliance audit cycle concludes end of month.",
-      "Audit findings will be presented to the board."
+      "Audit findings will be presented to the board.",
+      "External audit passed; certification renewed.",
+      "Audit remediation items tracked in Jira.",
+      "Annual audit complete; no material weaknesses."
     ],
     "security": [
       "Security audit identified no critical vulnerabilities.",
       "Pen test results are in; remediation tracked.",
-      "Audit logs retained per policy; no unauthorized access."
+      "Audit logs retained per policy; no unauthorized access.",
+      "Vulnerability scan complete; patches applied.",
+      "Access audit passed; least-privilege confirmed.",
+      "Security posture assessment: acceptable risk."
+    ],
+    "chaos": [
+      "Audit? We have logs. Somewhere. Probably.",
+      "Audit completed. We're not sure what we audited.",
+      "The auditors left. We're still recovering.",
+      "Audit findings: yes. Details: TBD.",
+      "We passed. Don't ask how. Don't.",
+      "Audit trail exists. Finding it is the real audit."
+    ],
+    "sarcastic": [
+      "Audit passed. We showed them the good servers.",
+      "No critical findings. We hid the critical stuff.",
+      "Audit complete. Our documentation game is strong.",
+      "Clean audit. The auditors were very understanding.",
+      "Zero findings. Zero servers they could access.",
+      "Audit: passed. Sanity: declining."
     ]
   }
 }

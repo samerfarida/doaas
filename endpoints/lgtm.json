@@ -1,19 +1,48 @@
 {
   "name": "lgtm",
   "description": "LGTM (Looks Good To Me) approvals",
-  "modes": ["normal", "sarcastic", "devops"],
+  "modes": ["normal", "sarcastic", "devops", "chaos", "corporate"],
   "examples": ["LGTM! Ready to merge.", "Code looks good, approved."],
   "examplesByMode": {
-    "normal": ["LGTM! Ready to merge.", "Code looks good, approved.", "No issues found, LGTM."],
+    "normal": [
+      "LGTM! Ready to merge.",
+      "Code looks good, approved.",
+      "No issues found, LGTM.",
+      "Nice work, ship it!",
+      "Approved. Clean implementation.",
+      "LGTM — tests pass, logic checks out."
+    ],
     "sarcastic": [
       "LGTM. I didn't read it but the CI is green.",
       "Ship it. What could possibly go wrong?",
-      "LGTM. My lawyer says I can't say more."
+      "LGTM. My lawyer says I can't say more.",
+      "Approved. I trust you. Mostly. Kind of.",
+      "LGTM. The linter didn't complain. Good enough.",
+      "Looks good. I skimmed the last 3 lines. We're fine."
     ],
     "devops": [
       "LGTM. Pipeline green, coverage acceptable.",
       "Approved. Merge when checks pass.",
-      "LGTM; deploy to staging first per process."
+      "LGTM; deploy to staging first per process.",
+      "Approved. Infra changes look safe.",
+      "LGTM. Monitoring and alerts in place.",
+      "Approved. Runbook updated. Good to go."
+    ],
+    "chaos": [
+      "LGTM. If it breaks prod, we didn't have this conversation.",
+      "Ship it. YOLO. I mean, we have rollback. Right?",
+      "Approved. Hope the staging env was real.",
+      "LGTM. Friday deploy. No fear. All fear.",
+      "Looks good. I'm on PTO next week. Good luck.",
+      "Approved. The tests passed. The tests we have."
+    ],
+    "corporate": [
+      "LGTM. Change advisory submitted.",
+      "Approved per code review standards.",
+      "LGTM. Compliance check passed.",
+      "Approved. Release notes updated.",
+      "LGTM. Stakeholder sign-off documented.",
+      "Approved. Ready for deployment window."
     ]
   }
 }

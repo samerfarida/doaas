@@ -94,9 +94,12 @@ async function testRandomWithMode() {
   assert.strictEqual(res.status, 200);
   const json = await res.json();
   assert.strictEqual(json.mode, "toxic");
+  const toxicEndpoints = Object.keys(ENDPOINTS).filter(
+    (k) => k !== "random" && ENDPOINTS[k].modes.includes("toxic")
+  );
   assert(
-    ["blame", "motivate"].includes(json.name),
-    "random with mode=toxic should be blame or motivate"
+    toxicEndpoints.includes(json.name),
+    `random with mode=toxic should be one of ${toxicEndpoints.join(", ")}`
   );
   assert(typeof json.example === "string" && json.example.length > 0);
 }

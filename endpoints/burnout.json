@@ -1,18 +1,40 @@
 {
   "name": "burnout",
   "description": "Burnout awareness and advice",
-  "modes": ["normal", "wholesome"],
+  "modes": ["normal", "wholesome", "chaos", "sarcastic"],
   "examples": ["Remember to take breaks and rest.", "It's okay to ask for help."],
   "examplesByMode": {
     "normal": [
       "Remember to take breaks and rest.",
       "It's okay to ask for help.",
-      "Prevent burnout by managing workload."
+      "Prevent burnout by managing workload.",
+      "Step away from the screen. Your eyes will thank you.",
+      "Deferred work is not deleted work. Pace yourself.",
+      "Sustainable pace beats heroic sprints."
     ],
     "wholesome": [
       "You're doing great. It's okay to step back.",
       "Your health matters more than the sprint.",
-      "Take that PTO. The code will still be here."
+      "Take that PTO. The code will still be here.",
+      "You're enough. The tickets will wait.",
+      "Rest isn't laziness. It's maintenance.",
+      "Be kind to yourself. You've earned it."
+    ],
+    "chaos": [
+      "You've been awake 32 hours. That's a personal best?",
+      "Sleep is for people who aren't shipping. Jk. Sleep.",
+      "The stack overflow isn't going to fix itself. But you need to.",
+      "Your keyboard misses you. Go touch grass.",
+      "Burnout speedrun: 47% complete. Please stop.",
+      "You can't deploy from the ICU. Probably. Please rest."
+    ],
+    "sarcastic": [
+      "Self-care: responding to Slacks from the shower.",
+      "Work-life balance: life is what happens between deploys.",
+      "Boundaries: I don't check email. I check PagerDuty.",
+      "Rest day: only 3 incident calls. Refreshed.",
+      "Vacation: laptop in carry-on. For emergencies. All of them.",
+      "Recharge: closed laptop. Opened laptop. Opened Slack."
     ]
   }
 }

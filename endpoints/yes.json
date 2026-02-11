@@ -1,9 +1,48 @@
 {
   "name": "yes",
   "description": "Affirmative responses",
-  "modes": ["normal"],
-  "examples": ["Yes, let's proceed.", "Absolutely, good idea.", "Confirmed, moving forward."],
+  "modes": ["normal", "corporate", "chaos", "sarcastic", "devops"],
+  "examples": ["Yes, let's proceed.", "Absolutely, good idea."],
   "examplesByMode": {
-    "normal": ["Yes, let's proceed.", "Absolutely, good idea.", "Confirmed, moving forward."]
+    "normal": [
+      "Yes, let's proceed.",
+      "Absolutely, good idea.",
+      "Confirmed, moving forward.",
+      "Approved. Go ahead.",
+      "Sounds good. Proceed.",
+      "Affirmative. Let's do it."
+    ],
+    "corporate": [
+      "Approved per governance process.",
+      "Stakeholder sign-off received. Proceed.",
+      "Within scope; authorized to proceed.",
+      "Compliance confirmed. Green light.",
+      "Resource allocation approved. Execute.",
+      "Change advisory approved. Proceed as planned."
+    ],
+    "chaos": [
+      "Yes. We'll regret this. But yes.",
+      "Absolutely. What's the worst that could happen?",
+      "Confirmed. Hope the rollback works.",
+      "Yes. Sending prayers to the deploy gods.",
+      "Proceed. I'll be in the war room. Emotionally.",
+      "Affirmative. The pager is charged. I'm not."
+    ],
+    "sarcastic": [
+      "Yes. I have concerns. But yes.",
+      "Absolutely. It's not like we have a choice.",
+      "Confirmed. My calendar already said yes. I'm just catching up.",
+      "Approved. The backlog said so. Who am I to argue?",
+      "Sounds good. I'll document my objections elsewhere.",
+      "Affirmative. We're all going to pretend this was the plan."
+    ],
+    "devops": [
+      "Yes. Pipeline is green. Ship it.",
+      "Approved. Rollback plan in place. Go.",
+      "Confirmed. Monitoring dashboards ready.",
+      "Proceed. Canary at 5%. Watch the metrics.",
+      "Go for deploy. Runbook updated. Good luck.",
+      "Affirmative. Infra ready. You're cleared for takeoff."
+    ]
   }
 }

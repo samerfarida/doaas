@@ -11,22 +11,49 @@
       "It's DNS. Again.",
       "Caching lied to us.",
       "It's not my fault, it was the network!",
-      "Blame the last person who touched the code."
+      "Blame the last person who touched the code.",
+      "Third-party API changed without notice.",
+      "Race condition. Classic."
     ],
     "chaos": [
       "Cosmic rays hit the load balancer. Good luck.",
       "Mercury is in retrograde. Blame physics.",
-      "The server is down because someone forgot to pay the bill."
+      "The server is down because someone forgot to pay the bill.",
+      "A butterfly flapped its wings in prod. Probably.",
+      "The hamster powering the server needed a break.",
+      "Sunspots. Definitely sunspots."
     ],
     "corporate": [
       "This appears to be an upstream dependency issue.",
-      "Unexpected vendor behavior impacted delivery."
+      "Unexpected vendor behavior impacted delivery.",
+      "External factor outside our control.",
+      "Prior ownership did not document this.",
+      "Cross-team dependency introduced the variance.",
+      "Legacy system interaction; not in current scope."
     ],
-    "security": ["Misconfigured IAM did it. As usual.", "An expired certificate chose violence."],
-    "toxic": ["Obviously the last person who touched it.", "Probably the intern. Or you."],
+    "security": [
+      "Misconfigured IAM did it. As usual.",
+      "An expired certificate chose violence.",
+      "Someone committed secrets to the repo. Again.",
+      "Default credentials. Still default. In prod.",
+      "Shadow IT deployed something. We're still finding it.",
+      "That service account had too much power. Oops."
+    ],
+    "toxic": [
+      "Obviously the last person who touched it.",
+      "Probably the intern. Or you.",
+      "Who wrote this? Oh. You. That explains it.",
+      "The person who merged without review. You know who you are.",
+      "Someone who clearly doesn't test their code.",
+      "The on-call who slept through the alert. Allegedly."
+    ],
     "sarcastic": [
       "Surely not the person who merged without testing.",
-      "Must be the cloud. It's always the cloud."
+      "Must be the cloud. It's always the cloud.",
+      "Couldn't possibly be the 47th hotfix this week.",
+      "Clearly the ghost in the machine. Very cooperative ghost.",
+      "Probably user error. Users are the worst.",
+      "It's a feature. A very aggressive feature."
     ]
   }
 }

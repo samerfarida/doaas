@@ -1,23 +1,48 @@
 {
   "name": "realitycheck",
   "description": "Reality check statements to ground the team",
-  "modes": ["normal", "corporate", "sarcastic"],
+  "modes": ["normal", "corporate", "sarcastic", "chaos", "devops"],
   "examples": ["Remember, deadlines are firm.", "We have limited resources, plan accordingly."],
   "examplesByMode": {
     "normal": [
       "Remember, deadlines are firm.",
       "We have limited resources, plan accordingly.",
-      "Quality is more important than speed."
+      "Quality is more important than speed.",
+      "Scope creep has consequences. Plan for it.",
+      "Technical debt compounds. Address it.",
+      "We can't do everything. Prioritize ruthlessly."
     ],
     "corporate": [
       "Scope and timeline are fixed; adjust scope or extend timeline.",
       "Resource allocation is constrained; prioritize accordingly.",
-      "We are accountable to the committed delivery date."
+      "We are accountable to the committed delivery date.",
+      "Stakeholder expectations are set; manage them.",
+      "Budget is allocated; no additional headcount this quarter.",
+      "Committed dates are tracked at the program level."
     ],
     "sarcastic": [
       "Sure, we can do that. And I can grow wings.",
       "The deadline is when it is. Physics doesn't care.",
-      "We have two options: do it right or do it twice."
+      "We have two options: do it right or do it twice.",
+      "Adding scope doesn't add time. It never has.",
+      "The roadmap is full. Of hopes. And dreams. Not capacity.",
+      "Reality: we have 2 devs. Ask: can 2 devs do 10 things? No."
+    ],
+    "chaos": [
+      "Reality check: prod is still on fire from last week.",
+      "We have 3 hours. The scope says 3 weeks. Adjust expectations.",
+      "The runbook is outdated. So is our understanding.",
+      "Reality: we're one incident away from a very long weekend.",
+      "Capacity check: we're at 147%. Of something. Not good.",
+      "Ground truth: the docs lie. The logs lie. We're winging it."
+    ],
+    "devops": [
+      "Error budget is exhausted. No more risky deploys.",
+      "SLO breach means we pause feature work. Period.",
+      "Incident count is up. Quality gates need tightening.",
+      "Tech debt is blocking. It's not optional anymore.",
+      "On-call fatigue is real. Rotation needs rebalancing.",
+      "Reality: we're at 90% capacity. Stop saying yes."
     ]
   }
 }

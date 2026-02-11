@@ -1,28 +1,48 @@
 {
   "name": "deploy",
   "description": "Deployment messages and instructions",
-  "modes": ["normal", "chaos", "corporate", "devops"],
+  "modes": ["normal", "chaos", "corporate", "devops", "sarcastic"],
   "examples": ["Deployment started at 3 PM UTC.", "Rollback plan is ready if issues arise."],
   "examplesByMode": {
     "normal": [
       "Deployment started at 3 PM UTC.",
       "Rollback plan is ready if issues arise.",
-      "Deployment successful with zero downtime."
+      "Deployment successful with zero downtime.",
+      "Release v2.1.0 going out; monitoring dashboards.",
+      "Staging validated; proceeding to production.",
+      "Deploy complete; smoke tests passing."
     ],
     "chaos": [
       "Deploying to prod. See you on the other side.",
       "Pushed. Pray to the deploy gods.",
-      "It's Friday. What could go wrong?"
+      "It's Friday. What could go wrong?",
+      "Deploy in progress. Someone hold the pager.",
+      "Merge to main. YOLO. I mean, we have a plan. Sort of.",
+      "Shipping it. The runbook is a suggestion."
     ],
     "corporate": [
       "Release 2.3.1 has been promoted to production.",
       "Deployment window completed; post-release review scheduled.",
-      "Change advisory approved; deployment executed per process."
+      "Change advisory approved; deployment executed per process.",
+      "Release notes published; stakeholders notified.",
+      "Production deployment successful; KPIs within tolerance.",
+      "Go-live complete; support team briefed."
     ],
     "devops": [
       "CI/CD pipeline completed; artifacts in registry.",
       "Canary rollout at 10%; monitoring metrics.",
-      "Blue-green switch completed; old stack draining."
+      "Blue-green switch completed; old stack draining.",
+      "ArgoCD sync complete; manifests applied.",
+      "Terraform apply successful; infra updated.",
+      "Deploy via GitOps; no manual intervention."
+    ],
+    "sarcastic": [
+      "Deployed. The staging environment that we don't have.",
+      "Ship it. The tests passed. The tests we wrote.",
+      "Production updated. Hope you like surprises.",
+      "Deploy successful. Customer impact: TBD.",
+      "We're live. The monitoring is also live. Coincidence?",
+      "Shipped. Documentation to follow. Eventually."
     ]
   }
 }

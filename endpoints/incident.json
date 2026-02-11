@@ -1,33 +1,56 @@
 {
   "name": "incident",
   "description": "Incident reports and updates",
-  "modes": ["normal", "chaos", "corporate", "security", "devops"],
+  "modes": ["normal", "chaos", "corporate", "security", "devops", "sarcastic"],
   "examples": ["Incident #1234 is being investigated.", "Root cause analysis in progress."],
   "examplesByMode": {
     "normal": [
       "Incident #1234 is being investigated.",
       "Root cause analysis in progress.",
-      "Incident resolved, system fully operational."
+      "Incident resolved, system fully operational.",
+      "Mitigation applied; monitoring for recurrence.",
+      "Post-incident review scheduled for tomorrow.",
+      "Impact: partial outage, 15 min; users notified."
     ],
     "chaos": [
       "Everything is on fire. We're on it. Maybe.",
       "Incident declared. Caffeine levels critical.",
-      "We have no idea yet. Stand by."
+      "We have no idea yet. Stand by.",
+      "War room assembled. So is the panic.",
+      "Investigating. The logs are not helpful. Send help.",
+      "Incident in progress. Morale: also in progress."
     ],
     "corporate": [
       "A major incident has been declared; war room convened.",
       "Post-incident review scheduled within 48 hours.",
-      "Stakeholders have been notified per comms plan."
+      "Stakeholders have been notified per comms plan.",
+      "Business impact assessment in progress.",
+      "Incident timeline being documented for RCA.",
+      "Escalation path activated; exec sponsor informed."
     ],
     "security": [
       "Potential security incident under investigation.",
       "Containment in progress; no data exfil detected.",
-      "Security incident closed; remediation and hardening completed."
+      "Security incident closed; remediation and hardening completed.",
+      "Credential rotation initiated; scope assessed.",
+      "IDS triggered; investigating; no confirmed breach.",
+      "Security incident declared; IR team engaged."
     ],
     "devops": [
       "Pager fired; on-call investigating.",
       "Rollback in progress; monitoring error rates.",
-      "Incident resolved; runbook updated."
+      "Incident resolved; runbook updated.",
+      "SLO breach; error budget consumed; RCA inbound.",
+      "Service degraded; canary rollback executing.",
+      "Incident closed; follow-up tasks in backlog."
+    ],
+    "sarcastic": [
+      "Incident: ongoing. Confidence: low. Coffee: high.",
+      "We've identified the problem: it's everything.",
+      "RCA complete. Blame: legacy. Solution: rewrite. Timeline: never.",
+      "Incident resolved. Root cause: Friday afternoon deploy.",
+      "Post-mortem finding: we knew this would happen. We did it anyway.",
+      "Incident report: it broke. We fixed it. Don't ask how."
     ]
   }
 }

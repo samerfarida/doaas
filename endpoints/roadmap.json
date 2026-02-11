@@ -1,7 +1,7 @@
 {
   "name": "roadmap",
   "description": "Roadmap updates and priorities",
-  "modes": ["normal", "corporate"],
+  "modes": ["normal", "corporate", "chaos", "sarcastic", "devops"],
   "examples": [
     "Next milestone: feature complete by end of month.",
     "Focus on bug fixes in sprint 5."
@@ -10,12 +10,42 @@
     "normal": [
       "Next milestone: feature complete by end of month.",
       "Focus on bug fixes in sprint 5.",
-      "Planning for Q3 initiatives underway."
+      "Planning for Q3 initiatives underway.",
+      "MVP scope locked; iterating from feedback.",
+      "Tech debt sprint scheduled for next month.",
+      "Roadmap review: bi-weekly with stakeholders."
     ],
     "corporate": [
       "Roadmap has been updated; Q3 priorities are locked.",
       "Strategic initiatives are reflected in the product roadmap.",
-      "Stakeholders have visibility into the next two quarters."
+      "Stakeholders have visibility into the next two quarters.",
+      "OKR alignment complete; roadmap reflects key results.",
+      "Investment areas prioritized per board guidance.",
+      "Portfolio roadmap published; dependencies mapped."
+    ],
+    "chaos": [
+      "Roadmap: we have one. It changes. Often. Daily.",
+      "Priorities: everything. Everything is priority.",
+      "Q3 plan: survive. That's the plan.",
+      "Roadmap updated. Again. This is the 12th version this week.",
+      "Strategic direction: forward. Mostly. We think.",
+      "Milestones: aspirational. Very aspirational."
+    ],
+    "sarcastic": [
+      "Roadmap: comprehensive. Accurate: debatable.",
+      "Priorities set. By someone. Somewhere. We're executing.",
+      "The roadmap says Q3. Reality says Q4. Or Q1. TBD.",
+      "Strategic pillars: we have four. They're all urgent.",
+      "Roadmap visibility: 100%. Confidence: 47%.",
+      "We're agile. The roadmap is a suggestion. A strong suggestion."
+    ],
+    "devops": [
+      "SLO focus next quarter; reliability over features.",
+      "Platform maturity roadmap: observability first.",
+      "Tech debt sprint; 20% capacity for infrastructure.",
+      "Migration roadmap: legacy to cloud. 18 months. Optimistic.",
+      "Automation initiative: reduce toil by 30%.",
+      "On-call improvements; runbook and alert refinement."
     ]
   }
 }
