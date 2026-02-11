@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
+    "deploy:production": "wrangler versions upload --env=production",
     "generate": "node scripts/generate-endpoints.mjs",
     "validate": "node scripts/validate.mjs",
     "build": "npm run generate && tsc",
