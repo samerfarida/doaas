@@ -1,4 +1,4 @@
-name = "doaas-worker"
+name = "doaas"
 main = "src/index.ts"
 compatibility_date = "2024-06-01"
 workers_dev = true
