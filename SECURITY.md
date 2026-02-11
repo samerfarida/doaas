@@ -1,6 +1,6 @@
-## Security Policy
+# Security Policy
 
-### Supported Versions
+## Supported Versions
 
 Security fixes are applied to the actively maintained branch of DOaaS. Older releases receive fixes only when the backport effort is low and the issue is high severity.
 
@@ -11,13 +11,13 @@ Security fixes are applied to the actively maintained branch of DOaaS. Older rel
 
 If you are running an older commit or a fork and cannot upgrade, please highlight that in your report so we can discuss options.
 
-### Reporting a Vulnerability
+## Reporting a Vulnerability
 
 Please **do not open a public GitHub issue or discussion** for security vulnerabilities.
 
 Instead, use one of the following private channels:
 
-- **GitHub Security Advisories**: https://github.com/samerfarida/doaas/security/advisories/new
+- **GitHub Security Advisories**: [New advisory](https://github.com/samerfarida/doaas/security/advisories/new)
 - **Email**: `samer.farida@yahoo.com`
 
 When reporting, please include as much detail as possible:
@@ -29,7 +29,7 @@ When reporting, please include as much detail as possible:
 
 If you require encryption, mention it in your report and we can provide an OpenPGP key over email.
 
-### What Happens Next
+## What Happens Next
 
 - **Acknowledgement**: We aim to acknowledge receipt within **2 business days**.
 - **Initial assessment**: We will triage and respond with initial findings or questions within **5 business days**.
@@ -38,7 +38,7 @@ If you require encryption, mention it in your report and we can provide an OpenP
 
 If you believe a vulnerability is being actively exploited or needs immediate attention, please mark your report as **URGENT** and include a reachable contact method.
 
-### Safe Harbor
+## Safe Harbor
 
 We value legitimate security research. When you follow this policy and report issues responsibly, we will not pursue legal action or DMCA claims against you. Please:
 
@@ -46,4 +46,3 @@ We value legitimate security research. When you follow this policy and report is
 - Respect rate limits and always obtain consent before testing on systems you do not own
 
 Thank you for helping keep DOaaS and its users safe.
-

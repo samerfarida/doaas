@@ -2,9 +2,7 @@
 
 _Because who has time for manual DevOps?_
 
-<div align="center">
-  <img src="assets/DOaaS.png" alt="DOaaS - DevOps-as-a-Service">
-</div>
+![DOaaS - DevOps-as-a-Service](assets/DOaaS.png)
 
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/samerfarida/doaas/badge)](https://scorecard.dev/viewer/?uri=github.com/samerfarida/doaas)
@@ -58,7 +56,7 @@ curl https://doaas.dev/random
 
 **Example output (plain text)** — use `?format=text`:
 
-```
+```text
 Blame the last person who touched the code.
 ```
 
