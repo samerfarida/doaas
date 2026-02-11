@@ -28,7 +28,7 @@ async function waitForServer() {
     try {
       const res = await fetch(`${BASE}/`);
       if (res.ok) return;
-    } catch (_) {
+    } catch {
       // not ready yet
     }
     await sleep(POLL_MS);

@@ -5,7 +5,7 @@ on:
   branch_protection_rule:
   # To guarantee Maintained check is occasionally updated.
   schedule:
-    - cron: '0 0 * * *' # Daily at midnight UTC
+    - cron: "0 0 * * *" # Daily at midnight UTC
   push:
     branches: ["main"]
   # Trigger on releases to detect Signed-Releases and SBOM checks
@@ -65,7 +65,6 @@ jobs:
           retention-days: 5
 
       - name: Upload to code-scanning
-        uses: github/codeql-action/upload-sarif@a293a9afd2b8a145f70242d88df6ea3113570be0 # v4
+        uses: github/codeql-action/upload-sarif@b20883b0cd1f46c72ae0ba6d1090936928f9fa30 # v4.32.0
         with:
           sarif_file: results.sarif
-
