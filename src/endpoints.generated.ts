@@ -6,7 +6,9 @@ export const ENDPOINTS = {
     "description": "Team alignment messages",
     "modes": [
       "normal",
-      "corporate"
+      "corporate",
+      "chaos",
+      "sarcastic"
     ],
     "examples": [
       "Let's align on project goals this week.",
@@ -16,12 +18,34 @@ export const ENDPOINTS = {
       "normal": [
         "Let's align on project goals this week.",
         "Ensure everyone understands the roadmap.",
-        "Sync up with stakeholders regularly."
+        "Sync up with stakeholders regularly.",
+        "Everyone on the same page? Great, let's build.",
+        "Alignment first, execution second.",
+        "Quick sync before we go heads-down."
       ],
       "corporate": [
         "We need to ensure strategic alignment across Q3 objectives.",
         "Stakeholder alignment is critical for delivery.",
-        "Let's sync our KPIs with the broader org."
+        "Let's sync our KPIs with the broader org.",
+        "Cross-functional alignment meeting scheduled.",
+        "Executive alignment achieved; proceed with initiative.",
+        "Ensure RACI matrix alignment before kickoff."
+      ],
+      "chaos": [
+        "We're aligned. On chaos. Everyone good with that?",
+        "Alignment achieved: we're all confused together.",
+        "Synced. No one knows what we're building. Perfect.",
+        "Alignment complete. Three different interpretations. Ship it.",
+        "We aligned in the hallway. Or was that a fever dream?",
+        "Alignment: everyone agreed to disagree. Moving on."
+      ],
+      "sarcastic": [
+        "Let's align. Again. For the 47th time this sprint.",
+        "Strategic alignment: my calendar says yes, my soul says no.",
+        "We're aligned. I have no idea what we aligned on.",
+        "Alignment meeting: 2 hours, zero decisions. Success.",
+        "Fully aligned. My interpretation is the right one.",
+        "Synergy achieved. Synergy is still not a real word."
       ]
     }
   },
@@ -31,7 +55,9 @@ export const ENDPOINTS = {
     "modes": [
       "normal",
       "corporate",
-      "security"
+      "security",
+      "chaos",
+      "sarcastic"
     ],
     "examples": [
       "Audit completed with no critical findings.",
@@ -41,17 +67,42 @@ export const ENDPOINTS = {
       "normal": [
         "Audit completed with no critical findings.",
         "Next audit scheduled for next quarter.",
-        "Please review audit logs for anomalies."
+        "Please review audit logs for anomalies.",
+        "Quarterly audit passed; minor findings documented.",
+        "Audit trail complete; no unauthorized access.",
+        "Internal audit wrapped; report in the shared drive."
       ],
       "corporate": [
         "Internal audit has been completed; report available in the portal.",
         "Compliance audit cycle concludes end of month.",
-        "Audit findings will be presented to the board."
+        "Audit findings will be presented to the board.",
+        "External audit passed; certification renewed.",
+        "Audit remediation items tracked in Jira.",
+        "Annual audit complete; no material weaknesses."
       ],
       "security": [
         "Security audit identified no critical vulnerabilities.",
         "Pen test results are in; remediation tracked.",
-        "Audit logs retained per policy; no unauthorized access."
+        "Audit logs retained per policy; no unauthorized access.",
+        "Vulnerability scan complete; patches applied.",
+        "Access audit passed; least-privilege confirmed.",
+        "Security posture assessment: acceptable risk."
+      ],
+      "chaos": [
+        "Audit? We have logs. Somewhere. Probably.",
+        "Audit completed. We're not sure what we audited.",
+        "The auditors left. We're still recovering.",
+        "Audit findings: yes. Details: TBD.",
+        "We passed. Don't ask how. Don't.",
+        "Audit trail exists. Finding it is the real audit."
+      ],
+      "sarcastic": [
+        "Audit passed. We showed them the good servers.",
+        "No critical findings. We hid the critical stuff.",
+        "Audit complete. Our documentation game is strong.",
+        "Clean audit. The auditors were very understanding.",
+        "Zero findings. Zero servers they could access.",
+        "Audit: passed. Sanity: declining."
       ]
     }
   },
@@ -75,28 +126,49 @@ export const ENDPOINTS = {
         "It's DNS. Again.",
         "Caching lied to us.",
         "It's not my fault, it was the network!",
-        "Blame the last person who touched the code."
+        "Blame the last person who touched the code.",
+        "Third-party API changed without notice.",
+        "Race condition. Classic."
       ],
       "chaos": [
         "Cosmic rays hit the load balancer. Good luck.",
         "Mercury is in retrograde. Blame physics.",
-        "The server is down because someone forgot to pay the bill."
+        "The server is down because someone forgot to pay the bill.",
+        "A butterfly flapped its wings in prod. Probably.",
+        "The hamster powering the server needed a break.",
+        "Sunspots. Definitely sunspots."
       ],
       "corporate": [
         "This appears to be an upstream dependency issue.",
-        "Unexpected vendor behavior impacted delivery."
+        "Unexpected vendor behavior impacted delivery.",
+        "External factor outside our control.",
+        "Prior ownership did not document this.",
+        "Cross-team dependency introduced the variance.",
+        "Legacy system interaction; not in current scope."
       ],
       "security": [
         "Misconfigured IAM did it. As usual.",
-        "An expired certificate chose violence."
+        "An expired certificate chose violence.",
+        "Someone committed secrets to the repo. Again.",
+        "Default credentials. Still default. In prod.",
+        "Shadow IT deployed something. We're still finding it.",
+        "That service account had too much power. Oops."
       ],
       "toxic": [
         "Obviously the last person who touched it.",
-        "Probably the intern. Or you."
+        "Probably the intern. Or you.",
+        "Who wrote this? Oh. You. That explains it.",
+        "The person who merged without review. You know who you are.",
+        "Someone who clearly doesn't test their code.",
+        "The on-call who slept through the alert. Allegedly."
       ],
       "sarcastic": [
         "Surely not the person who merged without testing.",
-        "Must be the cloud. It's always the cloud."
+        "Must be the cloud. It's always the cloud.",
+        "Couldn't possibly be the 47th hotfix this week.",
+        "Clearly the ghost in the machine. Very cooperative ghost.",
+        "Probably user error. Users are the worst.",
+        "It's a feature. A very aggressive feature."
       ]
     }
   },
@@ -105,7 +177,9 @@ export const ENDPOINTS = {
     "description": "Burnout awareness and advice",
     "modes": [
       "normal",
-      "wholesome"
+      "wholesome",
+      "chaos",
+      "sarcastic"
     ],
     "examples": [
       "Remember to take breaks and rest.",
@@ -115,12 +189,34 @@ export const ENDPOINTS = {
       "normal": [
         "Remember to take breaks and rest.",
         "It's okay to ask for help.",
-        "Prevent burnout by managing workload."
+        "Prevent burnout by managing workload.",
+        "Step away from the screen. Your eyes will thank you.",
+        "Deferred work is not deleted work. Pace yourself.",
+        "Sustainable pace beats heroic sprints."
       ],
       "wholesome": [
         "You're doing great. It's okay to step back.",
         "Your health matters more than the sprint.",
-        "Take that PTO. The code will still be here."
+        "Take that PTO. The code will still be here.",
+        "You're enough. The tickets will wait.",
+        "Rest isn't laziness. It's maintenance.",
+        "Be kind to yourself. You've earned it."
+      ],
+      "chaos": [
+        "You've been awake 32 hours. That's a personal best?",
+        "Sleep is for people who aren't shipping. Jk. Sleep.",
+        "The stack overflow isn't going to fix itself. But you need to.",
+        "Your keyboard misses you. Go touch grass.",
+        "Burnout speedrun: 47% complete. Please stop.",
+        "You can't deploy from the ICU. Probably. Please rest."
+      ],
+      "sarcastic": [
+        "Self-care: responding to Slacks from the shower.",
+        "Work-life balance: life is what happens between deploys.",
+        "Boundaries: I don't check email. I check PagerDuty.",
+        "Rest day: only 3 incident calls. Refreshed.",
+        "Vacation: laptop in carry-on. For emergencies. All of them.",
+        "Recharge: closed laptop. Opened laptop. Opened Slack."
       ]
     }
   },
@@ -130,7 +226,9 @@ export const ENDPOINTS = {
     "modes": [
       "normal",
       "corporate",
-      "security"
+      "security",
+      "chaos",
+      "sarcastic"
     ],
     "examples": [
       "Ensure GDPR compliance in data handling.",
@@ -140,17 +238,42 @@ export const ENDPOINTS = {
       "normal": [
         "Ensure GDPR compliance in data handling.",
         "Audit logs must be retained for 90 days.",
-        "Follow company policy for access control."
+        "Follow company policy for access control.",
+        "Data retention policy: 7 years for financial records.",
+        "PII must be encrypted at rest and in transit.",
+        "Compliance training due by end of quarter."
       ],
       "corporate": [
         "All changes must follow the compliance framework.",
         "Document retention policy applies to this dataset.",
-        "Regulatory requirements are documented in the handbook."
+        "Regulatory requirements are documented in the handbook.",
+        "SOC 2 controls must be evidenced for this change.",
+        "Compliance attestation required before go-live.",
+        "Risk assessment completed; controls documented."
       ],
       "security": [
         "Access must comply with least-privilege policy.",
         "Encryption at rest and in transit is mandatory.",
-        "MFA required for production access."
+        "MFA required for production access.",
+        "Secrets rotation every 90 days per policy.",
+        "No production credentials in code or chat.",
+        "Security review required for all data exports."
+      ],
+      "chaos": [
+        "Compliance: we have a checklist. Somewhere.",
+        "GDPR? We have a privacy policy. It's 47 pages. Good luck.",
+        "Audit logs: definitely logging something. Probably.",
+        "We're compliant. The auditors haven't found us yet.",
+        "Retention policy: we keep everything forever. Oops.",
+        "Compliance is a state of mind. And also the law. Mostly the law."
+      ],
+      "sarcastic": [
+        "Fully compliant. Our documentation says so.",
+        "We passed the compliance quiz. With a 62%.",
+        "Yes, we're compliant. No, you can't see the evidence.",
+        "Compliance: checked. Sanity: optional.",
+        "All policies followed. The important ones. Mostly.",
+        "Compliant since 2019. We think. The date might be wrong."
       ]
     }
   },
@@ -161,7 +284,8 @@ export const ENDPOINTS = {
       "normal",
       "chaos",
       "corporate",
-      "devops"
+      "devops",
+      "sarcastic"
     ],
     "examples": [
       "Deployment started at 3 PM UTC.",
@@ -171,22 +295,42 @@ export const ENDPOINTS = {
       "normal": [
         "Deployment started at 3 PM UTC.",
         "Rollback plan is ready if issues arise.",
-        "Deployment successful with zero downtime."
+        "Deployment successful with zero downtime.",
+        "Release v2.1.0 going out; monitoring dashboards.",
+        "Staging validated; proceeding to production.",
+        "Deploy complete; smoke tests passing."
       ],
       "chaos": [
         "Deploying to prod. See you on the other side.",
         "Pushed. Pray to the deploy gods.",
-        "It's Friday. What could go wrong?"
+        "It's Friday. What could go wrong?",
+        "Deploy in progress. Someone hold the pager.",
+        "Merge to main. YOLO. I mean, we have a plan. Sort of.",
+        "Shipping it. The runbook is a suggestion."
       ],
       "corporate": [
         "Release 2.3.1 has been promoted to production.",
         "Deployment window completed; post-release review scheduled.",
-        "Change advisory approved; deployment executed per process."
+        "Change advisory approved; deployment executed per process.",
+        "Release notes published; stakeholders notified.",
+        "Production deployment successful; KPIs within tolerance.",
+        "Go-live complete; support team briefed."
       ],
       "devops": [
         "CI/CD pipeline completed; artifacts in registry.",
         "Canary rollout at 10%; monitoring metrics.",
-        "Blue-green switch completed; old stack draining."
+        "Blue-green switch completed; old stack draining.",
+        "ArgoCD sync complete; manifests applied.",
+        "Terraform apply successful; infra updated.",
+        "Deploy via GitOps; no manual intervention."
+      ],
+      "sarcastic": [
+        "Deployed. The staging environment that we don't have.",
+        "Ship it. The tests passed. The tests we wrote.",
+        "Production updated. Hope you like surprises.",
+        "Deploy successful. Customer impact: TBD.",
+        "We're live. The monitoring is also live. Coincidence?",
+        "Shipped. Documentation to follow. Eventually."
       ]
     }
   },
@@ -196,7 +340,9 @@ export const ENDPOINTS = {
     "modes": [
       "normal",
       "chaos",
-      "sarcastic"
+      "sarcastic",
+      "corporate",
+      "toxic"
     ],
     "examples": [
       "I was stuck in traffic.",
@@ -206,17 +352,42 @@ export const ENDPOINTS = {
       "normal": [
         "I was stuck in traffic.",
         "My internet was down.",
-        "I had a family emergency."
+        "I had a family emergency.",
+        "Calendar conflict I didn't see.",
+        "Meeting ran over; couldn't make it.",
+        "Got pulled into an urgent production issue."
       ],
       "chaos": [
         "A squirrel ate through the fiber line.",
         "My laptop decided to install updates during the call.",
-        "The cat sat on the keyboard and closed everything."
+        "The cat sat on the keyboard and closed everything.",
+        "A bird flew into the power substation. Seriously.",
+        "My keyboard developed a mind of its own.",
+        "The WiFi is haunted. I have evidence."
       ],
       "sarcastic": [
         "I was busy aligning synergies.",
         "My calendar had a conflict with reality.",
-        "I thought it was optional. Like sleep."
+        "I thought it was optional. Like sleep.",
+        "I had a conflict with my other meeting about this meeting.",
+        "I was in a meeting about reducing meetings.",
+        "My OOO said I was out. I was in. The OOO lied."
+      ],
+      "corporate": [
+        "I had a conflicting stakeholder engagement.",
+        "Prior commitment to another initiative.",
+        "My calendar sync had a delay.",
+        "I was in back-to-backs; couldn't transition in time.",
+        "Double-booked; prioritizing per the RACI.",
+        "Resource allocation conflict; escalating."
+      ],
+      "toxic": [
+        "Didn't think my presence was required.",
+        "That meeting could've been an email. So I treated it like one.",
+        "I had more important things to do.",
+        "You didn't send a calendar invite. My fault?",
+        "I prioritize deliverables over meetings.",
+        "Sorry, I block 2–4 for deep work. Your meeting lost."
       ]
     }
   },
@@ -228,7 +399,8 @@ export const ENDPOINTS = {
       "chaos",
       "corporate",
       "security",
-      "devops"
+      "devops",
+      "sarcastic"
     ],
     "examples": [
       "Incident #1234 is being investigated.",
@@ -238,27 +410,50 @@ export const ENDPOINTS = {
       "normal": [
         "Incident #1234 is being investigated.",
         "Root cause analysis in progress.",
-        "Incident resolved, system fully operational."
+        "Incident resolved, system fully operational.",
+        "Mitigation applied; monitoring for recurrence.",
+        "Post-incident review scheduled for tomorrow.",
+        "Impact: partial outage, 15 min; users notified."
       ],
       "chaos": [
         "Everything is on fire. We're on it. Maybe.",
         "Incident declared. Caffeine levels critical.",
-        "We have no idea yet. Stand by."
+        "We have no idea yet. Stand by.",
+        "War room assembled. So is the panic.",
+        "Investigating. The logs are not helpful. Send help.",
+        "Incident in progress. Morale: also in progress."
       ],
       "corporate": [
         "A major incident has been declared; war room convened.",
         "Post-incident review scheduled within 48 hours.",
-        "Stakeholders have been notified per comms plan."
+        "Stakeholders have been notified per comms plan.",
+        "Business impact assessment in progress.",
+        "Incident timeline being documented for RCA.",
+        "Escalation path activated; exec sponsor informed."
       ],
       "security": [
         "Potential security incident under investigation.",
         "Containment in progress; no data exfil detected.",
-        "Security incident closed; remediation and hardening completed."
+        "Security incident closed; remediation and hardening completed.",
+        "Credential rotation initiated; scope assessed.",
+        "IDS triggered; investigating; no confirmed breach.",
+        "Security incident declared; IR team engaged."
       ],
       "devops": [
         "Pager fired; on-call investigating.",
         "Rollback in progress; monitoring error rates.",
-        "Incident resolved; runbook updated."
+        "Incident resolved; runbook updated.",
+        "SLO breach; error budget consumed; RCA inbound.",
+        "Service degraded; canary rollback executing.",
+        "Incident closed; follow-up tasks in backlog."
+      ],
+      "sarcastic": [
+        "Incident: ongoing. Confidence: low. Coffee: high.",
+        "We've identified the problem: it's everything.",
+        "RCA complete. Blame: legacy. Solution: rewrite. Timeline: never.",
+        "Incident resolved. Root cause: Friday afternoon deploy.",
+        "Post-mortem finding: we knew this would happen. We did it anyway.",
+        "Incident report: it broke. We fixed it. Don't ask how."
       ]
     }
   },
@@ -268,7 +463,9 @@ export const ENDPOINTS = {
     "modes": [
       "normal",
       "sarcastic",
-      "devops"
+      "devops",
+      "chaos",
+      "corporate"
     ],
     "examples": [
       "LGTM! Ready to merge.",
@@ -278,17 +475,42 @@ export const ENDPOINTS = {
       "normal": [
         "LGTM! Ready to merge.",
         "Code looks good, approved.",
-        "No issues found, LGTM."
+        "No issues found, LGTM.",
+        "Nice work, ship it!",
+        "Approved. Clean implementation.",
+        "LGTM — tests pass, logic checks out."
       ],
       "sarcastic": [
         "LGTM. I didn't read it but the CI is green.",
         "Ship it. What could possibly go wrong?",
-        "LGTM. My lawyer says I can't say more."
+        "LGTM. My lawyer says I can't say more.",
+        "Approved. I trust you. Mostly. Kind of.",
+        "LGTM. The linter didn't complain. Good enough.",
+        "Looks good. I skimmed the last 3 lines. We're fine."
       ],
       "devops": [
         "LGTM. Pipeline green, coverage acceptable.",
         "Approved. Merge when checks pass.",
-        "LGTM; deploy to staging first per process."
+        "LGTM; deploy to staging first per process.",
+        "Approved. Infra changes look safe.",
+        "LGTM. Monitoring and alerts in place.",
+        "Approved. Runbook updated. Good to go."
+      ],
+      "chaos": [
+        "LGTM. If it breaks prod, we didn't have this conversation.",
+        "Ship it. YOLO. I mean, we have rollback. Right?",
+        "Approved. Hope the staging env was real.",
+        "LGTM. Friday deploy. No fear. All fear.",
+        "Looks good. I'm on PTO next week. Good luck.",
+        "Approved. The tests passed. The tests we have."
+      ],
+      "corporate": [
+        "LGTM. Change advisory submitted.",
+        "Approved per code review standards.",
+        "LGTM. Compliance check passed.",
+        "Approved. Release notes updated.",
+        "LGTM. Stakeholder sign-off documented.",
+        "Approved. Ready for deployment window."
       ]
     }
   },
@@ -296,18 +518,47 @@ export const ENDPOINTS = {
     "name": "maybe",
     "description": "Uncertain or tentative responses",
     "modes": [
-      "normal"
+      "normal",
+      "corporate",
+      "chaos",
+      "sarcastic"
     ],
     "examples": [
       "Maybe, let's discuss further.",
-      "Possibly, needs more info.",
-      "Not sure yet, will update soon."
+      "Possibly, needs more info."
     ],
     "examplesByMode": {
       "normal": [
         "Maybe, let's discuss further.",
         "Possibly, needs more info.",
-        "Not sure yet, will update soon."
+        "Not sure yet, will update soon.",
+        "Unclear — need to validate with the team.",
+        "Could work; need to confirm dependencies.",
+        "Tentative yes, pending a few checks."
+      ],
+      "corporate": [
+        "Subject to stakeholder alignment.",
+        "Contingent upon resource availability.",
+        "Pending approval from the appropriate level.",
+        "Under consideration; decision timeline TBD.",
+        "Requires further analysis before commitment.",
+        "Provisional; formal approval in progress."
+      ],
+      "chaos": [
+        "Maybe. Our production environment said maybe too.",
+        "Possibly. The runbook is unclear. Very unclear.",
+        "Not sure. The person who knew left last week.",
+        "Could be. We're still finding out what we built.",
+        "Maybe yes, maybe no. The logs are inconclusive.",
+        "Tentative. Everything is tentative. Always."
+      ],
+      "sarcastic": [
+        "Maybe. Like maybe I'll check my email. Eventually.",
+        "Possibly. If the planets align and we get budget.",
+        "Not sure. Let me circle back after my 47 meetings.",
+        "Could work. In theory. Theory and practice differ.",
+        "Maybe. I'll add it to the backlog. Of maybes.",
+        "Tentative yes. The most committed answer I have."
       ]
     }
   },
@@ -317,7 +568,9 @@ export const ENDPOINTS = {
     "modes": [
       "normal",
       "corporate",
-      "devops"
+      "devops",
+      "chaos",
+      "sarcastic"
     ],
     "examples": [
       "Don't forget the daily standup at 10 AM.",
@@ -327,17 +580,42 @@ export const ENDPOINTS = {
       "normal": [
         "Don't forget the daily standup at 10 AM.",
         "Please prepare your updates before the meeting.",
-        "Meeting agenda: project status and blockers."
+        "Meeting agenda: project status and blockers.",
+        "Retro at 2 PM — bring your wins and learnings.",
+        "Sprint planning starts at 9; backlog prioritized.",
+        "Demo at 4 PM — stakeholders invited."
       ],
       "corporate": [
         "Q3 planning sync is on the calendar; pre-reads required.",
         "Stakeholder review scheduled; deck to be shared 24h prior.",
-        "All-hands reminder: please submit questions in advance."
+        "All-hands reminder: please submit questions in advance.",
+        "Board prep meeting; exec summary due by EOD.",
+        "Cross-functional alignment; RACI to be finalized.",
+        "Quarterly business review; KPIs and roadmap on deck."
       ],
       "devops": [
         "Incident retro at 2 PM; join if you were in the war room.",
         "SRE sync: focus on SLOs and error budget.",
-        "Release review at 4 PM; deploy owners expected."
+        "Release review at 4 PM; deploy owners expected.",
+        "On-call handoff at 9 AM; runbooks updated.",
+        "Infra review: capacity planning and scaling.",
+        "Postmortem for INC-420; blameless. Mostly."
+      ],
+      "chaos": [
+        "Meeting at 3. No agenda. No idea what we're discussing.",
+        "Standup: tell us what's on fire. Literally.",
+        "Retro: what went wrong. Everything. Everything went wrong.",
+        "Planning: we're planning to have a plan. Eventually.",
+        "Sync meeting: we'll sync on why we need fewer syncs.",
+        "All-hands: bring snacks. And hope."
+      ],
+      "sarcastic": [
+        "Meeting that could've been an email: 2 PM.",
+        "Standup: 15 minutes of updates no one will remember.",
+        "Planning poker: we're all voting 13. Every time.",
+        "Retro: glad we're blameless. The process isn't.",
+        "Demo: featuring the thing that almost shipped.",
+        "Sync: to sync on our lack of sync. Very meta."
       ]
     }
   },
@@ -347,7 +625,9 @@ export const ENDPOINTS = {
     "modes": [
       "normal",
       "wholesome",
-      "toxic"
+      "toxic",
+      "chaos",
+      "sarcastic"
     ],
     "examples": [
       "Keep pushing forward!",
@@ -357,17 +637,42 @@ export const ENDPOINTS = {
       "normal": [
         "Keep pushing forward!",
         "Every day is a new opportunity.",
-        "Success is not final; failure is not fatal."
+        "Success is not final; failure is not fatal.",
+        "You've got this. One deploy at a time.",
+        "Progress over perfection.",
+        "Celebrate the small wins."
       ],
       "wholesome": [
         "You've got this. One step at a time.",
         "It's okay to take a breath. Then try again.",
-        "Progress over perfection. You're doing great."
+        "Progress over perfection. You're doing great.",
+        "Your worth isn't measured by your sprint velocity.",
+        "Take care of yourself. The code can wait.",
+        "You're doing better than you think."
       ],
       "toxic": [
         "Sleep is for the weak. Deploy at 2 AM.",
         "If you're not stressed, you're not shipping.",
-        "Another day, another incident. Embrace it."
+        "Another day, another incident. Embrace it.",
+        "Hustle culture: because burnout is a badge of honor.",
+        "Vacation? What's that? We have prod.",
+        "The grind doesn't stop. Neither should you. Apparently."
+      ],
+      "chaos": [
+        "You're one deploy away from glory. Or disaster. Both?",
+        "Today might be the day everything works. Might.",
+        "Keep going. The pager will find you anyway.",
+        "Optimism: production might not crash. Today.",
+        "You got this. Probably. We believe in you. Maybe.",
+        "One more PR. What's the worst that could happen?"
+      ],
+      "sarcastic": [
+        "Rise and grind. Or rise and groan. Same energy.",
+        "Another day, another dollar. Mostly in AWS costs.",
+        "You're one meeting away from greatness. Or insanity.",
+        "Hustle! Just kidding. Take a break. Please.",
+        "Dream big. Or just dream of a green pipeline.",
+        "Seize the day. Or the deploy button. Whichever."
       ]
     }
   },
@@ -375,18 +680,56 @@ export const ENDPOINTS = {
     "name": "no",
     "description": "Negative responses",
     "modes": [
-      "normal"
+      "normal",
+      "corporate",
+      "chaos",
+      "sarcastic",
+      "security"
     ],
     "examples": [
       "No, that won't work.",
-      "I don't think that's feasible.",
-      "Negative, please reconsider."
+      "I don't think that's feasible."
     ],
     "examplesByMode": {
       "normal": [
         "No, that won't work.",
         "I don't think that's feasible.",
-        "Negative, please reconsider."
+        "Negative, please reconsider.",
+        "Not at this time.",
+        "We'll need to pass on that.",
+        "Doesn't align with current priorities."
+      ],
+      "corporate": [
+        "Out of scope for this quarter.",
+        "Requires additional stakeholder approval.",
+        "Not aligned with strategic objectives.",
+        "Resource constraints prevent this at present.",
+        "We'll need to escalate for consideration.",
+        "Outside the agreed RACI boundaries."
+      ],
+      "chaos": [
+        "No. Our production said no first.",
+        "Absolutely not. We tried. We're still recovering.",
+        "No. The last time we did that, we had an incident.",
+        "Hard no. The runbook doesn't cover that. Nothing does.",
+        "No. I don't have a good reason. Just no.",
+        "Negative. The system has spoken. It's upset."
+      ],
+      "sarcastic": [
+        "No. But thanks for the confidence.",
+        "Sure, no. Same thing, right?",
+        "No. I'd explain but I have 47 meetings.",
+        "Negative. I've seen what happens. We all have.",
+        "No. My calendar says maybe. My soul says no.",
+        "Pass. We have enough incidents. Thank you."
+      ],
+      "security": [
+        "Denied. Violates least-privilege policy.",
+        "No. That would require prod access. Hard no.",
+        "Security review says no. We listen to security.",
+        "Blocked. Credentials in plaintext? No.",
+        "Access denied. And logged. Always logged.",
+        "Negative. That config would open a hole. A big one."
       ]
     }
   },
@@ -396,7 +739,9 @@ export const ENDPOINTS = {
     "modes": [
       "normal",
       "corporate",
-      "security"
+      "security",
+      "chaos",
+      "sarcastic"
     ],
     "examples": [
       "Remote work is allowed up to 3 days a week.",
@@ -406,17 +751,42 @@ export const ENDPOINTS = {
       "normal": [
         "Remote work is allowed up to 3 days a week.",
         "Code reviews must be done before merging.",
-        "Use strong passwords and enable MFA."
+        "Use strong passwords and enable MFA.",
+        "PTO requests require 2 weeks notice.",
+        "Production changes need approval.",
+        "Documentation required for all APIs."
       ],
       "corporate": [
         "All remote work must comply with the flexible work policy.",
         "Merges require approval per the code review standard.",
-        "Access and authentication follow the identity policy."
+        "Access and authentication follow the identity policy.",
+        "PTO accrual and usage per the handbook.",
+        "Change management process applies to production.",
+        "Knowledge base must be updated for all changes."
       ],
       "security": [
         "Production access requires MFA and justification.",
         "Secrets must be stored in the vault; no env vars.",
-        "Patching SLA is 7 days for critical CVEs."
+        "Patching SLA is 7 days for critical CVEs.",
+        "No production credentials in chat or email.",
+        "Least-privilege access; request what you need.",
+        "Security review required for third-party integrations."
+      ],
+      "chaos": [
+        "Policy: we have one. It's in Confluence. Page 47.",
+        "Remote work: yes. From anywhere. Even the war room.",
+        "Code review: someone glances at it. Usually. Policy met.",
+        "MFA: required. Except when it's not. Don't ask.",
+        "Documentation: we document our lack of documentation.",
+        "Policy compliance: it's the spirit that counts. Right?"
+      ],
+      "sarcastic": [
+        "We have policies. We also have exceptions. Many exceptions.",
+        "Policy: read it. Follow it. Or don't. We're flexible.",
+        "The policy says one thing. Reality says another. Both are true.",
+        "Policies are guidelines. Strong guidelines. Very strong.",
+        "Compliance: we're 80% there. The 80% we remember.",
+        "Policy handbook: 200 pages. Key points: 3. Good luck."
       ]
     }
   },
@@ -441,7 +811,9 @@ export const ENDPOINTS = {
     "modes": [
       "normal",
       "corporate",
-      "sarcastic"
+      "sarcastic",
+      "chaos",
+      "devops"
     ],
     "examples": [
       "Remember, deadlines are firm.",
@@ -451,17 +823,42 @@ export const ENDPOINTS = {
       "normal": [
         "Remember, deadlines are firm.",
         "We have limited resources, plan accordingly.",
-        "Quality is more important than speed."
+        "Quality is more important than speed.",
+        "Scope creep has consequences. Plan for it.",
+        "Technical debt compounds. Address it.",
+        "We can't do everything. Prioritize ruthlessly."
       ],
       "corporate": [
         "Scope and timeline are fixed; adjust scope or extend timeline.",
         "Resource allocation is constrained; prioritize accordingly.",
-        "We are accountable to the committed delivery date."
+        "We are accountable to the committed delivery date.",
+        "Stakeholder expectations are set; manage them.",
+        "Budget is allocated; no additional headcount this quarter.",
+        "Committed dates are tracked at the program level."
       ],
       "sarcastic": [
         "Sure, we can do that. And I can grow wings.",
         "The deadline is when it is. Physics doesn't care.",
-        "We have two options: do it right or do it twice."
+        "We have two options: do it right or do it twice.",
+        "Adding scope doesn't add time. It never has.",
+        "The roadmap is full. Of hopes. And dreams. Not capacity.",
+        "Reality: we have 2 devs. Ask: can 2 devs do 10 things? No."
+      ],
+      "chaos": [
+        "Reality check: prod is still on fire from last week.",
+        "We have 3 hours. The scope says 3 weeks. Adjust expectations.",
+        "The runbook is outdated. So is our understanding.",
+        "Reality: we're one incident away from a very long weekend.",
+        "Capacity check: we're at 147%. Of something. Not good.",
+        "Ground truth: the docs lie. The logs lie. We're winging it."
+      ],
+      "devops": [
+        "Error budget is exhausted. No more risky deploys.",
+        "SLO breach means we pause feature work. Period.",
+        "Incident count is up. Quality gates need tightening.",
+        "Tech debt is blocking. It's not optional anymore.",
+        "On-call fatigue is real. Rotation needs rebalancing.",
+        "Reality: we're at 90% capacity. Stop saying yes."
       ]
     }
   },
@@ -471,7 +868,9 @@ export const ENDPOINTS = {
     "modes": [
       "normal",
       "corporate",
-      "security"
+      "security",
+      "chaos",
+      "sarcastic"
     ],
     "examples": [
       "High risk of delay due to dependencies.",
@@ -481,17 +880,42 @@ export const ENDPOINTS = {
       "normal": [
         "High risk of delay due to dependencies.",
         "Potential security vulnerabilities detected.",
-        "Resource constraints may impact delivery."
+        "Resource constraints may impact delivery.",
+        "Single point of failure in the architecture.",
+        "Vendor lock-in risk if we proceed.",
+        "Technical debt increasing; sustainability at risk."
       ],
       "corporate": [
         "Risk register updated; mitigation owners assigned.",
         "Delivery risk is elevated; escalation path documented.",
-        "Dependency risk has been flagged to program."
+        "Dependency risk has been flagged to program.",
+        "Risk accepted with compensating controls; documented.",
+        "Residual risk within tolerance; proceeding.",
+        "Risk assessment completed; RACI for mitigation."
       ],
       "security": [
         "Critical risk: unpatched dependency in the supply chain.",
         "Risk accepted with compensating controls; documented.",
-        "Security assessment identified medium residual risk."
+        "Security assessment identified medium residual risk.",
+        "Credential exposure risk; rotation required.",
+        "Data classification risk; encryption gap identified.",
+        "Third-party risk: vendor security posture under review."
+      ],
+      "chaos": [
+        "Risk: high. Mitigation: hope. We're hopeful.",
+        "Everything is a risk. We've normalized it.",
+        "Risk register: we have one. We don't look at it.",
+        "Single point of failure: me. I'm the SPOF. Send help.",
+        "Risk assessment: we'll do it post-incident. Classic.",
+        "Risk level: yes. Specifics: also yes. All of them."
+      ],
+      "sarcastic": [
+        "Risk: low. Our definition of low is flexible.",
+        "We've accepted the risk. We didn't have a choice.",
+        "Risk mitigation: we have a plan. It's optimistic.",
+        "Residual risk: acceptable. To whom? Unclear.",
+        "Risk register updated. With more risks. Progress?",
+        "Risk assessment: do we want to know? No. Documented anyway."
       ]
     }
   },
@@ -500,7 +924,10 @@ export const ENDPOINTS = {
     "description": "Roadmap updates and priorities",
     "modes": [
       "normal",
-      "corporate"
+      "corporate",
+      "chaos",
+      "sarcastic",
+      "devops"
     ],
     "examples": [
       "Next milestone: feature complete by end of month.",
@@ -510,12 +937,42 @@ export const ENDPOINTS = {
       "normal": [
         "Next milestone: feature complete by end of month.",
         "Focus on bug fixes in sprint 5.",
-        "Planning for Q3 initiatives underway."
+        "Planning for Q3 initiatives underway.",
+        "MVP scope locked; iterating from feedback.",
+        "Tech debt sprint scheduled for next month.",
+        "Roadmap review: bi-weekly with stakeholders."
       ],
       "corporate": [
         "Roadmap has been updated; Q3 priorities are locked.",
         "Strategic initiatives are reflected in the product roadmap.",
-        "Stakeholders have visibility into the next two quarters."
+        "Stakeholders have visibility into the next two quarters.",
+        "OKR alignment complete; roadmap reflects key results.",
+        "Investment areas prioritized per board guidance.",
+        "Portfolio roadmap published; dependencies mapped."
+      ],
+      "chaos": [
+        "Roadmap: we have one. It changes. Often. Daily.",
+        "Priorities: everything. Everything is priority.",
+        "Q3 plan: survive. That's the plan.",
+        "Roadmap updated. Again. This is the 12th version this week.",
+        "Strategic direction: forward. Mostly. We think.",
+        "Milestones: aspirational. Very aspirational."
+      ],
+      "sarcastic": [
+        "Roadmap: comprehensive. Accurate: debatable.",
+        "Priorities set. By someone. Somewhere. We're executing.",
+        "The roadmap says Q3. Reality says Q4. Or Q1. TBD.",
+        "Strategic pillars: we have four. They're all urgent.",
+        "Roadmap visibility: 100%. Confidence: 47%.",
+        "We're agile. The roadmap is a suggestion. A strong suggestion."
+      ],
+      "devops": [
+        "SLO focus next quarter; reliability over features.",
+        "Platform maturity roadmap: observability first.",
+        "Tech debt sprint; 20% capacity for infrastructure.",
+        "Migration roadmap: legacy to cloud. 18 months. Optimistic.",
+        "Automation initiative: reduce toil by 30%.",
+        "On-call improvements; runbook and alert refinement."
       ]
     }
   },
@@ -526,7 +983,8 @@ export const ENDPOINTS = {
       "normal",
       "chaos",
       "corporate",
-      "devops"
+      "devops",
+      "sarcastic"
     ],
     "examples": [
       "Rollback initiated due to critical bug.",
@@ -536,22 +994,42 @@ export const ENDPOINTS = {
       "normal": [
         "Rollback initiated due to critical bug.",
         "Previous stable version restored.",
-        "Rollback completed successfully."
+        "Rollback completed successfully.",
+        "Reverting to last known good release.",
+        "Rollback in progress; ETA 10 minutes.",
+        "Traffic shifted back; monitoring for stability."
       ],
       "chaos": [
         "Rolling back. Again. Hold my coffee.",
         "We're going back. No one say 'I told you so.'",
-        "Rollback in progress. Someone check the runbook."
+        "Rollback in progress. Someone check the runbook.",
+        "Reverting. The rollback might need a rollback.",
+        "Going back in time. Wish us luck.",
+        "Rollback initiated. Morale: also rolling back."
       ],
       "corporate": [
         "A rollback has been executed per the change process.",
         "Previous known-good release has been restored.",
-        "Post-rollback review will be scheduled within 48 hours."
+        "Post-rollback review will be scheduled within 48 hours.",
+        "Rollback completed; stakeholders notified.",
+        "Change reversal documented; RCA to follow.",
+        "Service restored to pre-incident state; impact logged."
       ],
       "devops": [
         "Rollback triggered; traffic shifting to previous version.",
         "Canary rollback complete; monitoring stable.",
-        "Rollback successful; incident ticket updated."
+        "Rollback successful; incident ticket updated.",
+        "ArgoCD revert applied; previous manifest active.",
+        "Blue-green switch reverted; old stack receiving traffic.",
+        "Rollback complete; pipeline artifacts retained for analysis."
+      ],
+      "sarcastic": [
+        "Rollback: the feature we use most often.",
+        "We've rolled back. The rollback. Rollback-ception.",
+        "Previous version restored. It had bugs too. Different bugs.",
+        "Rollback successful. Confidence: medium. Hope: high.",
+        "We're back. To the version that caused the last rollback.",
+        "Rollback complete. Documenting lessons learned. Again."
       ]
     }
   },
@@ -561,7 +1039,9 @@ export const ENDPOINTS = {
     "modes": [
       "normal",
       "corporate",
-      "devops"
+      "devops",
+      "chaos",
+      "sarcastic"
     ],
     "examples": [
       "What did you do yesterday?",
@@ -571,17 +1051,42 @@ export const ENDPOINTS = {
       "normal": [
         "What did you do yesterday?",
         "What will you do today?",
-        "Any blockers or issues?"
+        "Any blockers or issues?",
+        "Progress on the current sprint?",
+        "Anything need escalation?",
+        "Wins and learnings from the week?"
       ],
       "corporate": [
         "Please share progress against your committed objectives.",
         "Highlight any risks or dependencies for the program.",
-        "Updates should be concise; details in the tracker."
+        "Updates should be concise; details in the tracker.",
+        "Status against the sprint goals?",
+        "Any cross-functional blockers to raise?",
+        "Key accomplishments and priorities for today."
       ],
       "devops": [
         "What shipped? What's on fire? What's next?",
         "Any incidents or near-misses to call out?",
-        "SLO status and error budget for the week?"
+        "SLO status and error budget for the week?",
+        "On-call handoff: anything to know?",
+        "Deployments planned? Rollbacks in progress?",
+        "Platform health: any anomalies or tech debt wins?"
+      ],
+      "chaos": [
+        "What broke? What's still broken? What will break?",
+        "Any incidents? All of them? Okay, highlights.",
+        "Status: surviving. Blockers: existence. Next: hope.",
+        "What did you do? Put out fires. Will do? More fires.",
+        "SLO: we have one? Error budget: negative? Great.",
+        "Standup in 30 seconds: things are bad. Questions?"
+      ],
+      "sarcastic": [
+        "Yesterday: meetings. Today: meetings. Blockers: meetings.",
+        "Progress: I showed up. That counts. Right?",
+        "Status: the same as yesterday. And the day before.",
+        "What I did: context switched. What I'll do: context switch.",
+        "Blockers: the sprint. The scope. Reality.",
+        "Updates: we're agile. Very agile. Constantly pivoting."
       ]
     }
   },
@@ -591,7 +1096,9 @@ export const ENDPOINTS = {
     "modes": [
       "normal",
       "chaos",
-      "sarcastic"
+      "sarcastic",
+      "corporate",
+      "devops"
     ],
     "examples": [
       "Everything is on fire but this is fine.",
@@ -601,17 +1108,42 @@ export const ENDPOINTS = {
       "normal": [
         "Everything is on fire but this is fine.",
         "Keep calm and carry on.",
-        "Ignoring problems won't make them go away."
+        "Ignoring problems won't make them go away.",
+        "This is fine. We're fine. Probably.",
+        "Smile through the chaos.",
+        "Optimism: the dashboard is red but our spirits are high."
       ],
       "chaos": [
         "The dashboard is red. I'm choosing to see it as festive.",
         "Yes, prod is down. No, I'm not panicking. Much.",
-        "This is fine. We're fine. Everything is fine."
+        "This is fine. We're fine. Everything is fine.",
+        "The alerts are screaming. I'm choosing to hear music.",
+        "Five simultaneous incidents. This is fine. Totally fine.",
+        "The runbook doesn't cover this. We're improvising. It's fine."
       ],
       "sarcastic": [
         "Clearly this is a feature, not a bug.",
         "We'll fix it in the next sprint. So never.",
-        "I've decided to be optimistic. The bar is low."
+        "I've decided to be optimistic. The bar is low.",
+        "This is fine. My therapist says denial is a strategy.",
+        "Everything's under control. Control is a spectrum.",
+        "Fine is relative. We're relatively fine. Ish."
+      ],
+      "corporate": [
+        "We're experiencing expected variance. This is fine.",
+        "Stakeholders have been notified. We're fine.",
+        "The incident is contained. To the entire system. Fine.",
+        "Post-incident review scheduled. All fine.",
+        "Business continuity maintained. Sort of. Fine.",
+        "We have a plan. The plan is to remain calm. Fine."
+      ],
+      "devops": [
+        "Error rate: 47%. This is fine. We're fine.",
+        "Pager went off. Again. This is fine.",
+        "Rollback in progress. For the third time. Fine.",
+        "SLO: breached. Error budget: negative. This is fine.",
+        "On-call for 72 hours. This is fine. Send coffee.",
+        "The pipeline is red. The pipeline is always red. Fine."
       ]
     }
   },
@@ -619,18 +1151,56 @@ export const ENDPOINTS = {
     "name": "yes",
     "description": "Affirmative responses",
     "modes": [
-      "normal"
+      "normal",
+      "corporate",
+      "chaos",
+      "sarcastic",
+      "devops"
     ],
     "examples": [
       "Yes, let's proceed.",
-      "Absolutely, good idea.",
-      "Confirmed, moving forward."
+      "Absolutely, good idea."
     ],
     "examplesByMode": {
       "normal": [
         "Yes, let's proceed.",
         "Absolutely, good idea.",
-        "Confirmed, moving forward."
+        "Confirmed, moving forward.",
+        "Approved. Go ahead.",
+        "Sounds good. Proceed.",
+        "Affirmative. Let's do it."
+      ],
+      "corporate": [
+        "Approved per governance process.",
+        "Stakeholder sign-off received. Proceed.",
+        "Within scope; authorized to proceed.",
+        "Compliance confirmed. Green light.",
+        "Resource allocation approved. Execute.",
+        "Change advisory approved. Proceed as planned."
+      ],
+      "chaos": [
+        "Yes. We'll regret this. But yes.",
+        "Absolutely. What's the worst that could happen?",
+        "Confirmed. Hope the rollback works.",
+        "Yes. Sending prayers to the deploy gods.",
+        "Proceed. I'll be in the war room. Emotionally.",
+        "Affirmative. The pager is charged. I'm not."
+      ],
+      "sarcastic": [
+        "Yes. I have concerns. But yes.",
+        "Absolutely. It's not like we have a choice.",
+        "Confirmed. My calendar already said yes. I'm just catching up.",
+        "Approved. The backlog said so. Who am I to argue?",
+        "Sounds good. I'll document my objections elsewhere.",
+        "Affirmative. We're all going to pretend this was the plan."
+      ],
+      "devops": [
+        "Yes. Pipeline is green. Ship it.",
+        "Approved. Rollback plan in place. Go.",
+        "Confirmed. Monitoring dashboards ready.",
+        "Proceed. Canary at 5%. Watch the metrics.",
+        "Go for deploy. Runbook updated. Good luck.",
+        "Affirmative. Infra ready. You're cleared for takeoff."
       ]
     }
   }

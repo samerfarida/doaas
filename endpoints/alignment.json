@@ -1,7 +1,7 @@
 {
   "name": "alignment",
   "description": "Team alignment messages",
-  "modes": ["normal", "corporate"],
+  "modes": ["normal", "corporate", "chaos", "sarcastic"],
   "examples": [
     "Let's align on project goals this week.",
     "Ensure everyone understands the roadmap."
@@ -10,12 +10,34 @@
     "normal": [
       "Let's align on project goals this week.",
       "Ensure everyone understands the roadmap.",
-      "Sync up with stakeholders regularly."
+      "Sync up with stakeholders regularly.",
+      "Everyone on the same page? Great, let's build.",
+      "Alignment first, execution second.",
+      "Quick sync before we go heads-down."
     ],
     "corporate": [
       "We need to ensure strategic alignment across Q3 objectives.",
       "Stakeholder alignment is critical for delivery.",
-      "Let's sync our KPIs with the broader org."
+      "Let's sync our KPIs with the broader org.",
+      "Cross-functional alignment meeting scheduled.",
+      "Executive alignment achieved; proceed with initiative.",
+      "Ensure RACI matrix alignment before kickoff."
+    ],
+    "chaos": [
+      "We're aligned. On chaos. Everyone good with that?",
+      "Alignment achieved: we're all confused together.",
+      "Synced. No one knows what we're building. Perfect.",
+      "Alignment complete. Three different interpretations. Ship it.",
+      "We aligned in the hallway. Or was that a fever dream?",
+      "Alignment: everyone agreed to disagree. Moving on."
+    ],
+    "sarcastic": [
+      "Let's align. Again. For the 47th time this sprint.",
+      "Strategic alignment: my calendar says yes, my soul says no.",
+      "We're aligned. I have no idea what we aligned on.",
+      "Alignment meeting: 2 hours, zero decisions. Success.",
+      "Fully aligned. My interpretation is the right one.",
+      "Synergy achieved. Synergy is still not a real word."
     ]
   }
 }

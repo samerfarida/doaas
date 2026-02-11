@@ -1,7 +1,7 @@
 {
   "name": "risk",
   "description": "Risk assessment statements",
-  "modes": ["normal", "corporate", "security"],
+  "modes": ["normal", "corporate", "security", "chaos", "sarcastic"],
   "examples": [
     "High risk of delay due to dependencies.",
     "Potential security vulnerabilities detected."
@@ -10,17 +10,42 @@
     "normal": [
       "High risk of delay due to dependencies.",
       "Potential security vulnerabilities detected.",
-      "Resource constraints may impact delivery."
+      "Resource constraints may impact delivery.",
+      "Single point of failure in the architecture.",
+      "Vendor lock-in risk if we proceed.",
+      "Technical debt increasing; sustainability at risk."
     ],
     "corporate": [
       "Risk register updated; mitigation owners assigned.",
       "Delivery risk is elevated; escalation path documented.",
-      "Dependency risk has been flagged to program."
+      "Dependency risk has been flagged to program.",
+      "Risk accepted with compensating controls; documented.",
+      "Residual risk within tolerance; proceeding.",
+      "Risk assessment completed; RACI for mitigation."
     ],
     "security": [
       "Critical risk: unpatched dependency in the supply chain.",
       "Risk accepted with compensating controls; documented.",
-      "Security assessment identified medium residual risk."
+      "Security assessment identified medium residual risk.",
+      "Credential exposure risk; rotation required.",
+      "Data classification risk; encryption gap identified.",
+      "Third-party risk: vendor security posture under review."
+    ],
+    "chaos": [
+      "Risk: high. Mitigation: hope. We're hopeful.",
+      "Everything is a risk. We've normalized it.",
+      "Risk register: we have one. We don't look at it.",
+      "Single point of failure: me. I'm the SPOF. Send help.",
+      "Risk assessment: we'll do it post-incident. Classic.",
+      "Risk level: yes. Specifics: also yes. All of them."
+    ],
+    "sarcastic": [
+      "Risk: low. Our definition of low is flexible.",
+      "We've accepted the risk. We didn't have a choice.",
+      "Risk mitigation: we have a plan. It's optimistic.",
+      "Residual risk: acceptable. To whom? Unclear.",
+      "Risk register updated. With more risks. Progress?",
+      "Risk assessment: do we want to know? No. Documented anyway."
     ]
   }
 }

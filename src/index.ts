@@ -65,13 +65,19 @@ export async function handleRequest(request: Request): Promise<Response> {
   const format = (url.searchParams.get("format") || "json") as Format;
 
   if (pathname === "" || pathname === "help") {
-    const endpointsList = Object.values(ENDPOINTS).map((e) => ({
-      name: e.name,
-      description: e.description,
-      path: `/${e.name}`,
-      exampleCount: e.examples.length,
-      modes: e.modes,
-    }));
+    const endpointsList = Object.values(ENDPOINTS).map((e) => {
+      const totalExamples =
+        e.examplesByMode && Object.keys(e.examplesByMode).length > 0
+          ? Object.values(e.examplesByMode).reduce((sum, arr) => sum + (arr?.length ?? 0), 0)
+          : e.examples.length;
+      return {
+        name: e.name,
+        description: e.description,
+        path: `/${e.name}`,
+        exampleCount: totalExamples,
+        modes: e.modes,
+      };
+    });
 
     const helpJson = {
       service: "DOaaS",

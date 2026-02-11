@@ -1,7 +1,7 @@
 {
   "name": "policy",
   "description": "Company policy statements",
-  "modes": ["normal", "corporate", "security"],
+  "modes": ["normal", "corporate", "security", "chaos", "sarcastic"],
   "examples": [
     "Remote work is allowed up to 3 days a week.",
     "Code reviews must be done before merging."
@@ -10,17 +10,42 @@
     "normal": [
       "Remote work is allowed up to 3 days a week.",
       "Code reviews must be done before merging.",
-      "Use strong passwords and enable MFA."
+      "Use strong passwords and enable MFA.",
+      "PTO requests require 2 weeks notice.",
+      "Production changes need approval.",
+      "Documentation required for all APIs."
     ],
     "corporate": [
       "All remote work must comply with the flexible work policy.",
       "Merges require approval per the code review standard.",
-      "Access and authentication follow the identity policy."
+      "Access and authentication follow the identity policy.",
+      "PTO accrual and usage per the handbook.",
+      "Change management process applies to production.",
+      "Knowledge base must be updated for all changes."
     ],
     "security": [
       "Production access requires MFA and justification.",
       "Secrets must be stored in the vault; no env vars.",
-      "Patching SLA is 7 days for critical CVEs."
+      "Patching SLA is 7 days for critical CVEs.",
+      "No production credentials in chat or email.",
+      "Least-privilege access; request what you need.",
+      "Security review required for third-party integrations."
+    ],
+    "chaos": [
+      "Policy: we have one. It's in Confluence. Page 47.",
+      "Remote work: yes. From anywhere. Even the war room.",
+      "Code review: someone glances at it. Usually. Policy met.",
+      "MFA: required. Except when it's not. Don't ask.",
+      "Documentation: we document our lack of documentation.",
+      "Policy compliance: it's the spirit that counts. Right?"
+    ],
+    "sarcastic": [
+      "We have policies. We also have exceptions. Many exceptions.",
+      "Policy: read it. Follow it. Or don't. We're flexible.",
+      "The policy says one thing. Reality says another. Both are true.",
+      "Policies are guidelines. Strong guidelines. Very strong.",
+      "Compliance: we're 80% there. The 80% we remember.",
+      "Policy handbook: 200 pages. Key points: 3. Good luck."
     ]
   }
 }

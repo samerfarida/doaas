@@ -1,28 +1,48 @@
 {
   "name": "rollback",
   "description": "Rollback instructions and alerts",
-  "modes": ["normal", "chaos", "corporate", "devops"],
+  "modes": ["normal", "chaos", "corporate", "devops", "sarcastic"],
   "examples": ["Rollback initiated due to critical bug.", "Previous stable version restored."],
   "examplesByMode": {
     "normal": [
       "Rollback initiated due to critical bug.",
       "Previous stable version restored.",
-      "Rollback completed successfully."
+      "Rollback completed successfully.",
+      "Reverting to last known good release.",
+      "Rollback in progress; ETA 10 minutes.",
+      "Traffic shifted back; monitoring for stability."
     ],
     "chaos": [
       "Rolling back. Again. Hold my coffee.",
       "We're going back. No one say 'I told you so.'",
-      "Rollback in progress. Someone check the runbook."
+      "Rollback in progress. Someone check the runbook.",
+      "Reverting. The rollback might need a rollback.",
+      "Going back in time. Wish us luck.",
+      "Rollback initiated. Morale: also rolling back."
     ],
     "corporate": [
       "A rollback has been executed per the change process.",
       "Previous known-good release has been restored.",
-      "Post-rollback review will be scheduled within 48 hours."
+      "Post-rollback review will be scheduled within 48 hours.",
+      "Rollback completed; stakeholders notified.",
+      "Change reversal documented; RCA to follow.",
+      "Service restored to pre-incident state; impact logged."
     ],
     "devops": [
       "Rollback triggered; traffic shifting to previous version.",
       "Canary rollback complete; monitoring stable.",
-      "Rollback successful; incident ticket updated."
+      "Rollback successful; incident ticket updated.",
+      "ArgoCD revert applied; previous manifest active.",
+      "Blue-green switch reverted; old stack receiving traffic.",
+      "Rollback complete; pipeline artifacts retained for analysis."
+    ],
+    "sarcastic": [
+      "Rollback: the feature we use most often.",
+      "We've rolled back. The rollback. Rollback-ception.",
+      "Previous version restored. It had bugs too. Different bugs.",
+      "Rollback successful. Confidence: medium. Hope: high.",
+      "We're back. To the version that caused the last rollback.",
+      "Rollback complete. Documenting lessons learned. Again."
     ]
   }
 }

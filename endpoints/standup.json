@@ -1,19 +1,48 @@
 {
   "name": "standup",
   "description": "Daily standup prompts and notes",
-  "modes": ["normal", "corporate", "devops"],
+  "modes": ["normal", "corporate", "devops", "chaos", "sarcastic"],
   "examples": ["What did you do yesterday?", "What will you do today?"],
   "examplesByMode": {
-    "normal": ["What did you do yesterday?", "What will you do today?", "Any blockers or issues?"],
+    "normal": [
+      "What did you do yesterday?",
+      "What will you do today?",
+      "Any blockers or issues?",
+      "Progress on the current sprint?",
+      "Anything need escalation?",
+      "Wins and learnings from the week?"
+    ],
     "corporate": [
       "Please share progress against your committed objectives.",
       "Highlight any risks or dependencies for the program.",
-      "Updates should be concise; details in the tracker."
+      "Updates should be concise; details in the tracker.",
+      "Status against the sprint goals?",
+      "Any cross-functional blockers to raise?",
+      "Key accomplishments and priorities for today."
     ],
     "devops": [
       "What shipped? What's on fire? What's next?",
       "Any incidents or near-misses to call out?",
-      "SLO status and error budget for the week?"
+      "SLO status and error budget for the week?",
+      "On-call handoff: anything to know?",
+      "Deployments planned? Rollbacks in progress?",
+      "Platform health: any anomalies or tech debt wins?"
+    ],
+    "chaos": [
+      "What broke? What's still broken? What will break?",
+      "Any incidents? All of them? Okay, highlights.",
+      "Status: surviving. Blockers: existence. Next: hope.",
+      "What did you do? Put out fires. Will do? More fires.",
+      "SLO: we have one? Error budget: negative? Great.",
+      "Standup in 30 seconds: things are bad. Questions?"
+    ],
+    "sarcastic": [
+      "Yesterday: meetings. Today: meetings. Blockers: meetings.",
+      "Progress: I showed up. That counts. Right?",
+      "Status: the same as yesterday. And the day before.",
+      "What I did: context switched. What I'll do: context switch.",
+      "Blockers: the sprint. The scope. Reality.",
+      "Updates: we're agile. Very agile. Constantly pivoting."
     ]
   }
 }

@@ -1,17 +1,40 @@
 {
   "name": "maybe",
   "description": "Uncertain or tentative responses",
-  "modes": ["normal"],
-  "examples": [
-    "Maybe, let's discuss further.",
-    "Possibly, needs more info.",
-    "Not sure yet, will update soon."
-  ],
+  "modes": ["normal", "corporate", "chaos", "sarcastic"],
+  "examples": ["Maybe, let's discuss further.", "Possibly, needs more info."],
   "examplesByMode": {
     "normal": [
       "Maybe, let's discuss further.",
       "Possibly, needs more info.",
-      "Not sure yet, will update soon."
+      "Not sure yet, will update soon.",
+      "Unclear — need to validate with the team.",
+      "Could work; need to confirm dependencies.",
+      "Tentative yes, pending a few checks."
+    ],
+    "corporate": [
+      "Subject to stakeholder alignment.",
+      "Contingent upon resource availability.",
+      "Pending approval from the appropriate level.",
+      "Under consideration; decision timeline TBD.",
+      "Requires further analysis before commitment.",
+      "Provisional; formal approval in progress."
+    ],
+    "chaos": [
+      "Maybe. Our production environment said maybe too.",
+      "Possibly. The runbook is unclear. Very unclear.",
+      "Not sure. The person who knew left last week.",
+      "Could be. We're still finding out what we built.",
+      "Maybe yes, maybe no. The logs are inconclusive.",
+      "Tentative. Everything is tentative. Always."
+    ],
+    "sarcastic": [
+      "Maybe. Like maybe I'll check my email. Eventually.",
+      "Possibly. If the planets align and we get budget.",
+      "Not sure. Let me circle back after my 47 meetings.",
+      "Could work. In theory. Theory and practice differ.",
+      "Maybe. I'll add it to the backlog. Of maybes.",
+      "Tentative yes. The most committed answer I have."
     ]
   }
 }

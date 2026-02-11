@@ -1,7 +1,7 @@
 {
   "name": "compliance",
   "description": "Compliance reminders and checks",
-  "modes": ["normal", "corporate", "security"],
+  "modes": ["normal", "corporate", "security", "chaos", "sarcastic"],
   "examples": [
     "Ensure GDPR compliance in data handling.",
     "Audit logs must be retained for 90 days."
@@ -10,17 +10,42 @@
     "normal": [
       "Ensure GDPR compliance in data handling.",
       "Audit logs must be retained for 90 days.",
-      "Follow company policy for access control."
+      "Follow company policy for access control.",
+      "Data retention policy: 7 years for financial records.",
+      "PII must be encrypted at rest and in transit.",
+      "Compliance training due by end of quarter."
     ],
     "corporate": [
       "All changes must follow the compliance framework.",
       "Document retention policy applies to this dataset.",
-      "Regulatory requirements are documented in the handbook."
+      "Regulatory requirements are documented in the handbook.",
+      "SOC 2 controls must be evidenced for this change.",
+      "Compliance attestation required before go-live.",
+      "Risk assessment completed; controls documented."
     ],
     "security": [
       "Access must comply with least-privilege policy.",
       "Encryption at rest and in transit is mandatory.",
-      "MFA required for production access."
+      "MFA required for production access.",
+      "Secrets rotation every 90 days per policy.",
+      "No production credentials in code or chat.",
+      "Security review required for all data exports."
+    ],
+    "chaos": [
+      "Compliance: we have a checklist. Somewhere.",
+      "GDPR? We have a privacy policy. It's 47 pages. Good luck.",
+      "Audit logs: definitely logging something. Probably.",
+      "We're compliant. The auditors haven't found us yet.",
+      "Retention policy: we keep everything forever. Oops.",
+      "Compliance is a state of mind. And also the law. Mostly the law."
+    ],
+    "sarcastic": [
+      "Fully compliant. Our documentation says so.",
+      "We passed the compliance quiz. With a 62%.",
+      "Yes, we're compliant. No, you can't see the evidence.",
+      "Compliance: checked. Sanity: optional.",
+      "All policies followed. The important ones. Mostly.",
+      "Compliant since 2019. We think. The date might be wrong."
     ]
   }
 }

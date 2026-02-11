@@ -1,7 +1,7 @@
 {
   "name": "meeting",
   "description": "Meeting notes or reminders",
-  "modes": ["normal", "corporate", "devops"],
+  "modes": ["normal", "corporate", "devops", "chaos", "sarcastic"],
   "examples": [
     "Don't forget the daily standup at 10 AM.",
     "Please prepare your updates before the meeting."
@@ -10,17 +10,42 @@
     "normal": [
       "Don't forget the daily standup at 10 AM.",
       "Please prepare your updates before the meeting.",
-      "Meeting agenda: project status and blockers."
+      "Meeting agenda: project status and blockers.",
+      "Retro at 2 PM — bring your wins and learnings.",
+      "Sprint planning starts at 9; backlog prioritized.",
+      "Demo at 4 PM — stakeholders invited."
     ],
     "corporate": [
       "Q3 planning sync is on the calendar; pre-reads required.",
       "Stakeholder review scheduled; deck to be shared 24h prior.",
-      "All-hands reminder: please submit questions in advance."
+      "All-hands reminder: please submit questions in advance.",
+      "Board prep meeting; exec summary due by EOD.",
+      "Cross-functional alignment; RACI to be finalized.",
+      "Quarterly business review; KPIs and roadmap on deck."
     ],
     "devops": [
       "Incident retro at 2 PM; join if you were in the war room.",
       "SRE sync: focus on SLOs and error budget.",
-      "Release review at 4 PM; deploy owners expected."
+      "Release review at 4 PM; deploy owners expected.",
+      "On-call handoff at 9 AM; runbooks updated.",
+      "Infra review: capacity planning and scaling.",
+      "Postmortem for INC-420; blameless. Mostly."
+    ],
+    "chaos": [
+      "Meeting at 3. No agenda. No idea what we're discussing.",
+      "Standup: tell us what's on fire. Literally.",
+      "Retro: what went wrong. Everything. Everything went wrong.",
+      "Planning: we're planning to have a plan. Eventually.",
+      "Sync meeting: we'll sync on why we need fewer syncs.",
+      "All-hands: bring snacks. And hope."
+    ],
+    "sarcastic": [
+      "Meeting that could've been an email: 2 PM.",
+      "Standup: 15 minutes of updates no one will remember.",
+      "Planning poker: we're all voting 13. Every time.",
+      "Retro: glad we're blameless. The process isn't.",
+      "Demo: featuring the thing that almost shipped.",
+      "Sync: to sync on our lack of sync. Very meta."
     ]
   }
 }

@@ -1,19 +1,48 @@
 {
   "name": "excuse",
   "description": "Common excuses for missing deadlines or meetings",
-  "modes": ["normal", "chaos", "sarcastic"],
+  "modes": ["normal", "chaos", "sarcastic", "corporate", "toxic"],
   "examples": ["I was stuck in traffic.", "My internet was down."],
   "examplesByMode": {
-    "normal": ["I was stuck in traffic.", "My internet was down.", "I had a family emergency."],
+    "normal": [
+      "I was stuck in traffic.",
+      "My internet was down.",
+      "I had a family emergency.",
+      "Calendar conflict I didn't see.",
+      "Meeting ran over; couldn't make it.",
+      "Got pulled into an urgent production issue."
+    ],
     "chaos": [
       "A squirrel ate through the fiber line.",
       "My laptop decided to install updates during the call.",
-      "The cat sat on the keyboard and closed everything."
+      "The cat sat on the keyboard and closed everything.",
+      "A bird flew into the power substation. Seriously.",
+      "My keyboard developed a mind of its own.",
+      "The WiFi is haunted. I have evidence."
     ],
     "sarcastic": [
       "I was busy aligning synergies.",
       "My calendar had a conflict with reality.",
-      "I thought it was optional. Like sleep."
+      "I thought it was optional. Like sleep.",
+      "I had a conflict with my other meeting about this meeting.",
+      "I was in a meeting about reducing meetings.",
+      "My OOO said I was out. I was in. The OOO lied."
+    ],
+    "corporate": [
+      "I had a conflicting stakeholder engagement.",
+      "Prior commitment to another initiative.",
+      "My calendar sync had a delay.",
+      "I was in back-to-backs; couldn't transition in time.",
+      "Double-booked; prioritizing per the RACI.",
+      "Resource allocation conflict; escalating."
+    ],
+    "toxic": [
+      "Didn't think my presence was required.",
+      "That meeting could've been an email. So I treated it like one.",
+      "I had more important things to do.",
+      "You didn't send a calendar invite. My fault?",
+      "I prioritize deliverables over meetings.",
+      "Sorry, I block 2–4 for deep work. Your meeting lost."
     ]
   }
 }
