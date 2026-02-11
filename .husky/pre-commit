@@ -1,0 +1,2 @@
+npm audit --audit-level=high
+npx lint-staged

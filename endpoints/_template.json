@@ -1,0 +1,9 @@
+{
+  "name": "my-endpoint",
+  "description": "Brief description of what this endpoint provides",
+  "modes": ["normal"],
+  "examples": ["Example message one", "Example message two", "Example message three"],
+  "examplesByMode": {
+    "normal": ["Example message one", "Example message two", "Example message three"]
+  }
+}

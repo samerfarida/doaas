@@ -1,0 +1,38 @@
+name: New endpoint
+description: Propose a new API endpoint
+title: "[Endpoint] "
+labels: ["endpoint"]
+body:
+  - type: input
+    id: endpoint_id
+    attributes:
+      label: Endpoint ID
+      description: Lowercase slug for the URL path (e.g. celebrate, sorry)
+      placeholder: my-endpoint
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Display name
+      description: Human-readable name for the endpoint
+      placeholder: My Endpoint
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Short description of what this endpoint is for
+      placeholder: One-line description
+  - type: textarea
+    id: messages
+    attributes:
+      label: Messages (one per line)
+      description: List of messages to return randomly. One per line.
+      placeholder: |
+        First message
+        Second message
+        Third message
+    validations:
+      required: true

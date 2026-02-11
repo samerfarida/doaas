@@ -1,0 +1,19 @@
+{
+  "name": "standup",
+  "description": "Daily standup prompts and notes",
+  "modes": ["normal", "corporate", "devops"],
+  "examples": ["What did you do yesterday?", "What will you do today?"],
+  "examplesByMode": {
+    "normal": ["What did you do yesterday?", "What will you do today?", "Any blockers or issues?"],
+    "corporate": [
+      "Please share progress against your committed objectives.",
+      "Highlight any risks or dependencies for the program.",
+      "Updates should be concise; details in the tracker."
+    ],
+    "devops": [
+      "What shipped? What's on fire? What's next?",
+      "Any incidents or near-misses to call out?",
+      "SLO status and error budget for the week?"
+    ]
+  }
+}

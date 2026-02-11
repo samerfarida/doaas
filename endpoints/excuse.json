@@ -1,0 +1,19 @@
+{
+  "name": "excuse",
+  "description": "Common excuses for missing deadlines or meetings",
+  "modes": ["normal", "chaos", "sarcastic"],
+  "examples": ["I was stuck in traffic.", "My internet was down."],
+  "examplesByMode": {
+    "normal": ["I was stuck in traffic.", "My internet was down.", "I had a family emergency."],
+    "chaos": [
+      "A squirrel ate through the fiber line.",
+      "My laptop decided to install updates during the call.",
+      "The cat sat on the keyboard and closed everything."
+    ],
+    "sarcastic": [
+      "I was busy aligning synergies.",
+      "My calendar had a conflict with reality.",
+      "I thought it was optional. Like sleep."
+    ]
+  }
+}

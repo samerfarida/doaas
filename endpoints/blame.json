@@ -1,0 +1,32 @@
+{
+  "name": "blame",
+  "description": "Who/what caused the problem",
+  "modes": ["normal", "chaos", "corporate", "security", "toxic", "sarcastic"],
+  "examples": [
+    "It's not my fault, it was the network!",
+    "Blame the last person who touched the code."
+  ],
+  "examplesByMode": {
+    "normal": [
+      "It's DNS. Again.",
+      "Caching lied to us.",
+      "It's not my fault, it was the network!",
+      "Blame the last person who touched the code."
+    ],
+    "chaos": [
+      "Cosmic rays hit the load balancer. Good luck.",
+      "Mercury is in retrograde. Blame physics.",
+      "The server is down because someone forgot to pay the bill."
+    ],
+    "corporate": [
+      "This appears to be an upstream dependency issue.",
+      "Unexpected vendor behavior impacted delivery."
+    ],
+    "security": ["Misconfigured IAM did it. As usual.", "An expired certificate chose violence."],
+    "toxic": ["Obviously the last person who touched it.", "Probably the intern. Or you."],
+    "sarcastic": [
+      "Surely not the person who merged without testing.",
+      "Must be the cloud. It's always the cloud."
+    ]
+  }
+}

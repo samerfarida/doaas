@@ -1,0 +1,26 @@
+{
+  "name": "audit",
+  "description": "Audit reminders and results",
+  "modes": ["normal", "corporate", "security"],
+  "examples": [
+    "Audit completed with no critical findings.",
+    "Next audit scheduled for next quarter."
+  ],
+  "examplesByMode": {
+    "normal": [
+      "Audit completed with no critical findings.",
+      "Next audit scheduled for next quarter.",
+      "Please review audit logs for anomalies."
+    ],
+    "corporate": [
+      "Internal audit has been completed; report available in the portal.",
+      "Compliance audit cycle concludes end of month.",
+      "Audit findings will be presented to the board."
+    ],
+    "security": [
+      "Security audit identified no critical vulnerabilities.",
+      "Pen test results are in; remediation tracked.",
+      "Audit logs retained per policy; no unauthorized access."
+    ]
+  }
+}

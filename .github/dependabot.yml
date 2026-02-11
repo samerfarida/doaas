@@ -1,0 +1,41 @@
+# Dependabot configuration for DOaaS
+# See: https://docs.github.com/github/administering-a-repository/keeping-your-dependencies-updated-automatically
+
+version: 2
+updates:
+  # Node.js / npm dependencies
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "America/Detroit"
+    open-pull-requests-limit: 10
+    assignees:
+      - "samerfarida"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "javascript"
+
+  # GitHub Actions dependencies
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "America/Detroit"
+    open-pull-requests-limit: 5
+    assignees:
+      - "samerfarida"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "github-actions"
+

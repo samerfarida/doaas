@@ -1,0 +1,18 @@
+{
+  "name": "burnout",
+  "description": "Burnout awareness and advice",
+  "modes": ["normal", "wholesome"],
+  "examples": ["Remember to take breaks and rest.", "It's okay to ask for help."],
+  "examplesByMode": {
+    "normal": [
+      "Remember to take breaks and rest.",
+      "It's okay to ask for help.",
+      "Prevent burnout by managing workload."
+    ],
+    "wholesome": [
+      "You're doing great. It's okay to step back.",
+      "Your health matters more than the sprint.",
+      "Take that PTO. The code will still be here."
+    ]
+  }
+}

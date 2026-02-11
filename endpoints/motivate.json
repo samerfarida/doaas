@@ -1,0 +1,23 @@
+{
+  "name": "motivate",
+  "description": "Motivational quotes and phrases",
+  "modes": ["normal", "wholesome", "toxic"],
+  "examples": ["Keep pushing forward!", "Every day is a new opportunity."],
+  "examplesByMode": {
+    "normal": [
+      "Keep pushing forward!",
+      "Every day is a new opportunity.",
+      "Success is not final; failure is not fatal."
+    ],
+    "wholesome": [
+      "You've got this. One step at a time.",
+      "It's okay to take a breath. Then try again.",
+      "Progress over perfection. You're doing great."
+    ],
+    "toxic": [
+      "Sleep is for the weak. Deploy at 2 AM.",
+      "If you're not stressed, you're not shipping.",
+      "Another day, another incident. Embrace it."
+    ]
+  }
+}

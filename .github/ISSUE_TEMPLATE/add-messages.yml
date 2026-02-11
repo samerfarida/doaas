@@ -1,0 +1,44 @@
+name: Add messages to endpoint
+description: Add more messages to an existing endpoint
+title: "[Messages] "
+labels: ["messages"]
+body:
+  - type: dropdown
+    id: endpoint
+    attributes:
+      label: Endpoint
+      description: Which endpoint to add messages to
+      options:
+        - blame
+        - excuse
+        - motivate
+        - realitycheck
+        - meeting
+        - risk
+        - compliance
+        - policy
+        - audit
+        - deploy
+        - rollback
+        - incident
+        - standup
+        - alignment
+        - roadmap
+        - lgtm
+        - yes
+        - no
+        - maybe
+        - burnout
+        - thisisfine
+    validations:
+      required: true
+  - type: textarea
+    id: messages
+    attributes:
+      label: New messages (one per line)
+      description: Messages to add. One per line.
+      placeholder: |
+        New message one
+        New message two
+    validations:
+      required: true

@@ -1,0 +1,28 @@
+{
+  "name": "deploy",
+  "description": "Deployment messages and instructions",
+  "modes": ["normal", "chaos", "corporate", "devops"],
+  "examples": ["Deployment started at 3 PM UTC.", "Rollback plan is ready if issues arise."],
+  "examplesByMode": {
+    "normal": [
+      "Deployment started at 3 PM UTC.",
+      "Rollback plan is ready if issues arise.",
+      "Deployment successful with zero downtime."
+    ],
+    "chaos": [
+      "Deploying to prod. See you on the other side.",
+      "Pushed. Pray to the deploy gods.",
+      "It's Friday. What could go wrong?"
+    ],
+    "corporate": [
+      "Release 2.3.1 has been promoted to production.",
+      "Deployment window completed; post-release review scheduled.",
+      "Change advisory approved; deployment executed per process."
+    ],
+    "devops": [
+      "CI/CD pipeline completed; artifacts in registry.",
+      "Canary rollout at 10%; monitoring metrics.",
+      "Blue-green switch completed; old stack draining."
+    ]
+  }
+}

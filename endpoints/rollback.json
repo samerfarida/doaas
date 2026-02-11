@@ -1,0 +1,28 @@
+{
+  "name": "rollback",
+  "description": "Rollback instructions and alerts",
+  "modes": ["normal", "chaos", "corporate", "devops"],
+  "examples": ["Rollback initiated due to critical bug.", "Previous stable version restored."],
+  "examplesByMode": {
+    "normal": [
+      "Rollback initiated due to critical bug.",
+      "Previous stable version restored.",
+      "Rollback completed successfully."
+    ],
+    "chaos": [
+      "Rolling back. Again. Hold my coffee.",
+      "We're going back. No one say 'I told you so.'",
+      "Rollback in progress. Someone check the runbook."
+    ],
+    "corporate": [
+      "A rollback has been executed per the change process.",
+      "Previous known-good release has been restored.",
+      "Post-rollback review will be scheduled within 48 hours."
+    ],
+    "devops": [
+      "Rollback triggered; traffic shifting to previous version.",
+      "Canary rollback complete; monitoring stable.",
+      "Rollback successful; incident ticket updated."
+    ]
+  }
+}

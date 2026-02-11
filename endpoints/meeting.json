@@ -1,0 +1,26 @@
+{
+  "name": "meeting",
+  "description": "Meeting notes or reminders",
+  "modes": ["normal", "corporate", "devops"],
+  "examples": [
+    "Don't forget the daily standup at 10 AM.",
+    "Please prepare your updates before the meeting."
+  ],
+  "examplesByMode": {
+    "normal": [
+      "Don't forget the daily standup at 10 AM.",
+      "Please prepare your updates before the meeting.",
+      "Meeting agenda: project status and blockers."
+    ],
+    "corporate": [
+      "Q3 planning sync is on the calendar; pre-reads required.",
+      "Stakeholder review scheduled; deck to be shared 24h prior.",
+      "All-hands reminder: please submit questions in advance."
+    ],
+    "devops": [
+      "Incident retro at 2 PM; join if you were in the war room.",
+      "SRE sync: focus on SLOs and error budget.",
+      "Release review at 4 PM; deploy owners expected."
+    ]
+  }
+}
