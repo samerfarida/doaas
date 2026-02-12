@@ -7,14 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0] - 2026-02-11
 
+**We're live.** DOaaS is out in the wild — one API, zero seriousness, infinite DevOps one-liners.
+
 ### Added
 
-- Initial release: DevOps-as-a-Service
+- **Initial release:** DevOps-as-a-Service at [doaas.dev](https://doaas.dev)
 - `/help` – List all endpoints and usage
 - `/random` – Get a random message from any endpoint
-- Endpoints: `/blame`, `/motivate`, `/incident`, `/excuse`, `/thisisfine`, `/realitycheck`, `/deploy`, `/rollback`, `/lgtm`, `/standup`, `/meeting`, `/burnout`, `/alignment`, `/roadmap`, `/policy`, `/audit`, `/compliance`, `/risk`, `/yes`, `/no`, `/maybe`
+- **20+ endpoints:** `/blame`, `/motivate`, `/incident`, `/excuse`, `/thisisfine`, `/realitycheck`, `/deploy`, `/rollback`, `/lgtm`, `/standup`, `/meeting`, `/burnout`, `/alignment`, `/roadmap`, `/policy`, `/audit`, `/compliance`, `/risk`, `/yes`, `/no`, `/maybe`
 - Query params: `format=json|text`, `mode=normal|chaos|corporate|security|wholesome|toxic|sarcastic|devops` (per-endpoint)
 - Scripts: `generate`, `validate`, `build`, `test`, `dev`, `deploy`
 - CI workflow and contribution guidelines
 
-[1.0.0]: https://github.com/samer.farida/doaas/releases/tag/v1.0.0
+[1.0.0]: https://github.com/samerfarida/doaas/releases/tag/v1.0.0

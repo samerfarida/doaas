@@ -130,7 +130,7 @@ doaas() {
 }
 ```
 
-Then summon DOaaS with:
+Then: `doaas motivate text` · `doaas blame json` · you get it.
 
 ```bash
 doaas motivate text
@@ -198,7 +198,9 @@ doaas motivate json
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for how to join the fun and help DOaaS grow.
+We want **more than code** — new endpoints, funnier one-liners, better docs. See [CONTRIBUTING.md](CONTRIBUTING.md) to join the fun.
+
+**Star us on GitHub** if DOaaS made you smile. Share it in standup. Blame the API. You know what to do.
 
 ---
 
