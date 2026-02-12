@@ -1,4 +1,6 @@
-# DOaaS - DevOps-as-a-Service
+# DOaaS — DevOps-as-a-Service
+
+**One API. Zero seriousness. Infinite DevOps one-liners.**
 
 _Because who has time for manual DevOps?_
 
@@ -9,41 +11,60 @@ _Because who has time for manual DevOps?_
 [![CI](https://github.com/samerfarida/doaas/actions/workflows/ci.yml/badge.svg)](https://github.com/samerfarida/doaas/actions/workflows/ci.yml)
 [![CodeQL Analysis](https://github.com/samerfarida/doaas/actions/workflows/codeql.yml/badge.svg)](https://github.com/samerfarida/doaas/actions/workflows/codeql.yml)
 
-Welcome to DOaaS.dev (<https://doaas.dev>), your new best friend in the chaotic world of DevOps. Think of it as a magical genie for DevOps humor-minus the three-wish limit and the questionable lamp. DOaaS.dev is an API that serves up funny one-liners: blame messages, excuses, pep talks, reality checks, incident responses, and more. Hit an endpoint, get a fresh sentence. Because why take yourself seriously when you can DOaaS it?
+**[doaas.dev](https://doaas.dev)** — Your new best friend in the chaotic world of DevOps. A magical genie for DevOps humor (no lamp, no three-wish limit). Hit an endpoint, get a fresh one-liner: blame messages, excuses, pep talks, reality checks, incident responses, and more. **Why take yourself seriously when you can DOaaS it?**
 
-## Why does this exist?
-
-- To save you from the endless "Did you try turning it off and on again?"
-- Because every team needs a scapegoat (hello, /blame).
-- To inject some fun into incident handling (yes, really).
-- Because typing `curl` is oddly satisfying.
-- And most importantly, to make DevOps less "oh no" and more "oh wow!"
-
-## ✨ What can it do?
-
-Here’s the full toolbox (or hit `/help` for the live list):
-
-- `/help` – List all endpoints and usage (also at `/`).
-- `/random` – Get a random message from any endpoint.
-- `/blame` – Pass the buck in style.
-- `/motivate` – Cheerleader in JSON or plain text.
-- `/incident` – Incident-style responses without the panic.
-
-_Also: `/excuse`, `/thisisfine`, `/realitycheck`, `/deploy`, `/rollback`, `/lgtm`, `/standup`, `/meeting`, `/burnout`, `/alignment`, `/roadmap`, `/policy`, `/audit`, `/compliance`, `/risk`, `/yes`, `/no`, `/maybe`. Use `format=json|text`. Omit `mode` for a random mode per request, or set `mode=normal|chaos|corporate|...` to filter._
-
-## Usage (aka How to make DOaaS your new BFF)
-
-### Via curl
-
-Because nothing says "I’m a pro" like terminal commands:
-
-Get a random message from any endpoint in JSON (because you deserve some variety):
+## Try it in 5 seconds
 
 ```bash
 curl https://doaas.dev/random
 ```
 
-**Example output (JSON):**
+Or blame someone in style: `curl "https://doaas.dev/blame?format=text"` — then thank us in standup.
+
+---
+
+## Why does this exist?
+
+- Escape the endless "Did you try turning it off and on again?"
+- Every team needs a scapegoat. Say hello to `/blame`.
+- Make incident handling actually fun (yes, really).
+- Typing `curl` is oddly satisfying. So is DOaaS.
+- Turn DevOps from "oh no" into "oh wow!"
+
+## ✨ What can it do?
+
+**Full toolbox** — or hit [doaas.dev/help](https://doaas.dev/help) for the live list:
+
+| Endpoint    | Vibe                                 |
+| ----------- | ------------------------------------ |
+| `/help`     | List everything (also at `/`)        |
+| `/random`   | Surprise me from any endpoint        |
+| `/blame`    | Pass the buck in style               |
+| `/motivate` | Cheerleader in JSON or text          |
+| `/incident` | Incident responses without the panic |
+
+**Plus:** `/excuse`, `/thisisfine`, `/realitycheck`, `/deploy`, `/rollback`, `/lgtm`, `/standup`, `/meeting`, `/burnout`, `/alignment`, `/roadmap`, `/policy`, `/audit`, `/compliance`, `/risk`, `/yes`, `/no`, `/maybe`.
+
+**Params:** `format=json|text` · `mode=normal|chaos|corporate|security|wholesome|toxic|sarcastic|devops` (omit for random).
+
+---
+
+## Usage
+
+### curl
+
+```bash
+# Random message (JSON)
+curl https://doaas.dev/random
+
+# Blame in plain text (standup gold)
+curl "https://doaas.dev/blame?format=text"
+
+# Cheat sheet
+curl https://doaas.dev/help
+```
+
+**Example JSON:**
 
 ```json
 {
@@ -54,37 +75,13 @@ curl https://doaas.dev/random
 }
 ```
 
-**Example output (plain text)** — use `?format=text`:
+### Browser
 
-```text
-Blame the last person who touched the code.
-```
+Open **[doaas.dev/help](https://doaas.dev/help)** — one-stop shop for all endpoints.
 
-Get a blame message in plain text (perfect for those awkward team meetings):
+### Bash / Zsh
 
-```bash
-curl "https://doaas.dev/blame?format=text"
-```
-
-Need a quick refresher on what DOaaS offers? Here’s your cheat sheet:
-
-```bash
-curl https://doaas.dev/help
-```
-
-### In Browser
-
-For those who prefer clicking over typing, just navigate to:
-
-```text
-https://doaas.dev/help
-```
-
-Your one-stop shop for all endpoint goodness.
-
-### In Terminal with Bash Function
-
-Make your life easier by adding this magic to your `.bashrc` or `.zshrc`:
+Drop this in `.bashrc` or `.zshrc` and become a DOaaS ninja:
 
 ```bash
 doaas() {
@@ -94,33 +91,9 @@ doaas() {
 }
 ```
 
-Then summon DOaaS with:
+Then: `doaas motivate text` · `doaas blame json` · you get it.
 
-```bash
-doaas motivate text
-```
-
-Because typing less is winning.
-
-## 🚀 Quick Start (for the impatient)
-
-1. Get inspired with a random message:
-
-```bash
-curl https://doaas.dev/random
-```
-
-2. Blame your teammate (politely):
-
-```bash
-curl "https://doaas.dev/blame?format=text"
-```
-
-3. Or just add the bash function and become a DOaaS ninja:
-
-```bash
-doaas motivate json
-```
+---
 
 ## Development (aka How to poke under the hood)
 
@@ -147,11 +120,13 @@ doaas motivate json
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for how to join the fun and help DOaaS grow.
+We want **more than code** — new endpoints, funnier one-liners, better docs. See [CONTRIBUTING.md](CONTRIBUTING.md) to join the fun.
+
+**Star us on GitHub** if DOaaS made you smile. Share it in standup. Blame the API. You know what to do.
 
 ---
 
-Go forth and DOaaS like a boss! 🚀
+Go forth and DOaaS like a boss. 🚀
 
 ## ⚙️ Query Parameters
 
