@@ -1,87 +1,126 @@
-# DOaaS — DevOps-as-a-Service
+<div align="center">
 
-**One API. Zero seriousness. Infinite DevOps one-liners.**
+<h1>DOaaS - DevOps-as-a-Service</h1>
 
-_Because who has time for manual DevOps?_
+<img src="assets/DOaaS.png" alt="DOaaS - DevOps-as-a-Service Logo" width="200" height="200">
 
-![DOaaS - DevOps-as-a-Service](assets/DOaaS.png)
+<p><em>Emotional support for your CI/CD pipeline 🔥</em></p>
+
+</div>
+
+<div align="center">
+
+<a href="https://doaas.dev/help">Live demo</a> &nbsp; · &nbsp; <a href="https://doaas.dev/random?format=text">Try random</a> &nbsp; · &nbsp; <a href="INTEGRATIONS.md">Integrations</a>
+
+</div>
 
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/samerfarida/doaas/badge)](https://scorecard.dev/viewer/?uri=github.com/samerfarida/doaas)
 [![CI](https://github.com/samerfarida/doaas/actions/workflows/ci.yml/badge.svg)](https://github.com/samerfarida/doaas/actions/workflows/ci.yml)
 [![CodeQL Analysis](https://github.com/samerfarida/doaas/actions/workflows/codeql.yml/badge.svg)](https://github.com/samerfarida/doaas/actions/workflows/codeql.yml)
 
-**[doaas.dev](https://doaas.dev)** — Your new best friend in the chaotic world of DevOps. A magical genie for DevOps humor (no lamp, no three-wish limit). Hit an endpoint, get a fresh one-liner: blame messages, excuses, pep talks, reality checks, incident responses, and more. **Why take yourself seriously when you can DOaaS it?**
+Welcome to **DOaaS** (<https://doaas.dev>) — the most important DevOps platform of 2026.
 
-## Try it in 5 seconds
+It doesn't deploy infrastructure.
+It doesn't fix outages.
+It doesn't reduce your cloud bill.
+
+It does something far more critical:
+
+**It gives your pipeline emotional support.**
+
+Try it right now:
 
 ```bash
-curl https://doaas.dev/random
+curl -s "https://doaas.dev/random?mode=chaos&format=text"
 ```
 
-Or blame someone in style: `curl "https://doaas.dev/blame?format=text"` — then thank us in standup.
+Example output:
 
----
+```text
+Deploying to prod. No rollback plan. Respect.
+```
+
+Because production is pain, and pain deserves an API.
 
 ## Why does this exist?
 
-- Escape the endless "Did you try turning it off and on again?"
-- Every team needs a scapegoat. Say hello to `/blame`.
-- Make incident handling actually fun (yes, really).
-- Typing `curl` is oddly satisfying. So is DOaaS.
-- Turn DevOps from "oh no" into "oh wow!"
+- To save you from the endless "Did you try turning it off and on again?"
+- Because every team needs a scapegoat (hello, /blame).
+- To inject some fun into incident handling (yes, really).
+- Because typing `curl` is oddly satisfying.
+- And most importantly, to make DevOps less "oh no" and more "oh wow!"
 
 ## ✨ What can it do?
 
-**Full toolbox** — or hit [doaas.dev/help](https://doaas.dev/help) for the live list:
+Here’s the full toolbox (or hit `/help` for the live list):
 
-| Endpoint    | Vibe                                 |
-| ----------- | ------------------------------------ |
-| `/help`     | List everything (also at `/`)        |
-| `/random`   | Surprise me from any endpoint        |
-| `/blame`    | Pass the buck in style               |
-| `/motivate` | Cheerleader in JSON or text          |
-| `/incident` | Incident responses without the panic |
+- `/help` – List all endpoints and usage (also at `/`).
+- `/random` – Get a random message from any endpoint.
+- `/blame` – Pass the buck in style.
+- `/motivate` – Cheerleader in JSON or plain text.
+- `/incident` – Incident-style responses without the panic.
 
-**Plus:** `/excuse`, `/thisisfine`, `/realitycheck`, `/deploy`, `/rollback`, `/lgtm`, `/standup`, `/meeting`, `/burnout`, `/alignment`, `/roadmap`, `/policy`, `/audit`, `/compliance`, `/risk`, `/yes`, `/no`, `/maybe`.
+More endpoints:
 
-**Params:** `format=json|text` · `mode=normal|chaos|corporate|security|wholesome|toxic|sarcastic|devops` (omit for random).
+- `/excuse`
+- `/thisisfine`
+- `/realitycheck`
+- `/deploy`
+- `/rollback`
+- `/lgtm`
+- `/standup`
+- `/meeting`
+- `/burnout`
+- `/alignment`
+- `/roadmap`
+- `/policy`
+- `/audit`
+- `/compliance`
+- `/risk`
+- `/yes`
+- `/no`
+- `/maybe`
 
----
+## Usage (aka How to make DOaaS your new BFF)
 
-## Usage
+### Via curl
 
-### curl
+Quick examples:
 
 ```bash
-# Random message (JSON)
-curl https://doaas.dev/random
+# Random DOaaS wisdom
+curl -s "https://doaas.dev/random?format=text"
 
-# Blame in plain text (standup gold)
-curl "https://doaas.dev/blame?format=text"
+# Chaos mode (recommended)
+curl -s "https://doaas.dev/random?mode=chaos&format=text"
 
-# Cheat sheet
-curl https://doaas.dev/help
+# Blame generator
+curl -s "https://doaas.dev/blame?format=text"
+
+# Corporate meeting simulator
+curl -s "https://doaas.dev/meeting?mode=corporate&format=text"
+
+# Security reality check
+curl -s "https://doaas.dev/realitycheck?mode=security&format=text"
+
+# List all endpoints
+curl -s "https://doaas.dev/help"
 ```
 
-**Example JSON:**
+### In Browser
 
-```json
-{
-  "name": "motivate",
-  "description": "Motivational quotes and phrases",
-  "example": "Keep pushing forward!",
-  "mode": "normal"
-}
+For those who prefer clicking over typing, just navigate to:
+
+```text
+https://doaas.dev/help
 ```
 
-### Browser
+Your one-stop shop for all endpoint goodness.
 
-Open **[doaas.dev/help](https://doaas.dev/help)** — one-stop shop for all endpoints.
+### In Terminal with Bash Function
 
-### Bash / Zsh
-
-Drop this in `.bashrc` or `.zshrc` and become a DOaaS ninja:
+Make your life easier by adding this magic to your `.bashrc` or `.zshrc`:
 
 ```bash
 doaas() {
@@ -93,7 +132,46 @@ doaas() {
 
 Then: `doaas motivate text` · `doaas blame json` · you get it.
 
----
+```bash
+doaas motivate text
+```
+
+Because typing less is winning.
+
+## 🖥️ Terminal Greeting (Highly Recommended)
+
+Add this to your `~/.bashrc` or `~/.zshrc` and DOaaS will greet you every time you open a terminal:
+
+```bash
+[[ $- == *i* ]] && curl --max-time 2 -fsS "https://doaas.dev/random?mode=chaos&format=text" || true
+```
+
+Now every terminal session starts with wisdom, chaos, or emotional damage.
+
+## 🚀 Quick Start (for the impatient)
+
+1. Get inspired with a random message:
+
+```bash
+curl https://doaas.dev/random
+```
+
+2. Blame your teammate (politely):
+
+```bash
+curl "https://doaas.dev/blame?format=text"
+```
+
+3. Or just add the bash function and become a DOaaS ninja:
+
+```bash
+doaas motivate json
+```
+
+## ⚙️ Query Parameters
+
+- `mode`: normal (default) | chaos | corporate | security | wholesome | toxic | sarcastic | devops (availability varies by endpoint)
+- `format`: json (default) | text
 
 ## Development (aka How to poke under the hood)
 
@@ -126,9 +204,4 @@ We want **more than code** — new endpoints, funnier one-liners, better docs. S
 
 ---
 
-Go forth and DOaaS like a boss. 🚀
-
-## ⚙️ Query Parameters
-
-- `mode`: normal | chaos | corporate | security | wholesome | toxic | sarcastic | devops (availability varies by endpoint). **Omit `mode`** to get a random mode from that endpoint’s supported modes; **set `?mode=...`** to return only that mode.
-- `format`: json (default) | text
+Go forth and DOaaS like a boss! 🚀
