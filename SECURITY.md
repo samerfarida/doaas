@@ -45,4 +45,4 @@ We value legitimate security research. When you follow this policy and report is
 - Avoid privacy violations, service degradation, or destruction of data
 - Respect rate limits and always obtain consent before testing on systems you do not own
 
-Thank you for helping keep DOaaS and its users safe.
+Thank you for helping keep DOaaS and its users safe. We take security seriously so you can keep DOaaS-ing without worry.

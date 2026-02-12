@@ -1,6 +1,8 @@
 # Contributing to DOaaS
 
-Thanks for wanting to make DOaaS weirder and funnier! 🎉
+**Make the internet weirder. One endpoint at a time.**
+
+Thanks for wanting to make DOaaS funnier and more useful. We want this to be the API that shows up in standups, Slack, and "that one curl command" — and that happens with your help.
 
 ## What Counts as Contributing
 
@@ -21,6 +23,15 @@ If you're only here to fix a typo or refactor something, that's cool too. But we
 - Add tests in `tests/worker.test.mjs` for new functionality.
 - Run `npm run lint`, `npm run lint:md`, and `npm run format:check` (or `npm run format` to fix). Pre-commit hooks run audit, format, lint, and markdown lint on staged files.
 - Write commit messages that a human can understand (no "fix stuff" unless it's actually fixing stuff).
+
+## Development
+
+- `npm run generate` – Regenerate the endpoints file from JSON.
+- `npm run validate` – Validate endpoint JSON files.
+- `npm run build` – Build the worker.
+- `npm run test` – Run tests.
+- `npm run test:stress` – Run 10k requests (run after `npm run build`).
+- `npm run dev` – Start the local dev server with Wrangler.
 
 ## How to Contribute
 
@@ -43,4 +54,4 @@ Be respectful and constructive. We're here to have fun, not to be mean.
 
 ---
 
-Thanks for helping make DOaaS a little weirder. We appreciate you! 🙌
+Thanks for helping make DOaaS the kind of thing people actually share. We appreciate you. 🙌
