@@ -24,14 +24,14 @@ If you're only here to fix a typo or refactor something, that's cool too. But we
 - Run `npm run lint`, `npm run lint:md`, and `npm run format:check` (or `npm run format` to fix). Pre-commit hooks run audit, format, lint, and markdown lint on staged files.
 - Write commit messages that a human can understand (no "fix stuff" unless it's actually fixing stuff).
 
-## Development
+## Development (aka How to poke under the hood)
 
-- `npm run generate` – Regenerate the endpoints file from JSON.
-- `npm run validate` – Validate endpoint JSON files.
-- `npm run build` – Build the worker.
-- `npm run test` – Run tests.
-- `npm run test:stress` – Run 10k requests (run after `npm run build`).
-- `npm run dev` – Start the local dev server with Wrangler.
+- `npm run generate` – Cook up your endpoints file fresh from the oven.
+- `npm run validate` – Make sure your JSON files aren’t secretly broken.
+- `npm run build` – Compile all the magic before you test your spells.
+- `npm run test` – Run the tests and prove your code is worthy.
+- `npm run test:stress` – Run 10k requests against the worker (run after `npm run build`).
+- `npm run dev` – Fire up the local dev server with Wrangler and watch the magic happen.
 
 ## How to Contribute
 

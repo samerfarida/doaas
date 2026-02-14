@@ -1,0 +1,236 @@
+# OpenAPI 3.0 schema for DOaaS (doaas.dev)
+# Use this with Cloudflare Web Assets > Schema validation
+# https://developers.cloudflare.com/api-shield/security/schema-validation/
+openapi: "3.0.0"
+info:
+  title: DOaaS API
+  description: DevOps-as-a-Service — endpoint responses for excuses, motivations, reality checks, and more
+  version: "1.0"
+servers:
+  - url: https://doaas.dev
+    description: Production
+paths:
+  /motivate:
+    get:
+      summary: Get motivation
+      parameters:
+        - name: mode
+          in: query
+          schema:
+            type: string
+            enum: [normal, chaos, corporate, security, wholesome, toxic, sarcastic, devops]
+        - name: format
+          in: query
+          schema:
+            type: string
+            enum: [json, text]
+  /blame:
+    get:
+      summary: Get blame message
+      parameters:
+        - name: mode
+          in: query
+          schema:
+            type: string
+            enum: [normal, chaos, corporate, security, wholesome, toxic, sarcastic, devops]
+        - name: format
+          in: query
+          schema:
+            type: string
+            enum: [json, text]
+  /excuse:
+    get:
+      summary: Get excuse
+      parameters:
+        - name: mode
+          in: query
+          schema:
+            type: string
+            enum: [normal, chaos, corporate, security, wholesome, toxic, sarcastic, devops]
+        - name: format
+          in: query
+          schema:
+            type: string
+            enum: [json, text]
+  /random:
+    get:
+      summary: Random endpoint response
+      parameters:
+        - name: mode
+          in: query
+          schema:
+            type: string
+            enum: [normal, chaos, corporate, security, wholesome, toxic, sarcastic, devops]
+        - name: format
+          in: query
+          schema:
+            type: string
+            enum: [json, text]
+  /alignment:
+    get:
+      parameters:
+        - name: mode
+          in: query
+          schema: { type: string }
+        - name: format
+          in: query
+          schema: { type: string }
+  /audit:
+    get:
+      parameters:
+        - name: mode
+          in: query
+          schema: { type: string }
+        - name: format
+          in: query
+          schema: { type: string }
+  /burnout:
+    get:
+      parameters:
+        - name: mode
+          in: query
+          schema: { type: string }
+        - name: format
+          in: query
+          schema: { type: string }
+  /compliance:
+    get:
+      parameters:
+        - name: mode
+          in: query
+          schema: { type: string }
+        - name: format
+          in: query
+          schema: { type: string }
+  /deploy:
+    get:
+      parameters:
+        - name: mode
+          in: query
+          schema: { type: string }
+        - name: format
+          in: query
+          schema: { type: string }
+  /incident:
+    get:
+      parameters:
+        - name: mode
+          in: query
+          schema: { type: string }
+        - name: format
+          in: query
+          schema: { type: string }
+  /lgtm:
+    get:
+      parameters:
+        - name: mode
+          in: query
+          schema: { type: string }
+        - name: format
+          in: query
+          schema: { type: string }
+  /maybe:
+    get:
+      parameters:
+        - name: mode
+          in: query
+          schema: { type: string }
+        - name: format
+          in: query
+          schema: { type: string }
+  /meeting:
+    get:
+      parameters:
+        - name: mode
+          in: query
+          schema: { type: string }
+        - name: format
+          in: query
+          schema: { type: string }
+  /no:
+    get:
+      parameters:
+        - name: mode
+          in: query
+          schema: { type: string }
+        - name: format
+          in: query
+          schema: { type: string }
+  /policy:
+    get:
+      parameters:
+        - name: mode
+          in: query
+          schema: { type: string }
+        - name: format
+          in: query
+          schema: { type: string }
+  /realitycheck:
+    get:
+      parameters:
+        - name: mode
+          in: query
+          schema: { type: string }
+        - name: format
+          in: query
+          schema: { type: string }
+  /risk:
+    get:
+      parameters:
+        - name: mode
+          in: query
+          schema: { type: string }
+        - name: format
+          in: query
+          schema: { type: string }
+  /roadmap:
+    get:
+      parameters:
+        - name: mode
+          in: query
+          schema: { type: string }
+        - name: format
+          in: query
+          schema: { type: string }
+  /rollback:
+    get:
+      parameters:
+        - name: mode
+          in: query
+          schema: { type: string }
+        - name: format
+          in: query
+          schema: { type: string }
+  /standup:
+    get:
+      parameters:
+        - name: mode
+          in: query
+          schema: { type: string }
+        - name: format
+          in: query
+          schema: { type: string }
+  /thisisfine:
+    get:
+      parameters:
+        - name: mode
+          in: query
+          schema: { type: string }
+        - name: format
+          in: query
+          schema: { type: string }
+  /yes:
+    get:
+      parameters:
+        - name: mode
+          in: query
+          schema: { type: string }
+        - name: format
+          in: query
+          schema: { type: string }
+  /help:
+    get:
+      summary: API help
+  /:
+    get:
+      summary: API help (root)
