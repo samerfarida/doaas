@@ -5,6 +5,7 @@ on:
     branches:
       - main
   pull_request:
+  workflow_dispatch: # Run manually from Actions tab
 
 permissions:
   contents: read
@@ -14,6 +15,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Get motivation
+        id: motivate
+        run: |
+          MSG=$(curl -s "https://doaas.dev/motivate?format=text" || echo "You've got this. Probably.")
+          echo "message=$MSG" >> $GITHUB_OUTPUT
+          echo "$MSG"
+
       - name: Checkout repository
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
 
@@ -62,3 +70,14 @@ jobs:
 
       - name: E2E test
         run: node tests/e2e.mjs
+
+      - name: Celebrate success
+        if: success()
+        run: |
+          MSG=$(curl -s "https://doaas.dev/motivate?format=text" || echo "All tests passed. You're basically a hero.")
+          echo "### 🎉 $MSG" >> $GITHUB_STEP_SUMMARY
+
+      - name: Post blame on failure
+        if: failure()
+        run: |
+          curl -s "https://doaas.dev/blame?format=text" | xargs -I {} echo "::error::{}" || true
