@@ -108,6 +108,7 @@ export async function handleRequest(request: Request): Promise<Response> {
           "/blame?format=text",
           "/motivate?mode=wholesome&format=json",
           "/random?format=json",
+          "/random?format=shields",
         ],
       },
       endpoints: endpointsList,
@@ -116,11 +117,12 @@ export async function handleRequest(request: Request): Promise<Response> {
     if (format === "text") {
       const helpText = `DOaaS Endpoints:
 Available endpoints: ${Object.keys(ENDPOINTS).join(", ")}
-Use /:endpoint?mode=normal|chaos|corporate|security|wholesome|toxic|sarcastic|devops&format=json|text
+Use /:endpoint?mode=normal|chaos|corporate|security|wholesome|toxic|sarcastic|devops&format=json|text|shields
 Omitting mode picks a random mode per endpoint; use ?mode=... to filter.
 Examples:
   /blame?format=text
   /motivate?mode=wholesome&format=json
+  /random?format=shields
 `;
       return new Response(helpText, {
         status: 200,
