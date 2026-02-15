@@ -51,6 +51,18 @@ function toJson(endpoint: EndpointsMap[string], mode: Mode) {
   };
 }
 
+function toShields(endpoint: EndpointsMap[string], mode: Mode) {
+  const resolved = resolveMode(endpoint, mode);
+  const examples = getExamplesForMode(endpoint, resolved);
+  const message = getRandomElement(examples) || "DevOps as a Service";
+  return {
+    schemaVersion: 1,
+    label: "DOaaS",
+    message,
+    color: "orange",
+  };
+}
+
 export async function handleRequest(request: Request): Promise<Response> {
   if (request.method === "OPTIONS") {
     return new Response(null, {
@@ -89,7 +101,7 @@ export async function handleRequest(request: Request): Promise<Response> {
         path: "/:endpoint",
         query: {
           mode: "normal | chaos | corporate | security | wholesome | toxic | sarcastic | devops",
-          format: "json | text",
+          format: "json | text | shields",
         },
         note: "Omitting mode picks a random mode from that endpoint's supported modes; use ?mode=... to filter.",
         examples: [
@@ -163,10 +175,14 @@ Examples:
     const randomKey = getRandomElement(keys);
     const endpoint = ENDPOINTS[randomKey as keyof typeof ENDPOINTS];
     const effectiveMode = getEffectiveMode(endpoint, url, mode);
-    const body =
-      format === "text"
-        ? toText(endpoint, effectiveMode)
-        : JSON.stringify(toJson(endpoint, effectiveMode), null, 2);
+    let body: string;
+    if (format === "text") {
+      body = toText(endpoint, effectiveMode);
+    } else if (format === "shields") {
+      body = JSON.stringify(toShields(endpoint, effectiveMode));
+    } else {
+      body = JSON.stringify(toJson(endpoint, effectiveMode), null, 2);
+    }
     return new Response(body, {
       status: 200,
       headers: {
@@ -191,10 +207,14 @@ Examples:
 
   const endpoint = ENDPOINTS[pathname as keyof typeof ENDPOINTS];
   const effectiveMode = getEffectiveMode(endpoint, url, mode);
-  const body =
-    format === "text"
-      ? toText(endpoint, effectiveMode)
-      : JSON.stringify(toJson(endpoint, effectiveMode), null, 2);
+  let body: string;
+  if (format === "text") {
+    body = toText(endpoint, effectiveMode);
+  } else if (format === "shields") {
+    body = JSON.stringify(toShields(endpoint, effectiveMode));
+  } else {
+    body = JSON.stringify(toJson(endpoint, effectiveMode), null, 2);
+  }
 
   return new Response(body, {
     status: 200,

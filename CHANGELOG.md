@@ -1,9 +1,17 @@
 # Changelog
 
+<!-- markdownlint-disable MD024 -->
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [1.1.0] - 2026-02-15
+
+### Added
+
+- **`format=shields`** — Returns [Shields.io Endpoint Badge](https://shields.io/badges/endpoint-badge) schema for embedding dynamic DOaaS messages in README badges. Use with `https://img.shields.io/endpoint?url=https://doaas.dev/random?format=shields`.
 
 ## [1.0.0] - 2026-02-11
 
@@ -19,4 +27,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Scripts: `generate`, `validate`, `build`, `test`, `dev`, `deploy`
 - CI workflow and contribution guidelines
 
+[1.1.0]: https://github.com/samerfarida/doaas/releases/tag/v1.1.0
 [1.0.0]: https://github.com/samerfarida/doaas/releases/tag/v1.0.0

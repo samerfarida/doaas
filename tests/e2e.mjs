@@ -153,6 +153,17 @@ async function testCorsOnGetE2E() {
   assert.strictEqual(res.headers.get("Cache-Control"), "no-store");
 }
 
+async function testFormatShieldsE2E() {
+  const res = await fetch(`${BASE}/random?format=shields`);
+  assert.strictEqual(res.status, 200);
+  assert.strictEqual(res.headers.get("Content-Type"), "application/json; charset=utf-8");
+  const json = await res.json();
+  assert.strictEqual(json.schemaVersion, 1);
+  assert.strictEqual(json.label, "DOaaS");
+  assert(typeof json.message === "string" && json.message.length > 0);
+  assert.strictEqual(json.color, "orange");
+}
+
 async function runTests() {
   const rootRes = await fetch(`${BASE}/`);
   assert(rootRes.ok, "need root to get endpoint list");
@@ -172,6 +183,7 @@ async function runTests() {
   await testAllEndpointsJsonE2E(rootJson);
   await testCorsOnGetE2E();
   await testOptionsCors();
+  await testFormatShieldsE2E();
   console.log("All E2E tests passed.");
 }
 

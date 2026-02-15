@@ -23,7 +23,7 @@ paths:
           in: query
           schema:
             type: string
-            enum: [json, text]
+            enum: [json, text, shields]
   /blame:
     get:
       summary: Get blame message
@@ -37,7 +37,7 @@ paths:
           in: query
           schema:
             type: string
-            enum: [json, text]
+            enum: [json, text, shields]
   /excuse:
     get:
       summary: Get excuse
@@ -51,7 +51,7 @@ paths:
           in: query
           schema:
             type: string
-            enum: [json, text]
+            enum: [json, text, shields]
   /random:
     get:
       summary: Random endpoint response
@@ -65,7 +65,7 @@ paths:
           in: query
           schema:
             type: string
-            enum: [json, text]
+            enum: [json, text, shields]
   /alignment:
     get:
       parameters:

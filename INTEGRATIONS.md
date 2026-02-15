@@ -3,7 +3,7 @@
 All the ways you can call <https://doaas.dev> — from your terminal, scripts, CI/CD pipelines, shell aliases, and more.
 
 **Base URL:** `https://doaas.dev`  
-**Format:** `?format=json` (default) or `?format=text`  
+**Format:** `?format=json` (default), `?format=text`, or `?format=shields`  
 **Mode:** `?mode=normal|chaos|corporate|security|wholesome|toxic|sarcastic|devops` (default: `normal`)
 
 ---
@@ -343,6 +343,31 @@ curl -X POST -H 'Content-type: application/json' \
 
 ---
 
+## README & GitHub badges (Shields.io)
+
+Use `format=shields` to return JSON in the [Shields.io Endpoint Badge](https://shields.io/badges/endpoint-badge) schema. Embed a dynamic DOaaS message in your README — the message updates when Shields refreshes its cache.
+
+### Basic badge
+
+```markdown
+![DOaaS](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Frandom%3Fformat%3Dshields)
+```
+
+### Other endpoints
+
+Replace `/random` in the URL with any endpoint (`/blame`, `/motivate`, `/excuse`, `/incident`, etc.):
+
+```markdown
+![DOaaS blame](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Fblame%3Fformat%3Dshields)
+![DOaaS motivate](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Fmotivate%3Fformat%3Dshields)
+```
+
+### Note
+
+Shields.io caches responses (typically 5+ minutes), so the message updates when the cache expires rather than on every page load.
+
+---
+
 ## Browser & developer tools
 
 ### Direct URL
@@ -412,15 +437,16 @@ curl --max-time 2 -fsS "https://doaas.dev/realitycheck?mode=security&format=text
 
 ## Summary
 
-| Integration       | Example                                                                |
-| ----------------- | ---------------------------------------------------------------------- |
-| **Terminal**      | `curl "https://doaas.dev/blame?format=text"`                           |
-| **Shell fn**      | `doaas blame text` (add to `.bashrc` / `.zshrc`)                       |
-| **Node.js**       | `fetch("https://doaas.dev/random").then(r => r.json()).then(d => ...)` |
-| **Python**        | `requests.get("https://doaas.dev/blame?format=text").text`             |
-| **CI/CD**         | `curl -s "https://doaas.dev/blame?format=text"`                        |
-| **Makefile**      | `@curl -s "https://doaas.dev/motivate?format=text"`                    |
-| **Slack/Discord** | Use `curl` to get message, then POST to webhook                        |
-| **Browser**       | Visit `https://doaas.dev/help`                                         |
+| Integration       | Example                                                                                             |
+| ----------------- | --------------------------------------------------------------------------------------------------- |
+| **Terminal**      | `curl "https://doaas.dev/blame?format=text"`                                                        |
+| **Shell fn**      | `doaas blame text` (add to `.bashrc` / `.zshrc`)                                                    |
+| **Node.js**       | `fetch("https://doaas.dev/random").then(r => r.json()).then(d => ...)`                              |
+| **Python**        | `requests.get("https://doaas.dev/blame?format=text").text`                                          |
+| **CI/CD**         | `curl -s "https://doaas.dev/blame?format=text"`                                                     |
+| **Makefile**      | `@curl -s "https://doaas.dev/motivate?format=text"`                                                 |
+| **Slack/Discord** | Use `curl` to get message, then POST to webhook                                                     |
+| **Shields.io**    | `![DOaaS](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Frandom%3Fformat%3Dshields)` |
+| **Browser**       | Visit `https://doaas.dev/help`                                                                      |
 
 All endpoints support CORS (`Access-Control-Allow-Origin: *`), so you can call them from any origin (web apps, browser extensions, etc.).

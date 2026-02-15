@@ -15,6 +15,7 @@
 </div>
 
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
+[![DOaaS](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Frandom%3Fformat%3Dshields)](https://doaas.dev)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/samerfarida/doaas/badge)](https://scorecard.dev/viewer/?uri=github.com/samerfarida/doaas)
 [![CI](https://github.com/samerfarida/doaas/actions/workflows/ci.yml/badge.svg)](https://github.com/samerfarida/doaas/actions/workflows/ci.yml)
 [![CodeQL Analysis](https://github.com/samerfarida/doaas/actions/workflows/codeql.yml/badge.svg)](https://github.com/samerfarida/doaas/actions/workflows/codeql.yml)
@@ -128,7 +129,7 @@ For a calmer (wholesome) variant, see [INTEGRATIONS.md](INTEGRATIONS.md#terminal
 ## ⚙️ Query Parameters
 
 - `mode`: normal (default) | chaos | corporate | security | wholesome | toxic | sarcastic | devops (availability varies by endpoint)
-- `format`: json (default) | text
+- `format`: json (default) | text | shields
 
 ## Development
 
