@@ -18,4 +18,4 @@ export interface Endpoint {
 
 export type EndpointsMap = Record<string, Endpoint>;
 
-export type Format = "json" | "text";
+export type Format = "json" | "text" | "shields";

@@ -180,6 +180,44 @@ async function testCorsOnGet() {
   assert.strictEqual(res.headers.get("Cache-Control"), "no-store");
 }
 
+async function testFormatShields() {
+  const req = new Request("https://example.com/blame?format=shields");
+  const res = await handleRequest(req);
+  assert.strictEqual(res.status, 200);
+  assert.strictEqual(res.headers.get("Content-Type"), "application/json; charset=utf-8");
+  const json = await res.json();
+  assert.strictEqual(json.schemaVersion, 1);
+  assert.strictEqual(json.label, "DOaaS");
+  assert(typeof json.message === "string" && json.message.length > 0);
+  assert.strictEqual(json.color, "orange");
+}
+
+async function testRandomFormatShields() {
+  const req = new Request("https://example.com/random?format=shields");
+  const res = await handleRequest(req);
+  assert.strictEqual(res.status, 200);
+  assert.strictEqual(res.headers.get("Content-Type"), "application/json; charset=utf-8");
+  const json = await res.json();
+  assert.strictEqual(json.schemaVersion, 1);
+  assert.strictEqual(json.label, "DOaaS");
+  assert(typeof json.message === "string" && json.message.length > 0);
+  assert.strictEqual(json.color, "orange");
+}
+
+async function testFormatShieldsHelpFallback() {
+  const req = new Request("https://example.com/?format=shields");
+  const res = await handleRequest(req);
+  assert.strictEqual(res.status, 200);
+  const json = await res.json();
+  assert.strictEqual(json.service, "DOaaS");
+  assert(Array.isArray(json.endpoints));
+  assert.strictEqual(
+    json.schemaVersion,
+    undefined,
+    "help should return normal JSON, not shields schema"
+  );
+}
+
 async function runTests() {
   await testRoot();
   await testHelp();
@@ -196,6 +234,9 @@ async function runTests() {
   await testPathNormalization();
   await testCorsOnGet();
   await testOptionsCors();
+  await testFormatShields();
+  await testRandomFormatShields();
+  await testFormatShieldsHelpFallback();
   console.log("All tests passed.");
 }
 
