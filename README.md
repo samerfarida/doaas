@@ -129,7 +129,8 @@ For a calmer (wholesome) variant, see [INTEGRATIONS.md](INTEGRATIONS.md#terminal
 ## ⚙️ Query Parameters
 
 - `mode`: normal (default) | chaos | corporate | security | wholesome | toxic | sarcastic | devops (availability varies by endpoint)
-- `format`: json (default) | text | shields
+- `format`: json (default) | text | shields  
+  When `format=shields`, optional: `style`, `label`, `color`, `labelColor` (defaults and details in [INTEGRATIONS.md](INTEGRATIONS.md#readme--github-badges-shieldsio)).
 
 ## Development
 

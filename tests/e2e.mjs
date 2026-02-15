@@ -162,6 +162,7 @@ async function testFormatShieldsE2E() {
   assert.strictEqual(json.label, "DOaaS");
   assert(typeof json.message === "string" && json.message.length > 0);
   assert.strictEqual(json.color, "orange");
+  assert.strictEqual(json.style, "flat");
 }
 
 async function runTests() {

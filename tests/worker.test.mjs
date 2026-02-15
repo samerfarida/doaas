@@ -187,9 +187,10 @@ async function testFormatShields() {
   assert.strictEqual(res.headers.get("Content-Type"), "application/json; charset=utf-8");
   const json = await res.json();
   assert.strictEqual(json.schemaVersion, 1);
-  assert.strictEqual(json.label, "DOaaS");
+  assert.strictEqual(json.label, "DOaaS blame");
   assert(typeof json.message === "string" && json.message.length > 0);
   assert.strictEqual(json.color, "orange");
+  assert.strictEqual(json.style, "flat");
 }
 
 async function testRandomFormatShields() {
@@ -202,6 +203,21 @@ async function testRandomFormatShields() {
   assert.strictEqual(json.label, "DOaaS");
   assert(typeof json.message === "string" && json.message.length > 0);
   assert.strictEqual(json.color, "orange");
+  assert.strictEqual(json.style, "flat");
+}
+
+async function testFormatShieldsQueryParams() {
+  const req = new Request(
+    "https://example.com/blame?format=shields&label=Custom%20Label&color=blue&style=flat-square&labelColor=abcdef"
+  );
+  const res = await handleRequest(req);
+  assert.strictEqual(res.status, 200);
+  const json = await res.json();
+  assert.strictEqual(json.schemaVersion, 1);
+  assert.strictEqual(json.label, "Custom Label");
+  assert.strictEqual(json.color, "blue");
+  assert.strictEqual(json.style, "flat-square");
+  assert.strictEqual(json.labelColor, "abcdef");
 }
 
 async function testFormatShieldsHelpFallback() {
@@ -236,6 +252,7 @@ async function runTests() {
   await testOptionsCors();
   await testFormatShields();
   await testRandomFormatShields();
+  await testFormatShieldsQueryParams();
   await testFormatShieldsHelpFallback();
   console.log("All tests passed.");
 }

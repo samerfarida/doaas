@@ -24,6 +24,24 @@ paths:
           schema:
             type: string
             enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
+          schema: { type: string }
   /blame:
     get:
       summary: Get blame message
@@ -38,6 +56,24 @@ paths:
           schema:
             type: string
             enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
+          schema: { type: string }
   /excuse:
     get:
       summary: Get excuse
@@ -52,6 +88,24 @@ paths:
           schema:
             type: string
             enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
+          schema: { type: string }
   /random:
     get:
       summary: Random endpoint response
@@ -66,6 +120,24 @@ paths:
           schema:
             type: string
             enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
+          schema: { type: string }
   /alignment:
     get:
       parameters:
@@ -74,6 +146,26 @@ paths:
           schema: { type: string }
         - name: format
           in: query
+          schema:
+            type: string
+            enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
           schema: { type: string }
   /audit:
     get:
@@ -83,6 +175,26 @@ paths:
           schema: { type: string }
         - name: format
           in: query
+          schema:
+            type: string
+            enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
           schema: { type: string }
   /burnout:
     get:
@@ -92,6 +204,26 @@ paths:
           schema: { type: string }
         - name: format
           in: query
+          schema:
+            type: string
+            enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
           schema: { type: string }
   /compliance:
     get:
@@ -101,6 +233,26 @@ paths:
           schema: { type: string }
         - name: format
           in: query
+          schema:
+            type: string
+            enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
           schema: { type: string }
   /deploy:
     get:
@@ -110,6 +262,26 @@ paths:
           schema: { type: string }
         - name: format
           in: query
+          schema:
+            type: string
+            enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
           schema: { type: string }
   /incident:
     get:
@@ -119,6 +291,26 @@ paths:
           schema: { type: string }
         - name: format
           in: query
+          schema:
+            type: string
+            enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
           schema: { type: string }
   /lgtm:
     get:
@@ -128,6 +320,26 @@ paths:
           schema: { type: string }
         - name: format
           in: query
+          schema:
+            type: string
+            enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
           schema: { type: string }
   /maybe:
     get:
@@ -137,6 +349,26 @@ paths:
           schema: { type: string }
         - name: format
           in: query
+          schema:
+            type: string
+            enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
           schema: { type: string }
   /meeting:
     get:
@@ -146,6 +378,26 @@ paths:
           schema: { type: string }
         - name: format
           in: query
+          schema:
+            type: string
+            enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
           schema: { type: string }
   /no:
     get:
@@ -155,6 +407,26 @@ paths:
           schema: { type: string }
         - name: format
           in: query
+          schema:
+            type: string
+            enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
           schema: { type: string }
   /policy:
     get:
@@ -164,6 +436,26 @@ paths:
           schema: { type: string }
         - name: format
           in: query
+          schema:
+            type: string
+            enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
           schema: { type: string }
   /realitycheck:
     get:
@@ -173,6 +465,26 @@ paths:
           schema: { type: string }
         - name: format
           in: query
+          schema:
+            type: string
+            enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
           schema: { type: string }
   /risk:
     get:
@@ -182,6 +494,26 @@ paths:
           schema: { type: string }
         - name: format
           in: query
+          schema:
+            type: string
+            enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
           schema: { type: string }
   /roadmap:
     get:
@@ -191,6 +523,26 @@ paths:
           schema: { type: string }
         - name: format
           in: query
+          schema:
+            type: string
+            enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
           schema: { type: string }
   /rollback:
     get:
@@ -200,6 +552,26 @@ paths:
           schema: { type: string }
         - name: format
           in: query
+          schema:
+            type: string
+            enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
           schema: { type: string }
   /standup:
     get:
@@ -209,6 +581,26 @@ paths:
           schema: { type: string }
         - name: format
           in: query
+          schema:
+            type: string
+            enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
           schema: { type: string }
   /thisisfine:
     get:
@@ -218,6 +610,26 @@ paths:
           schema: { type: string }
         - name: format
           in: query
+          schema:
+            type: string
+            enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
           schema: { type: string }
   /yes:
     get:
@@ -227,6 +639,26 @@ paths:
           schema: { type: string }
         - name: format
           in: query
+          schema:
+            type: string
+            enum: [json, text, shields]
+        - name: style
+          in: query
+          description: When format=shields. Badge style.
+          schema:
+            type: string
+            enum: [flat, flat-square, plastic, for-the-badge, social]
+        - name: label
+          in: query
+          description: When format=shields. Override left-side badge text.
+          schema: { type: string }
+        - name: color
+          in: query
+          description: When format=shields. Right-side badge color (default orange).
+          schema: { type: string }
+        - name: labelColor
+          in: query
+          description: When format=shields. Left-side badge color.
           schema: { type: string }
   /help:
     get:

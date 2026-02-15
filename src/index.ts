@@ -51,16 +51,37 @@ function toJson(endpoint: EndpointsMap[string], mode: Mode) {
   };
 }
 
-function toShields(endpoint: EndpointsMap[string], mode: Mode) {
+const SHIELDS_STYLES = ["flat", "flat-square", "plastic", "for-the-badge", "social"] as const;
+
+function toShields(endpoint: EndpointsMap[string], mode: Mode, url: URL, isRandomPath: boolean) {
   const resolved = resolveMode(endpoint, mode);
   const examples = getExamplesForMode(endpoint, resolved);
   const message = getRandomElement(examples) || "DevOps as a Service";
-  return {
+
+  const labelParam = url.searchParams.get("label");
+  const defaultLabel = isRandomPath ? "DOaaS" : `DOaaS ${endpoint.name}`;
+  const label = labelParam !== null && labelParam !== "" ? labelParam : defaultLabel;
+
+  const styleParam = url.searchParams.get("style");
+  const style =
+    styleParam && SHIELDS_STYLES.includes(styleParam as (typeof SHIELDS_STYLES)[number])
+      ? styleParam
+      : "flat";
+
+  const color = url.searchParams.get("color") || "orange";
+  const labelColor = url.searchParams.get("labelColor");
+
+  const result: Record<string, unknown> = {
     schemaVersion: 1,
-    label: "DOaaS",
+    label,
     message,
-    color: "orange",
+    color,
+    style,
   };
+  if (labelColor !== null && labelColor !== "") {
+    result.labelColor = labelColor;
+  }
+  return result;
 }
 
 export async function handleRequest(request: Request): Promise<Response> {
@@ -181,7 +202,7 @@ Examples:
     if (format === "text") {
       body = toText(endpoint, effectiveMode);
     } else if (format === "shields") {
-      body = JSON.stringify(toShields(endpoint, effectiveMode));
+      body = JSON.stringify(toShields(endpoint, effectiveMode, url, true), null, 2);
     } else {
       body = JSON.stringify(toJson(endpoint, effectiveMode), null, 2);
     }
@@ -213,7 +234,7 @@ Examples:
   if (format === "text") {
     body = toText(endpoint, effectiveMode);
   } else if (format === "shields") {
-    body = JSON.stringify(toShields(endpoint, effectiveMode));
+    body = JSON.stringify(toShields(endpoint, effectiveMode, url, false), null, 2);
   } else {
     body = JSON.stringify(toJson(endpoint, effectiveMode), null, 2);
   }
