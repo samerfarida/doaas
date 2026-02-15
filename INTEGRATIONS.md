@@ -356,9 +356,55 @@ When using `format=shields`, you can pass these query parameters to customize th
 | `color`      | `orange`                               | Right-side color (named or hex)                                          |
 | `labelColor` | —                                      | Left-side color (named or hex)                                           |
 
-Example: `https://doaas.dev/blame?format=shields&style=flat-square&color=blue`
-
 **Cache:** To control how long Shields.io caches the badge, add `cacheSeconds` to the **Shields URL** (not the DOaaS URL), e.g. `https://img.shields.io/endpoint?url=...&cacheSeconds=3600`.
+
+### Live examples by parameter
+
+See how each parameter changes the badge. Copy the markdown and tweak the query string.
+
+**Custom label** (`label=...`):
+
+```markdown
+![Blame](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Fblame%3Fformat%3Dshields%26label%3DBlame)
+```
+
+![Blame](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Fblame%3Fformat%3Dshields%26label%3DBlame)
+
+**Different colors** (`color=...`):
+
+```markdown
+![DOaaS](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Fmotivate%3Fformat%3Dshields%26color%3Dblue)
+![DOaaS](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Fexcuse%3Fformat%3Dshields%26color%3Dgreen)
+```
+
+![DOaaS](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Fmotivate%3Fformat%3Dshields%26color%3Dblue)
+![DOaaS](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Fexcuse%3Fformat%3Dshields%26color%3Dgreen)
+
+**Style** (`style=flat-square`, `plastic`, etc.):
+
+```markdown
+![DOaaS](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Frandom%3Fformat%3Dshields%26style%3Dflat-square)
+![DOaaS](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Frandom%3Fformat%3Dshields%26style%3Dplastic)
+```
+
+![DOaaS](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Frandom%3Fformat%3Dshields%26style%3Dflat-square)
+![DOaaS](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Frandom%3Fformat%3Dshields%26style%3Dplastic)
+
+**Label color** (`labelColor=...`):
+
+```markdown
+![DOaaS](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Fincident%3Fformat%3Dshields%26labelColor%3D555%26color%3Dred)
+```
+
+![DOaaS](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Fincident%3Fformat%3Dshields%26labelColor%3D555%26color%3Dred)
+
+**Combine several** (label + color + style):
+
+```markdown
+![Vibes](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Frandom%3Fformat%3Dshields%26label%3DVibes%26color%3Dpurple%26style%3Dfor-the-badge)
+```
+
+![Vibes](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Frandom%3Fformat%3Dshields%26label%3DVibes%26color%3Dpurple%26style%3Dfor-the-badge)
 
 ### Basic badge
 
