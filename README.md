@@ -116,6 +116,8 @@ Then: `doaas motivate text`, `doaas blame json`, and so on. For a version with `
 
 ### Terminal greeting
 
+![Terminal with DOaaS-style message](assets/terminal01.png)
+
 Get a DOaaS message every time you open a terminal — add to `~/.bashrc` or `~/.zshrc`:
 
 ```bash
