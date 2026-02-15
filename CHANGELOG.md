@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - **`format=shields`** — Returns [Shields.io Endpoint Badge](https://shields.io/badges/endpoint-badge) schema for embedding dynamic DOaaS messages in README badges. Use with `https://img.shields.io/endpoint?url=https://doaas.dev/random?format=shields`.
+- **Shields query params** — When `format=shields`, optional: `style` (default `flat`), `label` (default `DOaaS` or `DOaaS {endpoint}`), `color` (default `orange`), `labelColor`. All endpoints support these; documented in OpenAPI schema and INTEGRATIONS.md.
 
 ## [1.0.0] - 2026-02-11
 

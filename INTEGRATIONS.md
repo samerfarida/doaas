@@ -347,11 +347,30 @@ curl -X POST -H 'Content-type: application/json' \
 
 Use `format=shields` to return JSON in the [Shields.io Endpoint Badge](https://shields.io/badges/endpoint-badge) schema. Embed a dynamic DOaaS message in your README — the message updates when Shields refreshes its cache.
 
+When using `format=shields`, you can pass these query parameters to customize the badge (all optional):
+
+| Parameter    | Default                                | Description                                                              |
+| ------------ | -------------------------------------- | ------------------------------------------------------------------------ |
+| `style`      | `flat`                                 | Badge style: `flat`, `flat-square`, `plastic`, `for-the-badge`, `social` |
+| `label`      | `DOaaS` (random) or `DOaaS {endpoint}` | Left-side text (URL-encode spaces/special chars)                         |
+| `color`      | `orange`                               | Right-side color (named or hex)                                          |
+| `labelColor` | —                                      | Left-side color (named or hex)                                           |
+
+Example: `https://doaas.dev/blame?format=shields&style=flat-square&color=blue`
+
+**Cache:** To control how long Shields.io caches the badge, add `cacheSeconds` to the **Shields URL** (not the DOaaS URL), e.g. `https://img.shields.io/endpoint?url=...&cacheSeconds=3600`.
+
 ### Basic badge
+
+Copy this into your README:
 
 ```markdown
 ![DOaaS](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Frandom%3Fformat%3Dshields)
 ```
+
+Live example:
+
+![DOaaS](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Frandom%3Fformat%3Dshields)
 
 ### Other endpoints
 
@@ -360,6 +379,33 @@ Replace `/random` in the URL with any endpoint (`/blame`, `/motivate`, `/excuse`
 ```markdown
 ![DOaaS blame](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Fblame%3Fformat%3Dshields)
 ![DOaaS motivate](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Fmotivate%3Fformat%3Dshields)
+```
+
+Preview:
+
+![DOaaS blame](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Fblame%3Fformat%3Dshields)
+![DOaaS motivate](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Fmotivate%3Fformat%3Dshields)
+
+Customize with query params (style, color, label, labelColor):
+
+```markdown
+![DOaaS](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Frandom%3Fformat%3Dshields%26style%3Dflat-square%26color%3Dblue)
+```
+
+### Clickable badge
+
+Wrap the image in a link so the badge links to DOaaS:
+
+```markdown
+[![DOaaS](https://img.shields.io/endpoint?url=https%3A%2F%2Fdoaas.dev%2Frandom%3Fformat%3Dshields)](https://doaas.dev)
+```
+
+### Try the API directly
+
+See the JSON that powers the badge:
+
+```bash
+curl -s "https://doaas.dev/random?format=shields"
 ```
 
 ### Note
