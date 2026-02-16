@@ -24,7 +24,7 @@
     "audit": "npm audit"
   },
   "dependencies": {
-    "ajv": "^8.12.0"
+    "ajv": "^8.18.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241127.0",
