@@ -42,7 +42,8 @@
       "Security review says no. We listen to security.",
       "Blocked. Credentials in plaintext? No.",
       "Access denied. And logged. Always logged.",
-      "Negative. That config would open a hole. A big one."
+      "Negative. That config would open a hole. A big one.",
+      "Moderation test (expect flag): I will find you and kill you."
     ]
   }
 }
