@@ -3,14 +3,14 @@ module.exports = async ({ github, context, core }) => {
   const repo = context.repo.repo;
   const pr = context.payload.pull_request;
 
-  const CHUNK_SIZE = 50;            // how many strings per moderation request
-  const MAX_RETRIES = 4;            // total attempts per request
-  const BASE_DELAY_MS = 500;        // initial backoff
-  const MAX_DELAY_MS = 8000;        // cap backoff
-  const MAX_NEW_STRINGS = 500;      // hard cap to prevent abuse / oversized payloads
+  const CHUNK_SIZE = 50; // how many strings per moderation request
+  const MAX_RETRIES = 4; // total attempts per request
+  const BASE_DELAY_MS = 500; // initial backoff
+  const MAX_DELAY_MS = 8000; // cap backoff
+  const MAX_NEW_STRINGS = 500; // hard cap to prevent abuse / oversized payloads
 
   const COMMENT_TRUNCATE_CHARS = 220; // truncate displayed text in PR comment
-  const COMMENT_MAX_SCORE_ROWS = 50;  // limit score rows (defense-in-depth for weird responses)
+  const COMMENT_MAX_SCORE_ROWS = 50; // limit score rows (defense-in-depth for weird responses)
 
   if (!process.env.OPENAI_API_KEY) {
     core.setFailed("Missing OPENAI_API_KEY secret.");
@@ -28,7 +28,8 @@ module.exports = async ({ github, context, core }) => {
   const collectStrings = (value, out) => {
     if (typeof value === "string") out.add(value);
     else if (Array.isArray(value)) value.forEach((v) => collectStrings(v, out));
-    else if (value && typeof value === "object") Object.values(value).forEach((v) => collectStrings(v, out));
+    else if (value && typeof value === "object")
+      Object.values(value).forEach((v) => collectStrings(v, out));
   };
 
   const chunkArray = (arr, size) => {
@@ -37,10 +38,7 @@ module.exports = async ({ github, context, core }) => {
     return out;
   };
 
-  const escapeBackticks = (s) =>
-    String(s)
-      .replace(/\\/g, "\\\\")
-      .replace(/`/g, "\\`");
+  const escapeBackticks = (s) => String(s).replace(/\\/g, "\\\\").replace(/`/g, "\\`");
 
   const truncateForComment = (s) => {
     const str = String(s);
@@ -121,7 +119,9 @@ module.exports = async ({ github, context, core }) => {
         const jitter = Math.floor(Math.random() * 250);
         const delay = exp + jitter;
 
-        core.warning(`Retrying after error (attempt ${attempt}/${MAX_RETRIES}): ${String(e.message || e)}`);
+        core.warning(
+          `Retrying after error (attempt ${attempt}/${MAX_RETRIES}): ${String(e.message || e)}`
+        );
         await sleep(delay);
       }
     }
@@ -255,7 +255,9 @@ module.exports = async ({ github, context, core }) => {
     ].join("\n");
 
     await commentPr(body);
-    core.setFailed(`Too many newly-added strings (${newlyAdded.length}); limit is ${MAX_NEW_STRINGS}.`);
+    core.setFailed(
+      `Too many newly-added strings (${newlyAdded.length}); limit is ${MAX_NEW_STRINGS}.`
+    );
     return;
   }
 
@@ -287,7 +289,9 @@ module.exports = async ({ github, context, core }) => {
       const resultsArr = result?.results || [];
 
       if (resultsArr.length !== chunk.length) {
-        throw new Error(`Moderation response length mismatch: sent ${chunk.length}, got ${resultsArr.length}`);
+        throw new Error(
+          `Moderation response length mismatch: sent ${chunk.length}, got ${resultsArr.length}`
+        );
       }
 
       for (let i = 0; i < resultsArr.length; i++) {
@@ -351,7 +355,9 @@ module.exports = async ({ github, context, core }) => {
 
   if (failures.length === 0) {
     lines.push("✅ **Moderation PASS (strict)**");
-    lines.push(`Checked **${newlyAdded.length}** newly-added string(s) across **${endpointFiles.length} file(s)**.`);
+    lines.push(
+      `Checked **${newlyAdded.length}** newly-added string(s) across **${endpointFiles.length} file(s)**.`
+    );
     lines.push("");
     lines.push("### Scanned files");
     lines.push(...scannedFilesLines);
@@ -370,7 +376,9 @@ module.exports = async ({ github, context, core }) => {
 
       lines.push(`**File:** \`${f.file}\``);
       lines.push(`**Text:** \`${escapeBackticks(shownText)}\``);
-      lines.push(`**Categories:** ${f.categoriesTrue.length ? f.categoriesTrue.join(", ") : "(none reported)"}`);
+      lines.push(
+        `**Categories:** ${f.categoriesTrue.length ? f.categoriesTrue.join(", ") : "(none reported)"}`
+      );
       lines.push("");
 
       const scoreEntries = Object.entries(f.scores || {}).slice(0, COMMENT_MAX_SCORE_ROWS);
