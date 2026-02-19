@@ -60,5 +60,22 @@ export default tseslint.config(
         require: "readonly",
       },
     },
+  },
+  {
+    files: [".github/scripts/**/*.js"],
+    languageOptions: {
+      sourceType: "commonjs",
+      globals: {
+        module: "readonly",
+        require: "readonly",
+        process: "readonly",
+        Buffer: "readonly",
+        console: "readonly",
+        fetch: "readonly",
+      },
+    },
+    rules: {
+      "no-empty": ["error", { allowEmptyCatch: true }],
+    },
   }
 );
