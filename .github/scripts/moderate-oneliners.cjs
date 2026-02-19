@@ -66,12 +66,39 @@ module.exports = async ({ github, context, core }) => {
   }
 
   async function commentPr(body) {
-    await github.rest.issues.createComment({
+    const botLogin = "github-actions[bot]";
+    const marker = "Moderation PASS (strict)";
+    const markerFail = "Moderation FAIL (strict)";
+
+    const { data: comments } = await github.rest.issues.listComments({
       owner,
       repo,
       issue_number: pr.number,
-      body,
+      per_page: 100,
     });
+
+    const existing = comments
+      .filter(
+        (c) =>
+          c.user?.login === botLogin && (c.body?.includes(marker) || c.body?.includes(markerFail))
+      )
+      .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))[0];
+
+    if (existing) {
+      await github.rest.issues.updateComment({
+        owner,
+        repo,
+        comment_id: existing.id,
+        body,
+      });
+    } else {
+      await github.rest.issues.createComment({
+        owner,
+        repo,
+        issue_number: pr.number,
+        body,
+      });
+    }
   }
 
   function isRetryableStatus(status) {
@@ -215,7 +242,7 @@ module.exports = async ({ github, context, core }) => {
       if (baseJson) collectStrings(baseJson, baseSet);
 
       for (const s of headSet) {
-        if (!baseSet.has(s)) {
+        if (!baseSet.has(s) && String(s).trim() !== "") {
           newlyAdded.push({ file: path, text: s });
           fileCounts.set(path, (fileCounts.get(path) || 0) + 1);
         }
@@ -409,7 +436,7 @@ module.exports = async ({ github, context, core }) => {
   lines.push("");
   lines.push(await getFooter(failures.length > 0));
 
-  // Post PR comment (new comment each run)
+  // Post or update PR comment (single comment per PR, updated on each run)
   await commentPr(lines.join("\n"));
 
   // Fail job if any flagged content detected

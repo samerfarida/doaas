@@ -3,6 +3,8 @@ name: Moderate new one-liners (strict)
 on:
   pull_request_target:
     types: [opened, synchronize, reopened]
+    paths:
+      - "endpoints/**"
 
 permissions:
   contents: read
