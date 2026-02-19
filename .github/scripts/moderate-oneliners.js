@@ -37,7 +37,10 @@ module.exports = async ({ github, context, core }) => {
     return out;
   };
 
-  const escapeBackticks = (s) => String(s).replace(/`/g, "\\`");
+  const escapeBackticks = (s) =>
+    String(s)
+      .replace(/\\/g, "\\\\")
+      .replace(/`/g, "\\`");
 
   const truncateForComment = (s) => {
     const str = String(s);
