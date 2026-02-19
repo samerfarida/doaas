@@ -23,5 +23,5 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         with:
           script: |
-            const run = require(process.cwd() + "/.github/scripts/moderate-oneliners.js");
+            const run = require(process.cwd() + "/.github/scripts/moderate-oneliners.cjs");
             await run({ github, context, core });
