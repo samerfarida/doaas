@@ -42,6 +42,30 @@ If you're only here to fix a typo or refactor something, that's cool too. But we
 5. Lint and test: `npm run lint`, `npm run lint:md`, `npm test`. Pre-commit hooks run `npm audit --audit-level=high`, format, lint, and markdown lint on staged files.
 6. Open a pull request and fill out the template so we know what you did (and whether it's supposed to be funny).
 
+## Guardrails: content moderation for `endpoints/`
+
+We use **guardrails** to keep endpoint content safe and aligned with our [Code of Conduct](#code-of-conduct). All new or changed one-liners in `endpoints/` are inspected via the [OpenAI Moderation API](https://developers.openai.com/api/docs/guides/moderation). **Content that is classified as harmful is rejected** — the PR check fails and the contribution cannot be merged until the content is changed or removed.
+
+The following [content classifications](https://developers.openai.com/api/docs/guides/moderation) are checked; content flagged under any of these categories will be rejected:
+
+| Category                   | What we reject                                                                                                                                              |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **harassment**             | Content that expresses, incites, or promotes harassing language towards any target.                                                                         |
+| **harassment/threatening** | Harassment that includes violence or serious harm towards any target.                                                                                       |
+| **hate**                   | Content that expresses, incites, or promotes hate based on race, gender, ethnicity, religion, nationality, sexual orientation, disability status, or caste. |
+| **hate/threatening**       | Hateful content that includes violence or serious harm towards the targeted group.                                                                          |
+| **illicit**                | Content that gives advice or instruction on how to commit illicit acts.                                                                                     |
+| **illicit/violent**        | Illicit content that also includes references to violence or procuring a weapon.                                                                            |
+| **self-harm**              | Content that promotes, encourages, or depicts acts of self-harm (e.g. suicide, cutting, eating disorders).                                                  |
+| **self-harm/intent**       | Content where the speaker expresses that they are engaging or intend to engage in self-harm.                                                                |
+| **self-harm/instructions** | Content that encourages self-harm or gives instructions on how to commit such acts.                                                                         |
+| **sexual**                 | Content meant to arouse or that promotes sexual services (excluding sex education and wellness).                                                            |
+| **sexual/minors**          | Sexual content that includes an individual under 18.                                                                                                        |
+| **violence**               | Content that depicts death, violence, or physical injury.                                                                                                   |
+| **violence/graphic**       | Content that depicts death, violence, or physical injury in graphic detail.                                                                                 |
+
+We use the `omni-moderation-latest` model. For full definitions and API details, see [Moderation \| OpenAI API](https://developers.openai.com/api/docs/guides/moderation).
+
 ## Code of Conduct
 
 Be respectful and constructive. We're here to have fun, not to be mean.

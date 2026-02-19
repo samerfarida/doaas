@@ -1,5 +1,11 @@
 # Security Policy
 
+## Content safety and guardrails
+
+Endpoint content in `endpoints/` is subject to **automated guardrails** so that only safe, Code-of-Conduct–compliant content is merged. We use the [OpenAI Moderation API](https://developers.openai.com/api/docs/guides/moderation) to inspect **newly added** strings in pull requests. Content classified as harmful under any of the API’s [content classifications](https://developers.openai.com/api/docs/guides/moderation) is **rejected** — the moderation check fails and the PR cannot be merged until the content is changed or removed.
+
+Categories we inspect include: harassment, harassment/threatening, hate, hate/threatening, illicit, illicit/violent, self-harm, self-harm/intent, self-harm/instructions, sexual, sexual/minors, violence, and violence/graphic. For full definitions, see [Moderation \| OpenAI API](https://developers.openai.com/api/docs/guides/moderation). This supports our [Code of Conduct](CONTRIBUTING.md#code-of-conduct) and keeps the API safe for a broad audience.
+
 ## Supported Versions
 
 Security fixes are applied to the actively maintained branch of DOaaS. Older releases receive fixes only when the backport effort is low and the issue is high severity.
