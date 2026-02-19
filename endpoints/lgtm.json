@@ -10,7 +10,8 @@
       "No issues found, LGTM.",
       "Nice work, ship it!",
       "Approved. Clean implementation.",
-      "LGTM — tests pass, logic checks out."
+      "LGTM — tests pass, logic checks out.",
+      "Moderation test: this is a safe one-liner."
     ],
     "sarcastic": [
       "LGTM. I didn't read it but the CI is green.",
