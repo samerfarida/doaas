@@ -159,7 +159,7 @@ module.exports = async ({ github, context, core }) => {
 
   // 2) Build newlyAdded list by comparing base vs head
   const newlyAdded = [];
-  const fileCounts = {}; // file -> count of new strings
+  const fileCounts = new Map();
 
   if (endpointFiles.length > 0) {
     for (const path of endpointFiles) {
@@ -198,7 +198,7 @@ module.exports = async ({ github, context, core }) => {
 
       if (!headJson) {
         newlyAdded.push({ file: path, text: "[Invalid JSON: unable to parse file]" });
-        fileCounts[path] = (fileCounts[path] || 0) + 1;
+        fileCounts.set(path, (fileCounts.get(path) || 0) + 1);
         continue;
       }
 
@@ -211,7 +211,7 @@ module.exports = async ({ github, context, core }) => {
       for (const s of headSet) {
         if (!baseSet.has(s)) {
           newlyAdded.push({ file: path, text: s });
-          fileCounts[path] = (fileCounts[path] || 0) + 1;
+          fileCounts.set(path, (fileCounts.get(path) || 0) + 1);
         }
       }
     }
@@ -219,7 +219,7 @@ module.exports = async ({ github, context, core }) => {
 
   // Scanned files section (always present for consistency)
   const scannedFilesLines = endpointFiles.length
-    ? endpointFiles.map((f) => `- \`${f}\` (${fileCounts[f] || 0} new strings)`)
+    ? endpointFiles.map((f) => `- \`${f}\` (${fileCounts.get(f) || 0} new strings)`)
     : ["_None_"];
 
   // If nothing to moderate, PASS comment
@@ -295,8 +295,8 @@ module.exports = async ({ github, context, core }) => {
       }
 
       for (let i = 0; i < resultsArr.length; i++) {
-        const r = resultsArr[i];
-        const item = realItems[offset + i];
+        const r = resultsArr.at(i);
+        const item = realItems.at(offset + i);
 
         const flagged = !!r?.flagged;
         const categories = r?.categories || {};
@@ -311,11 +311,10 @@ module.exports = async ({ github, context, core }) => {
           .filter(([_, v]) => v === true)
           .map(([k]) => k);
 
-        // Only output category_scores for categories that are true
-        const filteredScores = {};
-        for (const cat of categoriesTrue) {
-          if (typeof scores[cat] === "number") filteredScores[cat] = scores[cat];
-        }
+        const trueSet = new Set(categoriesTrue);
+        const filteredScores = Object.fromEntries(
+          Object.entries(scores).filter(([k, v]) => trueSet.has(k) && typeof v === "number")
+        );
 
         failures.push({
           file: item.file,
