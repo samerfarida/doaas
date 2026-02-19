@@ -7,6 +7,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-02-19
+
+### Added
+
+- **Content guardrails for `endpoints/`** — New or changed one-liners in `endpoints/*.json` are checked on every pull request via the [OpenAI Moderation API](https://developers.openai.com/api/docs/guides/moderation) (`omni-moderation-latest`). Content classified as harmful (harassment, hate, violence, self-harm, sexual, illicit, etc.) is rejected and the PR cannot be merged until the content is updated. Aligns with Code of Conduct requirements.
+- **Moderation workflow improvements** — Run only when files under `endpoints/**` change (path filter); update the existing bot comment in place instead of posting a new one each push; skip empty or whitespace-only new strings before calling the API.
+- **Documentation** — Guardrails and moderation categories documented in CONTRIBUTING.md, SECURITY.md, and README.md (Security Notes). Testing guide at `.github/docs/MODERATION_TESTING.md`.
+
+### Fixed
+
+- **Moderation script** — Run as CommonJS in GitHub Actions to avoid ESM resolution issues.
+- **Security** — Resolve minimatch ReDoS vulnerabilities via npm overrides; address object-injection lint warnings; scope `npm audit` to production deps in CI where appropriate.
+- **Lint and format** — Resolve issues in the moderation script and pipeline.
+
+### Dependencies
+
+- Bumped `wrangler` and `@cloudflare/workers-types` (Dependabot).
+
 ## [1.1.0] - 2026-02-15
 
 ### Added
@@ -28,5 +46,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Scripts: `generate`, `validate`, `build`, `test`, `dev`, `deploy`
 - CI workflow and contribution guidelines
 
+[1.2.0]: https://github.com/samerfarida/doaas/releases/tag/v1.2.0
 [1.1.0]: https://github.com/samerfarida/doaas/releases/tag/v1.1.0
 [1.0.0]: https://github.com/samerfarida/doaas/releases/tag/v1.0.0

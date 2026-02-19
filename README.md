@@ -140,6 +140,7 @@ For local setup and all `npm` scripts, see [CONTRIBUTING.md](CONTRIBUTING.md#dev
 
 ## 🔐 Security Notes
 
+- **Content guardrails:** We inspect all content in `endpoints/` using the [OpenAI Moderation API](https://developers.openai.com/api/docs/guides/moderation). New or changed one-liners are checked on every pull request; content classified as harmful (e.g. harassment, hate, violence, self-harm, sexual, illicit) is **rejected** per our [Code of Conduct](CONTRIBUTING.md#code-of-conduct). See [CONTRIBUTING.md](CONTRIBUTING.md#guardrails-content-moderation-for-endpoints) for the full list of categories we check.
 - Free plan folks: don’t be that person hammering the API—rate limits are real.
 - Cache smartly or keep local copies to avoid becoming a DOaaS spammer.
 - All endpoints have `Cache-Control: no-store` because fresh data is the best data.
