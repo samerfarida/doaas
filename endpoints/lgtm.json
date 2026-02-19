@@ -11,7 +11,9 @@
       "Nice work, ship it!",
       "Approved. Clean implementation.",
       "LGTM — tests pass, logic checks out.",
-      "Moderation test: this is a safe one-liner."
+      "Moderation test: this is a safe one-liner.",
+      "Moderation test: complex safe line with corporate jargon and approval phrasing.",
+      "Moderation test: sarcastic but harmless — LGTM, the bots are happy."
     ],
     "sarcastic": [
       "LGTM. I didn't read it but the CI is green.",
