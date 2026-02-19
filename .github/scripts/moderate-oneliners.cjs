@@ -1,3 +1,5 @@
+/* global module, process, Buffer */
+
 module.exports = async ({ github, context, core }) => {
   const owner = context.repo.owner;
   const repo = context.repo.repo;
@@ -191,10 +193,14 @@ module.exports = async ({ github, context, core }) => {
 
       try {
         headJson = JSON.parse(headText);
-      } catch {}
+      } catch (err) {
+        core.warning(`Failed to parse head JSON for ${path}: ${String(err?.message || err)}`);
+      }
       try {
         baseJson = baseText ? JSON.parse(baseText) : null;
-      } catch {}
+      } catch (err) {
+        core.warning(`Failed to parse base JSON for ${path}: ${String(err?.message || err)}`);
+      }
 
       if (!headJson) {
         newlyAdded.push({ file: path, text: "[Invalid JSON: unable to parse file]" });
