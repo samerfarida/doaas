@@ -1,0 +1,78 @@
+# Create a GitHub Release from CHANGELOG.md when a version tag (v*) is pushed.
+# Uses Changelog Reader to get the entry for that version and publishes it as the release notes.
+# See: https://github.com/marketplace/actions/changelog-reader
+
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Create release from changelog
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get version from tag
+        id: tag_name
+        run: |
+          echo "current_version=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get changelog entry
+        id: changelog_reader
+        uses: mindsers/changelog-reader-action@v2
+        with:
+          path: ./CHANGELOG.md
+          version: ${{ steps.tag_name.outputs.current_version }}
+          validation_level: warn
+
+      - name: Get release message
+        id: release_msg
+        run: |
+          MSG=$(curl -s "https://doaas.dev/lgtm?format=text" || echo "Ship it!")
+          echo "message=$MSG" >> $GITHUB_OUTPUT
+          echo "$MSG"
+
+      - name: Build release body
+        id: release_body
+        env:
+          CHANGELOG_CHANGES: ${{ steps.changelog_reader.outputs.changes }}
+          RELEASE_MSG: ${{ steps.release_msg.outputs.message }}
+        run: |
+          {
+            echo "**$RELEASE_MSG**"
+            echo ""
+            echo "Try it:"
+            echo ""
+            echo '```bash'
+            echo 'curl -s "https://doaas.dev/lgtm?format=text"'
+            echo '```'
+            echo ""
+            echo "---"
+            echo ""
+            printf '%s' "$CHANGELOG_CHANGES"
+          } > release_body.md
+          echo "body<<RELEASEBODY" >> $GITHUB_OUTPUT
+          cat release_body.md >> $GITHUB_OUTPUT
+          echo "RELEASEBODY" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ steps.changelog_reader.outputs.version }}
+          body_path: release_body.md
+          prerelease: ${{ steps.changelog_reader.outputs.status == 'prereleased' }}
+          draft: ${{ steps.changelog_reader.outputs.status == 'unreleased' }}
+          make_latest: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
