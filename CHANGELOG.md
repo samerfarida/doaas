@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-02-20
+
 ### Added
 
 - **More taglines (batch 1/3)** — New one-liners per mode for: `lgtm`, `alignment`, `audit`, `blame`, `burnout`, `compliance`, `deploy`, `excuse`, `incident`. Content follows CONTRIBUTING.md guardrails and is subject to PR moderation.
@@ -57,6 +59,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Scripts: `generate`, `validate`, `build`, `test`, `dev`, `deploy`
 - CI workflow and contribution guidelines
 
+[Unreleased]: https://github.com/samerfarida/doaas/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/samerfarida/doaas/releases/tag/v1.3.0
 [1.2.0]: https://github.com/samerfarida/doaas/releases/tag/v1.2.0
 [1.1.0]: https://github.com/samerfarida/doaas/releases/tag/v1.1.0
 [1.0.0]: https://github.com/samerfarida/doaas/releases/tag/v1.0.0

@@ -154,6 +154,10 @@ For local setup and all `npm` scripts, see [CONTRIBUTING.md](CONTRIBUTING.md#dev
 - Blame is a team sport—pass it around generously.
 - Remember: every incident is just a plot twist in your career story.
 
+## Releases
+
+See [CHANGELOG.md](CHANGELOG.md) for version history and [GitHub Releases](https://github.com/samerfarida/doaas/releases) for release notes and assets.
+
 ## Contributing
 
 We want **more than code** — new endpoints, funnier one-liners, better docs. See [CONTRIBUTING.md](CONTRIBUTING.md) to join the fun.
