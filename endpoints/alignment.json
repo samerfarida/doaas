@@ -13,7 +13,21 @@
       "Sync up with stakeholders regularly.",
       "Everyone on the same page? Great, let's build.",
       "Alignment first, execution second.",
-      "Quick sync before we go heads-down."
+      "Quick sync before we go heads-down.",
+      "Let's get on the same page. Then execute.",
+      "Goals clear? Great. Let's ship.",
+      "Quick alignment before the sprint.",
+      "Everyone know the priorities? Good.",
+      "Sync on scope before we build.",
+      "Align on the plan. Then run.",
+      "Same page? Same page. Go.",
+      "Goals aligned. Let's do this.",
+      "Quick check: we're building the right thing? Good.",
+      "Stakeholders aligned. We're aligned. Go.",
+      "Priorities locked. Team aligned. Execute.",
+      "Alignment done. Questions? No? Ship.",
+      "We're aligned. Document it. Then build.",
+      "Goals set. Team aligned. Let's go."
     ],
     "corporate": [
       "We need to ensure strategic alignment across Q3 objectives.",
@@ -21,7 +35,21 @@
       "Let's sync our KPIs with the broader org.",
       "Cross-functional alignment meeting scheduled.",
       "Executive alignment achieved; proceed with initiative.",
-      "Ensure RACI matrix alignment before kickoff."
+      "Ensure RACI matrix alignment before kickoff.",
+      "Strategic alignment across Q3 objectives required.",
+      "Stakeholder alignment critical for delivery.",
+      "Sync KPIs with the broader org.",
+      "Cross-functional alignment meeting scheduled.",
+      "Executive alignment achieved; proceed.",
+      "RACI matrix alignment before kickoff.",
+      "Program alignment with portfolio priorities.",
+      "Stakeholder sign-off required; alignment meeting set.",
+      "OKR alignment with company goals.",
+      "Board alignment on initiative; proceed.",
+      "Cross-team alignment on dependencies.",
+      "Executive alignment documented; green light.",
+      "Governance alignment confirmed; initiative approved.",
+      "Strategic alignment complete; execution authorized."
     ],
     "chaos": [
       "We're aligned. On chaos. Everyone good with that?",
@@ -29,7 +57,15 @@
       "Synced. No one knows what we're building. Perfect.",
       "Alignment complete. Three different interpretations. Ship it.",
       "We aligned in the hallway. Or was that a fever dream?",
-      "Alignment: everyone agreed to disagree. Moving on."
+      "Alignment: everyone agreed to disagree. Moving on.",
+      "We're aligned. I think. I'm not sure on what.",
+      "Synced. We have three versions of the plan. All correct.",
+      "Alignment: we said the same words. Different meanings. Ship it.",
+      "We're aligned. The doc says so. No one read the doc.",
+      "Alignment complete. We'll discover what we meant later.",
+      "Synced. We're building something. Probably. Good enough.",
+      "Alignment: we nodded. We're not sure we agreed. Proceeding.",
+      "We're aligned. On needing another alignment meeting. Soon."
     ],
     "sarcastic": [
       "Let's align. Again. For the 47th time this sprint.",
@@ -37,7 +73,38 @@
       "We're aligned. I have no idea what we aligned on.",
       "Alignment meeting: 2 hours, zero decisions. Success.",
       "Fully aligned. My interpretation is the right one.",
-      "Synergy achieved. Synergy is still not a real word."
+      "Synergy achieved. Synergy is still not a real word.",
+      "We're aligned. On chaos. Everyone good with that?",
+      "Alignment achieved: we're all confused together.",
+      "Synced. No one knows what we're building. Perfect.",
+      "Alignment complete. Three different interpretations. Ship it.",
+      "We aligned in the hallway. Or was that a fever dream?",
+      "Alignment: everyone agreed to disagree. Moving on.",
+      "We're aligned. I think. I'm not sure on what.",
+      "Synced. We have three versions of the plan. All correct.",
+      "Alignment: we said the same words. Different meanings. Ship it.",
+      "We're aligned. The doc says so. No one read the doc.",
+      "Alignment complete. We'll discover what we meant later.",
+      "Synced. We're building something. Probably. Good enough.",
+      "Alignment: we nodded. We're not sure we agreed. Proceeding.",
+      "We're aligned. On needing another alignment meeting. Soon."
+    ],
+    "sarcastic": [
+      "Let's align. Again. For the 47th time this sprint.",
+      "Strategic alignment: my calendar says yes, my soul says no.",
+      "We're aligned. I have no idea what we aligned on.",
+      "Alignment meeting: 2 hours, zero decisions. Success.",
+      "Fully aligned. My interpretation is the right one.",
+      "Synergy achieved. Synergy is still not a real word.",
+      "Let's align. My notes say one thing. Yours say another. Both right.",
+      "Alignment: we achieved it. We think. The deck says so.",
+      "We're aligned. I'll know for sure after the next alignment meeting.",
+      "Strategic alignment: we have a slide. The slide has words. We're good.",
+      "Aligned. On something. Possibly the same thing. Proceeding.",
+      "Alignment complete. We have consensus. On having another meeting.",
+      "We're aligned. The strategy is clear. To someone. Somewhere.",
+      "Synergy: achieved. Meaning: TBD. Confidence: high. Somehow.",
+      "Alignment done. We're all saying the same thing. We think."
     ]
   }
 }

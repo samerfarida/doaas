@@ -13,7 +13,21 @@
       "It's not my fault, it was the network!",
       "Blame the last person who touched the code.",
       "Third-party API changed without notice.",
-      "Race condition. Classic."
+      "Race condition. Classic.",
+      "It's the network. It's always the network.",
+      "Cache invalidation. Hard problem.",
+      "Third-party outage. Not us.",
+      "Timeout on the upstream service.",
+      "Load balancer had a moment.",
+      "Database connection pool. Again.",
+      "CDN edge node misbehaving.",
+      "Kubernetes did something. We're not sure what.",
+      "Out of memory. The server's, not mine.",
+      "Disk full. Logs. Always the logs.",
+      "SSL certificate expired. Who's job was that?",
+      "Config drift. Classic.",
+      "Deployment race. Two deploys, one winner.",
+      "Timeout. The request is still thinking. Somewhere."
     ],
     "chaos": [
       "Cosmic rays hit the load balancer. Good luck.",
@@ -21,7 +35,21 @@
       "The server is down because someone forgot to pay the bill.",
       "A butterfly flapped its wings in prod. Probably.",
       "The hamster powering the server needed a break.",
-      "Sunspots. Definitely sunspots."
+      "Sunspots. Definitely sunspots.",
+      "The gremlins are back. We thought we'd evicted them.",
+      "Phase of the moon. Deploy calendar says so.",
+      "The data center had a feeling. We're respecting it.",
+      "Someone unplugged something. We don't know who. Or what.",
+      "The backup power kicked in. It's shy. Didn't announce.",
+      "A butterfly in Brazil. Chaos theory. Look it up.",
+      "The hamster needed a break. We're supportive.",
+      "Mercury is still in retrograde. Blame the cosmos.",
+      "The cloud had a thought. It was a bad thought.",
+      "Electromagnetic interference. From where? Yes.",
+      "The server got lonely. It's emotional.",
+      "Bit flip. Cosmic rays. Same thing. Probably.",
+      "The load balancer took a nap. Unplanned.",
+      "The network had opinions. Strong opinions."
     ],
     "corporate": [
       "This appears to be an upstream dependency issue.",
@@ -29,7 +57,21 @@
       "External factor outside our control.",
       "Prior ownership did not document this.",
       "Cross-team dependency introduced the variance.",
-      "Legacy system interaction; not in current scope."
+      "Legacy system interaction; not in current scope.",
+      "Upstream dependency issue; vendor notified.",
+      "Unexpected vendor behavior; impact documented.",
+      "External factor; outside our control.",
+      "Prior ownership; documentation gap.",
+      "Cross-team dependency; variance introduced.",
+      "Third-party API change; no advance notice.",
+      "Vendor SLA breach; escalation in progress.",
+      "Upstream timeline slip; we're blocked.",
+      "External system degradation; we're impacted.",
+      "Legacy integration; not in current roadmap.",
+      "Dependency update introduced regression.",
+      "Vendor communication gap; following up.",
+      "Upstream change; we weren't in the loop.",
+      "External dependency; mitigation in progress."
     ],
     "security": [
       "Misconfigured IAM did it. As usual.",
@@ -37,7 +79,21 @@
       "Someone committed secrets to the repo. Again.",
       "Default credentials. Still default. In prod.",
       "Shadow IT deployed something. We're still finding it.",
-      "That service account had too much power. Oops."
+      "That service account had too much power. Oops.",
+      "Misconfigured IAM. Again. As usual.",
+      "Expired certificate. It chose violence.",
+      "Secrets in the repo. Again. We have a pattern.",
+      "Default credentials. In prod. Still.",
+      "Shadow IT. We're still discovering what they deployed.",
+      "Service account had admin. Oops.",
+      "Unencrypted channel. We're fixing. Again.",
+      "Missing MFA on that account. We know.",
+      "Credentials in the log. We've rotated. Again.",
+      "Over-permissioned role. Cleanup in progress.",
+      "Hardcoded secret. In the code. We found it. Again.",
+      "Patching lag. Critical CVE. We're on it.",
+      "That API key was in the client. We've revoked.",
+      "Security review skipped. We're doing it now."
     ],
     "toxic": [
       "Obviously the last person who touched it.",
@@ -45,7 +101,21 @@
       "Who wrote this? Oh. You. That explains it.",
       "The person who merged without review. You know who you are.",
       "Someone who clearly doesn't test their code.",
-      "The on-call who slept through the alert. Allegedly."
+      "The on-call who slept through the alert. Allegedly.",
+      "Obviously the last person who touched it. You.",
+      "Probably the intern. Or you. Same thing.",
+      "Who wrote this? Oh. You. That explains it.",
+      "The person who merged without review. You know who.",
+      "Someone who doesn't test. We have ideas who.",
+      "The on-call. They were sleeping. Allegedly.",
+      "The person who said it worked on their machine.",
+      "Whoever skipped the review. You know who you are.",
+      "The one who deployed on Friday. We have a list.",
+      "Someone who thought staging was prod. Or didn't check.",
+      "The person who didn't run the tests. We know.",
+      "Whoever left the debug log in. In prod.",
+      "The one who said it was a quick fix. It wasn't.",
+      "Obviously not me. I would never. Except that one time."
     ],
     "sarcastic": [
       "Surely not the person who merged without testing.",
@@ -53,7 +123,15 @@
       "Couldn't possibly be the 47th hotfix this week.",
       "Clearly the ghost in the machine. Very cooperative ghost.",
       "Probably user error. Users are the worst.",
-      "It's a feature. A very aggressive feature."
+      "It's a feature. A very aggressive feature.",
+      "Must be the cache. The cache is a scapegoat. A reliable one.",
+      "Surely not the deploy we did 10 minutes ago.",
+      "Couldn't be the config change. The config is innocent. Probably.",
+      "Clearly the network. The network is always guilty.",
+      "Probably a race condition. We have a lot of those.",
+      "Must be the dependency. We have 400. One of them.",
+      "Surely not our code. Our code is perfect. We think.",
+      "It's the system. The system is complicated. So we blame it."
     ]
   }
 }

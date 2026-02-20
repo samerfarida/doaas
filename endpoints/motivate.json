@@ -10,7 +10,21 @@
       "Success is not final; failure is not fatal.",
       "You've got this. One deploy at a time.",
       "Progress over perfection.",
-      "Celebrate the small wins."
+      "Celebrate the small wins.",
+      "You've got this. One PR at a time.",
+      "Progress over perfection. Keep shipping.",
+      "Every deploy is a chance to learn.",
+      "You're doing great. Really.",
+      "Small steps still move the needle.",
+      "Take a breath. Then keep going.",
+      "Your work matters. Even when it's hard.",
+      "One more try. You're closer than you think.",
+      "Celebrate the wins. Learn from the rest.",
+      "You're capable. Don't forget it.",
+      "Keep going. The finish line is there.",
+      "Mistakes are how we learn. You're learning.",
+      "You've survived 100% of your bad days.",
+      "Today is a new chance. Use it."
     ],
     "wholesome": [
       "You've got this. One step at a time.",
@@ -18,7 +32,21 @@
       "Progress over perfection. You're doing great.",
       "Your worth isn't measured by your sprint velocity.",
       "Take care of yourself. The code can wait.",
-      "You're doing better than you think."
+      "You're doing better than you think.",
+      "You've got this. One step at a time.",
+      "It's okay to take a breath. Then try again.",
+      "Progress over perfection. You're doing great.",
+      "Your worth isn't measured by your sprint velocity.",
+      "Take care of yourself. The code can wait.",
+      "Rest isn't laziness. It's maintenance.",
+      "Be kind to yourself. You've earned it.",
+      "You're enough. The tickets will wait.",
+      "It's okay to ask for help. Really.",
+      "Your health matters more than the deadline.",
+      "Take that break. You deserve it.",
+      "One task at a time. That's enough.",
+      "You're doing great. Even on the hard days.",
+      "Be gentle with yourself. You're trying."
     ],
     "toxic": [
       "Sleep is for the weak. Deploy at 2 AM.",
@@ -26,7 +54,20 @@
       "Another day, another incident. Embrace it.",
       "Hustle culture: because burnout is a badge of honor.",
       "Vacation? What's that? We have prod.",
-      "The grind doesn't stop. Neither should you. Apparently."
+      "The grind doesn't stop. Neither should you. Apparently.",
+      "Sleep is for the weak. Deploy at 2 AM.",
+      "If you're not stressed, you're not shipping.",
+      "Another day, another incident. Embrace it.",
+      "Hustle culture: because burnout is a badge of honor.",
+      "Vacation? What's that? We have prod.",
+      "Sleep when you're dead. Or when prod is stable. Same thing.",
+      "Stress is a feature. Of the job. Apparently.",
+      "PTO is a suggestion. Prod is not.",
+      "Burnout is a myth. So they say. They're wrong.",
+      "Another incident. Another lesson. Another coffee.",
+      "The pager doesn't sleep. Why should you?",
+      "Hustle. The sprint won't complete itself. Sadly.",
+      "Rest is for the weak. So is lunch. Kidding. Maybe."
     ],
     "chaos": [
       "You're one deploy away from glory. Or disaster. Both?",
@@ -34,7 +75,21 @@
       "Keep going. The pager will find you anyway.",
       "Optimism: production might not crash. Today.",
       "You got this. Probably. We believe in you. Maybe.",
-      "One more PR. What's the worst that could happen?"
+      "One more PR. What's the worst that could happen?",
+      "You're one deploy away from glory. Or disaster. Both?",
+      "Today might be the day everything works. Might.",
+      "Keep going. The pager will find you anyway.",
+      "Optimism: production might not crash. Today.",
+      "You got this. Probably. We believe in you. Maybe.",
+      "One more PR. What's the worst that could happen?",
+      "You're one incident away from a great story. Or therapy.",
+      "Keep pushing. The pipeline might turn green. Eventually.",
+      "Today could be the day. Could be. Stranger things have happened.",
+      "You've got this. The runbook says so. Somewhere.",
+      "One more deploy. We have rollback. We think.",
+      "Optimism: the canary might survive. Might.",
+      "Keep going. The on-call shift ends. Eventually.",
+      "You're one fix away from hero. Or villain. Same thing sometimes."
     ],
     "sarcastic": [
       "Rise and grind. Or rise and groan. Same energy.",
@@ -42,7 +97,21 @@
       "You're one meeting away from greatness. Or insanity.",
       "Hustle! Just kidding. Take a break. Please.",
       "Dream big. Or just dream of a green pipeline.",
-      "Seize the day. Or the deploy button. Whichever."
+      "Seize the day. Or the deploy button. Whichever.",
+      "Rise and grind. Or rise and groan. Same energy.",
+      "Another day, another dollar. Mostly in AWS costs.",
+      "You're one meeting away from greatness. Or insanity.",
+      "Hustle! Just kidding. Take a break. Please.",
+      "Dream big. Or just dream of a green pipeline.",
+      "Seize the day. Or the deploy button. Whichever.",
+      "Rise and shine. Or rise and deploy. Your choice.",
+      "Another standup, another update. You're doing great. Probably.",
+      "Dream big. The pipeline might agree. One day.",
+      "Seize the sprint. Or the sprint seizes you. Either way.",
+      "You're one LGTM away from production. Or rollback.",
+      "Hustle culture: we have it. We're not proud. Much.",
+      "Another day, another deploy. Or rollback. We don't judge.",
+      "Rise and caffeinate. Then deploy. Or not. Your call."
     ]
   }
 }

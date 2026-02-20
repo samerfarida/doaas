@@ -10,7 +10,21 @@
       "Not sure yet, will update soon.",
       "Unclear — need to validate with the team.",
       "Could work; need to confirm dependencies.",
-      "Tentative yes, pending a few checks."
+      "Tentative yes, pending a few checks.",
+      "Maybe. Need to confirm with the team.",
+      "Possibly. Checking dependencies first.",
+      "Unclear. Will know by EOD.",
+      "Could be. Need a bit more info.",
+      "Tentative. Waiting on one more sign-off.",
+      "Maybe. Let me validate and get back.",
+      "Possibly. Pending technical review.",
+      "Not sure. Will update after the sync.",
+      "Could work. Need to double-check scope.",
+      "Maybe. Timeline is tight. Checking.",
+      "Tentative yes. A few open questions.",
+      "Unclear. Dependencies might block. Checking.",
+      "Possibly. Need stakeholder input.",
+      "Maybe. Will confirm by tomorrow."
     ],
     "corporate": [
       "Subject to stakeholder alignment.",
@@ -18,7 +32,21 @@
       "Pending approval from the appropriate level.",
       "Under consideration; decision timeline TBD.",
       "Requires further analysis before commitment.",
-      "Provisional; formal approval in progress."
+      "Provisional; formal approval in progress.",
+      "Subject to capacity review. TBD.",
+      "Contingent on Q3 planning outcome.",
+      "Pending executive alignment. Timeline TBD.",
+      "Under review; decision by month end.",
+      "Provisional yes; legal review in progress.",
+      "Subject to budget confirmation. Maybe.",
+      "Contingent upon vendor response. Pending.",
+      "Under consideration. Steering committee to decide.",
+      "Provisional; risk assessment in progress.",
+      "Subject to resource allocation. TBD.",
+      "Contingent on audit findings. Pending.",
+      "Under review. Board update scheduled.",
+      "Provisional; compliance sign-off pending.",
+      "Subject to contract amendment. Timeline TBD."
     ],
     "chaos": [
       "Maybe. Our production environment said maybe too.",
@@ -26,7 +54,21 @@
       "Not sure. The person who knew left last week.",
       "Could be. We're still finding out what we built.",
       "Maybe yes, maybe no. The logs are inconclusive.",
-      "Tentative. Everything is tentative. Always."
+      "Tentative. Everything is tentative. Always.",
+      "Maybe. The logs say maybe. The logs say a lot of things.",
+      "Possibly. If the person who built it ever returns.",
+      "Not sure. The runbook says see Bob. Bob left in 2019.",
+      "Could be. We're still mapping the system. With a candle.",
+      "Maybe yes. The monitoring is unclear. Very unclear.",
+      "Tentative. The last deploy said maybe. Then it crashed.",
+      "Maybe. Staging said yes. Staging lies.",
+      "Possibly. We'll find out in prod. We always do.",
+      "Not sure. The docs say one thing. The code says another.",
+      "Could be. Ask the on-call. If they're awake.",
+      "Maybe. The ticket has been open for 2 years. So.",
+      "Tentative. The database might agree. Might.",
+      "Maybe. We have a plan. The plan is maybe.",
+      "Possibly. Hope is a strategy. Right?"
     ],
     "sarcastic": [
       "Maybe. Like maybe I'll check my email. Eventually.",
@@ -34,7 +76,21 @@
       "Not sure. Let me circle back after my 47 meetings.",
       "Could work. In theory. Theory and practice differ.",
       "Maybe. I'll add it to the backlog. Of maybes.",
-      "Tentative yes. The most committed answer I have."
+      "Tentative yes. The most committed answer I have.",
+      "Maybe. I'll add it to the list. The long list.",
+      "Possibly. If the planets align. And we get budget.",
+      "Not sure. Let me circle back. In Q4. Maybe.",
+      "Could work. In a parallel universe. With more time.",
+      "Maybe. I'll run it up the flagpole. The flagpole is busy.",
+      "Tentative. My calendar says maybe. My calendar is optimistic.",
+      "Maybe. The roadmap says yes. The roadmap is fiction.",
+      "Possibly. Pending the meeting about the meeting.",
+      "Not sure. I'll check with the committee. The committee of one.",
+      "Could be. Need to sync with myself. I'm double-booked.",
+      "Maybe. I've committed to committing. Eventually.",
+      "Tentative yes. The strongest maybe I've got.",
+      "Maybe. I'll put it in the backlog. The backlog of life.",
+      "Possibly. If we can find the owner. We're still looking."
     ]
   }
 }

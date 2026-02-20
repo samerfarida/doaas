@@ -7,6 +7,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- **More taglines and one-liners for all endpoints** — Added roughly 10 new one-liners per mode across all endpoints (`lgtm`, `yes`, `no`, `maybe`, `standup`, `deploy`, `rollback`, `thisisfine`, `incident`, `excuse`, `blame`, `motivate`, `realitycheck`, `meeting`, `burnout`, `alignment`, `roadmap`, `policy`, `audit`, `compliance`, `risk`). All new content follows CONTRIBUTING.md guardrails (family-friendly, no harassment, hate, violence, self-harm, sexual, or illicit content) and is subject to moderation checks on PR.
+
 ## [1.2.0] - 2026-02-19
 
 ### Added
