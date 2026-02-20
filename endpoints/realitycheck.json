@@ -10,7 +10,21 @@
       "Quality is more important than speed.",
       "Scope creep has consequences. Plan for it.",
       "Technical debt compounds. Address it.",
-      "We can't do everything. Prioritize ruthlessly."
+      "We can't do everything. Prioritize ruthlessly.",
+      "Deadlines are real. Plan for them.",
+      "Resources are finite. Use them wisely.",
+      "Scope has limits. Respect them.",
+      "Quality takes time. Don't skip it.",
+      "Technical debt has interest. Pay it down.",
+      "We have limited bandwidth. Prioritize.",
+      "Adding people doesn't always speed things up.",
+      "The timeline is the timeline. Work with it.",
+      "Dependencies are real. Map them early.",
+      "We can't do it all. Choose what matters.",
+      "Reality: we have X hours. Plan accordingly.",
+      "Scope creep has a cost. We're paying it.",
+      "Good enough sometimes is. Know when.",
+      "Sustainability beats heroics. Plan for it."
     ],
     "corporate": [
       "Scope and timeline are fixed; adjust scope or extend timeline.",
@@ -18,7 +32,20 @@
       "We are accountable to the committed delivery date.",
       "Stakeholder expectations are set; manage them.",
       "Budget is allocated; no additional headcount this quarter.",
-      "Committed dates are tracked at the program level."
+      "Committed dates are tracked at the program level.",
+      "Scope and timeline are fixed; adjust one or the other.",
+      "Resource allocation is constrained; no new headcount.",
+      "We're accountable to the delivery date. Period.",
+      "Budget is allocated; no extra spend this quarter.",
+      "Committed dates are tracked; no silent slips.",
+      "Governance is in place; follow it.",
+      "RACI is defined; stay in your lane.",
+      "Portfolio is full; no new work without trade-off.",
+      "OKRs are set; delivery is measured.",
+      "Program timeline is fixed; scope is the variable.",
+      "Stakeholder sign-off is required; get it.",
+      "Resource plan is locked; prioritize within it.",
+      "Committed is committed. We report on it."
     ],
     "sarcastic": [
       "Sure, we can do that. And I can grow wings.",
@@ -26,7 +53,15 @@
       "We have two options: do it right or do it twice.",
       "Adding scope doesn't add time. It never has.",
       "The roadmap is full. Of hopes. And dreams. Not capacity.",
-      "Reality: we have 2 devs. Ask: can 2 devs do 10 things? No."
+      "Reality: we have 2 devs. Ask: can 2 devs do 10 things? No.",
+      "The timeline is optimistic. Very. Unrealistically.",
+      "We can add that. We can't add time. Pick one.",
+      "The backlog is infinite. Our capacity is not.",
+      "Sure. And I'll also learn to fly. By Tuesday.",
+      "Scope is a suggestion. Said no one with a deadline.",
+      "We have capacity. For one thing. Maybe two. Not ten.",
+      "The plan assumes nothing goes wrong. Everything goes wrong.",
+      "Reality: we're at 110% capacity. That's not a typo."
     ],
     "chaos": [
       "Reality check: prod is still on fire from last week.",
@@ -34,7 +69,15 @@
       "The runbook is outdated. So is our understanding.",
       "Reality: we're one incident away from a very long weekend.",
       "Capacity check: we're at 147%. Of something. Not good.",
-      "Ground truth: the docs lie. The logs lie. We're winging it."
+      "Ground truth: the docs lie. The logs lie. We're winging it.",
+      "Reality check: the last deploy is still rolling back.",
+      "We have one on-call. And 47 services. Do the math.",
+      "The staging env is not prod. We keep forgetting.",
+      "Reality: we don't know what we don't know. It's a lot.",
+      "The runbook ends at step 3. We're on step 12. Improvising.",
+      "Capacity: we're over. By how much? Yes.",
+      "Ground truth: we're in reactive mode. Have been for weeks.",
+      "Reality: the system is more complex than the diagram. Always."
     ],
     "devops": [
       "Error budget is exhausted. No more risky deploys.",
@@ -42,7 +85,15 @@
       "Incident count is up. Quality gates need tightening.",
       "Tech debt is blocking. It's not optional anymore.",
       "On-call fatigue is real. Rotation needs rebalancing.",
-      "Reality: we're at 90% capacity. Stop saying yes."
+      "Reality: we're at 90% capacity. Stop saying yes.",
+      "Error budget: negative. No new risk until we recover.",
+      "SLOs are breached. Feature work pauses. Non-negotiable.",
+      "Runbook is outdated. Update before next incident.",
+      "Tech debt is at the limit. Paydown before new features.",
+      "On-call load is unsustainable. Add rotation or reduce scope.",
+      "Reality: we're one deploy away from burnout. Slow down.",
+      "Monitoring gaps are real. Fix before next incident.",
+      "Reality: reliability first. Then features. Always."
     ]
   }
 }

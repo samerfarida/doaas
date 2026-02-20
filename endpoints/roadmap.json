@@ -13,7 +13,21 @@
       "Planning for Q3 initiatives underway.",
       "MVP scope locked; iterating from feedback.",
       "Tech debt sprint scheduled for next month.",
-      "Roadmap review: bi-weekly with stakeholders."
+      "Roadmap review: bi-weekly with stakeholders.",
+      "Next milestone: Q3 feature complete.",
+      "Tech debt sprint in two weeks.",
+      "MVP scope locked; feedback loop active.",
+      "Planning for next quarter underway.",
+      "Roadmap priorities: reliability, then features.",
+      "Sprint focus: bug bash and stability.",
+      "Milestone review at end of month.",
+      "Roadmap updated; stakeholders notified.",
+      "Next quarter themes: scale and observability.",
+      "Backlog prioritized; roadmap aligned.",
+      "Tech debt allocation: 20% this sprint.",
+      "Roadmap sync: weekly with product.",
+      "Next release: scope locked Friday.",
+      "Roadmap visible in the tracker; review and comment."
     ],
     "corporate": [
       "Roadmap has been updated; Q3 priorities are locked.",
@@ -21,7 +35,21 @@
       "Stakeholders have visibility into the next two quarters.",
       "OKR alignment complete; roadmap reflects key results.",
       "Investment areas prioritized per board guidance.",
-      "Portfolio roadmap published; dependencies mapped."
+      "Portfolio roadmap published; dependencies mapped.",
+      "Roadmap updated; Q3 priorities locked.",
+      "Strategic initiatives on product roadmap.",
+      "Stakeholders have visibility; next two quarters.",
+      "OKR alignment complete; roadmap reflects key results.",
+      "Investment areas per board guidance.",
+      "Portfolio roadmap published; dependencies mapped.",
+      "Roadmap review with exec; priorities confirmed.",
+      "Q3 roadmap locked; resource allocation set.",
+      "Strategic themes reflected; delivery timeline set.",
+      "Stakeholder sign-off on roadmap; proceed.",
+      "Roadmap and OKRs aligned; tracking in place.",
+      "Portfolio view updated; dependencies documented.",
+      "Roadmap communicated; next review in two weeks.",
+      "Strategic roadmap approved; execution authorized."
     ],
     "chaos": [
       "Roadmap: we have one. It changes. Often. Daily.",
@@ -29,7 +57,15 @@
       "Q3 plan: survive. That's the plan.",
       "Roadmap updated. Again. This is the 12th version this week.",
       "Strategic direction: forward. Mostly. We think.",
-      "Milestones: aspirational. Very aspirational."
+      "Milestones: aspirational. Very aspirational.",
+      "Roadmap: it exists. Accuracy: TBD. Confidence: low.",
+      "Priorities: set. By someone. We're executing. We think.",
+      "Q3: we have goals. We'll discover them as we go.",
+      "Roadmap: comprehensive. Realistic: debatable.",
+      "Strategic pillars: we have four. All urgent. All the time.",
+      "Milestones: we're working toward them. They're moving too.",
+      "Roadmap visibility: 100%. Certainty: 47%.",
+      "We have a plan. The plan is flexible. Very flexible."
     ],
     "sarcastic": [
       "Roadmap: comprehensive. Accurate: debatable.",
@@ -37,7 +73,15 @@
       "The roadmap says Q3. Reality says Q4. Or Q1. TBD.",
       "Strategic pillars: we have four. They're all urgent.",
       "Roadmap visibility: 100%. Confidence: 47%.",
-      "We're agile. The roadmap is a suggestion. A strong suggestion."
+      "We're agile. The roadmap is a suggestion. A strong suggestion.",
+      "Roadmap: we have one. It's in the wiki. Page 47.",
+      "Priorities: everything is P0. We've accepted it.",
+      "The roadmap is a living document. Very living. Constantly changing.",
+      "Strategic direction: forward. The definition of forward: TBD.",
+      "Roadmap: it's optimistic. We're optimistic. It's fine.",
+      "We're agile. The roadmap agrees. The roadmap is flexible. Too flexible.",
+      "Milestones: we have them. We're not sure we'll hit them. We'll see.",
+      "Roadmap: approved. By someone. We're building. Hope it's right."
     ],
     "devops": [
       "SLO focus next quarter; reliability over features.",
@@ -45,7 +89,15 @@
       "Tech debt sprint; 20% capacity for infrastructure.",
       "Migration roadmap: legacy to cloud. 18 months. Optimistic.",
       "Automation initiative: reduce toil by 30%.",
-      "On-call improvements; runbook and alert refinement."
+      "On-call improvements; runbook and alert refinement.",
+      "SLO and error budget focus; feature work secondary.",
+      "Observability roadmap: tracing and metrics first.",
+      "Tech debt: dedicated capacity each sprint.",
+      "Runbook overhaul; reduce MTTR.",
+      "Alert refinement; reduce noise.",
+      "Platform stability over new features; next two quarters.",
+      "Incident response improvements on roadmap.",
+      "Reliability first; roadmap reflects it."
     ]
   }
 }

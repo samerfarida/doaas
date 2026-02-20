@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - **More taglines (batch 1/3)** — New one-liners per mode for: `lgtm`, `alignment`, `audit`, `blame`, `burnout`, `compliance`, `deploy`, `excuse`, `incident`. Content follows CONTRIBUTING.md guardrails and is subject to PR moderation.
-
+- **More taglines (batch 2/3)** — New one-liners per mode for: `maybe`, `meeting`, `motivate`, `no`, `policy`, `realitycheck`, `risk`, `roadmap`, `rollback`. Content follows CONTRIBUTING.md guardrails and is subject to PR moderation.
 - **More taglines (batch 3/3)** — New one-liners per mode for: `standup`, `thisisfine`, `yes`. Content follows CONTRIBUTING.md guardrails and is subject to PR moderation.
 
 ### Fixed

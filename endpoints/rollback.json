@@ -10,7 +10,21 @@
       "Rollback completed successfully.",
       "Reverting to last known good release.",
       "Rollback in progress; ETA 10 minutes.",
-      "Traffic shifted back; monitoring for stability."
+      "Traffic shifted back; monitoring for stability.",
+      "Rollback complete; post-incident review scheduled.",
+      "Reverted to last known good; verifying.",
+      "Rollback in progress; ETA 5 minutes.",
+      "Previous version restored; impact assessed.",
+      "Rollback executed; stakeholders notified.",
+      "Traffic reverted; monitoring error rates.",
+      "Rollback successful; RCA to follow.",
+      "Version reverted; stability checks running.",
+      "Rollback complete; no further impact expected.",
+      "Reverted; deployment window closed.",
+      "Rollback in progress; runbook followed.",
+      "Previous release restored; all clear.",
+      "Rollback done; lessons learned scheduled.",
+      "Traffic back to stable version; all good."
     ],
     "chaos": [
       "Rolling back. Again. Hold my coffee.",
@@ -18,7 +32,21 @@
       "Rollback in progress. Someone check the runbook.",
       "Reverting. The rollback might need a rollback.",
       "Going back in time. Wish us luck.",
-      "Rollback initiated. Morale: also rolling back."
+      "Rollback initiated. Morale: also rolling back.",
+      "Rolling back. Again. The runbook is well-thumbed.",
+      "We're going back. No one say I told you so. Please.",
+      "Rollback in progress. Someone find the runbook. Good luck.",
+      "Reverting. The rollback might need its own rollback.",
+      "Going back in time. Wish us luck. We need it.",
+      "Rollback initiated. The pager is having a busy day.",
+      "Reverting. Staging said it was fine. Staging lies.",
+      "Rolling back. Friday deploy. Classic.",
+      "We're reverting. The deploy gods are fickle.",
+      "Rollback in progress. Coffee consumption: critical.",
+      "Going back. The canary didn't make it. RIP canary.",
+      "Rollback started. Documentation: we'll add it. Later.",
+      "Reverting. The tests passed. The tests. Passed.",
+      "Rollback. See you in the postmortem. Everyone."
     ],
     "corporate": [
       "A rollback has been executed per the change process.",
@@ -26,7 +54,21 @@
       "Post-rollback review will be scheduled within 48 hours.",
       "Rollback completed; stakeholders notified.",
       "Change reversal documented; RCA to follow.",
-      "Service restored to pre-incident state; impact logged."
+      "Service restored to pre-incident state; impact logged.",
+      "Rollback executed per change process.",
+      "Previous known-good restored; review in 48h.",
+      "Rollback completed; stakeholders notified.",
+      "Change reversal documented; RCA to follow.",
+      "Service restored; impact assessment complete.",
+      "Rollback per policy; post-rollback review scheduled.",
+      "Pre-incident state restored; audit trail updated.",
+      "Rollback complete; communication plan executed.",
+      "Version reverted per governance; report to follow.",
+      "Rollback documented; lessons learned scheduled.",
+      "Service restored; stakeholder update sent.",
+      "Change reversed; compliance notified.",
+      "Rollback complete; no material impact.",
+      "Previous release restored; governance followed."
     ],
     "devops": [
       "Rollback triggered; traffic shifting to previous version.",
@@ -34,7 +76,21 @@
       "Rollback successful; incident ticket updated.",
       "ArgoCD revert applied; previous manifest active.",
       "Blue-green switch reverted; old stack receiving traffic.",
-      "Rollback complete; pipeline artifacts retained for analysis."
+      "Rollback complete; pipeline artifacts retained for analysis.",
+      "Traffic shifted to previous version; monitoring stable.",
+      "Canary rollback done; metrics green.",
+      "Rollback successful; incident ticket updated.",
+      "ArgoCD revert applied; old manifest active.",
+      "Blue-green reverted; previous stack live.",
+      "Rollback triggered; traffic shifting.",
+      "Previous version live; error rate dropping.",
+      "Rollback complete; runbook updated. For next time.",
+      "Revert applied; monitoring confirms stability.",
+      "Rollback done; artifacts kept for RCA.",
+      "Traffic reverted; SLO recovering.",
+      "Rollback successful; on-call notified.",
+      "Previous release active; all clear.",
+      "Rollback complete; post-incident tasks in backlog."
     ],
     "sarcastic": [
       "Rollback: the feature we use most often.",
@@ -42,7 +98,16 @@
       "Previous version restored. It had bugs too. Different bugs.",
       "Rollback successful. Confidence: medium. Hope: high.",
       "We're back. To the version that caused the last rollback.",
-      "Rollback complete. Documenting lessons learned. Again."
+      "Rollback complete. Documenting lessons learned. Again.",
+      "Rollback complete. We're getting good at this. Too good.",
+      "Reverted. The good version. The one with fewer bugs. Fewer.",
+      "Rollback done. Postmortem: we know what we did. We'll do it again.",
+      "Previous version live. We missed it. Sort of.",
+      "Rollback successful. The deploy was optimistic. Very.",
+      "We're back. To stability. Or what we call stability.",
+      "Rollback complete. Lessons learned: same as last time.",
+      "Reverted. Documentation updated. In our dreams.",
+      "Rollback done. See you next deploy. Same time, same channel."
     ]
   }
 }
