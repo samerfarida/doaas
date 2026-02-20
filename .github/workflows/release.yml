@@ -61,10 +61,6 @@ jobs:
             echo ""
             printf '%s' "$CHANGELOG_CHANGES"
           } > release_body.md
-          DELIM="EOF_RELEASE_BODY_$(openssl rand -hex 8)"
-          echo "body<<$DELIM" >> $GITHUB_OUTPUT
-          cat release_body.md >> $GITHUB_OUTPUT
-          echo "$DELIM" >> $GITHUB_OUTPUT
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
