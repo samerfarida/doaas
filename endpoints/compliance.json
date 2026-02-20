@@ -13,7 +13,21 @@
       "Follow company policy for access control.",
       "Data retention policy: 7 years for financial records.",
       "PII must be encrypted at rest and in transit.",
-      "Compliance training due by end of quarter."
+      "Compliance training due by end of quarter.",
+      "GDPR: ensure data handling compliance.",
+      "Audit logs retained 90 days minimum.",
+      "Access control per company policy.",
+      "Data retention: 7 years for financial records.",
+      "PII encrypted at rest and in transit.",
+      "Compliance training: complete by quarter end.",
+      "Data classification required for new data.",
+      "Vendor compliance check before onboarding.",
+      "Right to deletion process documented.",
+      "Privacy policy reviewed annually.",
+      "Data processing agreements in place.",
+      "Compliance attestation on file.",
+      "Regulatory requirements in handbook.",
+      "Control evidence retained per policy."
     ],
     "corporate": [
       "All changes must follow the compliance framework.",
@@ -21,7 +35,15 @@
       "Regulatory requirements are documented in the handbook.",
       "SOC 2 controls must be evidenced for this change.",
       "Compliance attestation required before go-live.",
-      "Risk assessment completed; controls documented."
+      "Risk assessment completed; controls documented.",
+      "Compliance review required for go-live.",
+      "Governance framework applies.",
+      "Stakeholder sign-off per compliance.",
+      "Control environment documented.",
+      "Audit trail for all changes.",
+      "Compliance checklist complete.",
+      "Regulatory alignment confirmed.",
+      "Compliance gate passed; proceed."
     ],
     "security": [
       "Access must comply with least-privilege policy.",
@@ -29,7 +51,19 @@
       "MFA required for production access.",
       "Secrets rotation every 90 days per policy.",
       "No production credentials in code or chat.",
-      "Security review required for all data exports."
+      "Security review required for all data exports.",
+      "Access per least-privilege policy.",
+      "Secrets rotation every 90 days.",
+      "No prod credentials in code or chat.",
+      "Security review for all data exports.",
+      "Data classification before sharing.",
+      "Encryption keys managed per policy.",
+      "Access review: quarterly.",
+      "No PII in logs or chat.",
+      "Security controls evidenced.",
+      "Compliance check before release.",
+      "Data handling per policy.",
+      "Security sign-off on file."
     ],
     "chaos": [
       "Compliance: we have a checklist. Somewhere.",
@@ -37,7 +71,16 @@
       "Audit logs: definitely logging something. Probably.",
       "We're compliant. The auditors haven't found us yet.",
       "Retention policy: we keep everything forever. Oops.",
-      "Compliance is a state of mind. And also the law. Mostly the law."
+      "Compliance is a state of mind. And also the law. Mostly the law.",
+      "Compliance: we have a doc. It's in the drive. Somewhere.",
+      "We're compliant. We think. The checklist was long.",
+      "GDPR: we have a process. We follow it. Usually.",
+      "Audit trail: we have logs. Many logs. Finding the right one: TBD.",
+      "Compliance is a journey. We're on the journey. The map is unclear.",
+      "We're compliant. The evidence is somewhere. We'll find it.",
+      "Retention: we retain. We're not sure for how long. Long.",
+      "Compliance: checked. The check was thorough. We think.",
+      "We're compliant. Don't ask for the proof. It's in progress."
     ],
     "sarcastic": [
       "Fully compliant. Our documentation says so.",
@@ -45,7 +88,15 @@
       "Yes, we're compliant. No, you can't see the evidence.",
       "Compliance: checked. Sanity: optional.",
       "All policies followed. The important ones. Mostly.",
-      "Compliant since 2019. We think. The date might be wrong."
+      "Compliant since 2019. We think. The date might be wrong.",
+      "We're compliant. The documentation is comprehensive. We've read the summary.",
+      "Compliance: we have it. Evidence: we have it. Somewhere.",
+      "We passed. The bar was reasonable. We met it. We think.",
+      "Fully compliant. Don't ask for the audit trail. It's long.",
+      "Compliance: achieved. Our definition of achieved: flexible.",
+      "We're compliant. The checklist was 200 items. We did the important 150.",
+      "Compliant. The proof is in the drive. The drive has 10,000 files.",
+      "We're compliant. Trust us. Or don't. We have a doc. Somewhere."
     ]
   }
 }
