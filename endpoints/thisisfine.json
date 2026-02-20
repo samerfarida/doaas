@@ -10,7 +10,21 @@
       "Ignoring problems won't make them go away.",
       "This is fine. We're fine. Probably.",
       "Smile through the chaos.",
-      "Optimism: the dashboard is red but our spirits are high."
+      "Optimism: the dashboard is red but our spirits are high.",
+      "We're fine. Everything is fine. Probably fine.",
+      "Keep calm. The alerts can wait.",
+      "This is fine. We've seen worse. Maybe.",
+      "Chin up. The deploy will sort itself. Or not.",
+      "Staying positive. The pipeline is a suggestion.",
+      "All good. We're all good. Right?",
+      "No panic. We have a plan. The plan is hope.",
+      "This is fine. The runbook says so. Somewhere.",
+      "Smile. The dashboard is just enthusiastic.",
+      "We're okay. The system is okay. We're one. Sort of.",
+      "Calm. We're calm. The pager is not. We're calm.",
+      "Fine. Everything's fine. Say it until it's true.",
+      "Optimism mode: on. The bar was low. We're over it.",
+      "This is fine. Coffee helps. So does denial."
     ],
     "chaos": [
       "The dashboard is red. I'm choosing to see it as festive.",
@@ -18,7 +32,21 @@
       "This is fine. We're fine. Everything is fine.",
       "The alerts are screaming. I'm choosing to hear music.",
       "Five simultaneous incidents. This is fine. Totally fine.",
-      "The runbook doesn't cover this. We're improvising. It's fine."
+      "The runbook doesn't cover this. We're improvising. It's fine.",
+      "The dashboard is red. I'm calling it a theme.",
+      "Prod is down. I'm fine. We're all fine. Fine.",
+      "Alerts: many. Panic: none. Denial: strong.",
+      "Five incidents. One war room. This is fine.",
+      "The runbook ended at step 2. We're on step 47. Fine.",
+      "Everything is fine. I've repeated it 10 times. It's true now.",
+      "The pager is singing. I'm choosing to dance.",
+      "Staging is down. Prod is down. We're up. Spiritually.",
+      "The logs are useless. We're improvising. It's fine.",
+      "Rollback failed. The rollback to the rollback is in progress. Fine.",
+      "On-call for 48 hours. This is fine. Send snacks.",
+      "Error budget: negative. We're fine. We're in debt. Fine debt.",
+      "The system has opinions. We're listening. This is fine.",
+      "Chaos is a feature. We're feature-rich. Fine."
     ],
     "sarcastic": [
       "Clearly this is a feature, not a bug.",
@@ -26,7 +54,15 @@
       "I've decided to be optimistic. The bar is low.",
       "This is fine. My therapist says denial is a strategy.",
       "Everything's under control. Control is a spectrum.",
-      "Fine is relative. We're relatively fine. Ish."
+      "Fine is relative. We're relatively fine. Ish.",
+      "It's a known unknown. We're fine with unknown.",
+      "The docs don't cover this. We're writing new docs. In our heads. Fine.",
+      "We're fine. The system is fine. We're aligned. In fineness.",
+      "Not panicking. Panicking is inefficient. We're efficient. Fine.",
+      "This is fine. I've accepted it. You should too.",
+      "Optimism: we have it. The pipeline doesn't. We're fine.",
+      "Everything's under control. The control is loose. Very loose. Fine.",
+      "We're good. Good is relative. We're relatively good. Fine."
     ],
     "corporate": [
       "We're experiencing expected variance. This is fine.",
@@ -34,7 +70,21 @@
       "The incident is contained. To the entire system. Fine.",
       "Post-incident review scheduled. All fine.",
       "Business continuity maintained. Sort of. Fine.",
-      "We have a plan. The plan is to remain calm. Fine."
+      "We have a plan. The plan is to remain calm. Fine.",
+      "Expected variance. We're fine. Variance is expected.",
+      "Stakeholders notified. We're fine. They're less fine. We're fine.",
+      "Incident contained. To the system. The whole system. Fine.",
+      "Post-incident review scheduled. All fine. The review will be fine.",
+      "Business continuity maintained. Sort of. Fine.",
+      "We have a plan. Calm. The plan is calm. We're calm. Fine.",
+      "Communications sent. We're fine. The comms said we're fine.",
+      "RCA scheduled. We're fine. The RCA will be fine.",
+      "Escalation path active. We're fine. The path is long. Fine.",
+      "Stakeholders updated. We're fine. They're informed. We're fine.",
+      "Impact assessed. We're fine. The impact is assessed. Fine.",
+      "Governance followed. We're fine. The process is fine.",
+      "Lessons learned: scheduled. We're fine. Learning is fine.",
+      "All hands updated. We're fine. Hands are fine. Fine."
     ],
     "devops": [
       "Error rate: 47%. This is fine. We're fine.",
@@ -42,7 +92,21 @@
       "Rollback in progress. For the third time. Fine.",
       "SLO: breached. Error budget: negative. This is fine.",
       "On-call for 72 hours. This is fine. Send coffee.",
-      "The pipeline is red. The pipeline is always red. Fine."
+      "The pipeline is red. The pipeline is always red. Fine.",
+      "Error rate: 47%. We're fine. 47% is a number. Fine.",
+      "Pager again. This is fine. We're fine. The pager is not fine.",
+      "Rollback. Third time. Fine. We're fine. Rollback is fine.",
+      "SLO breached. Error budget: negative. Fine. We're fine.",
+      "On-call 72 hours. Fine. Send coffee. We're fine.",
+      "Pipeline red. Always red. Fine. We've made peace. Fine.",
+      "Deploy failed. Rollback failed. We're fine. Next step: hope.",
+      "Monitoring: alerting. Us: fine. The alerts: loud. We're fine.",
+      "Canary died. We're fine. The canary: not fine. We're fine.",
+      "Database slow. We're fine. The database: struggling. We're fine.",
+      "Cache invalid. We're fine. The cache: confused. We're fine.",
+      "Load high. We're fine. The load: very high. We're fine.",
+      "Disk full. We're fine. The disk: not fine. We're fine.",
+      "Everything's on fire. We're fine. This is fine. Fine."
     ]
   }
 }
