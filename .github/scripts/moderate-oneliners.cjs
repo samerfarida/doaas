@@ -7,8 +7,11 @@ module.exports = async ({ github, context, core }) => {
 
   const CHUNK_SIZE = 50; // how many strings per moderation request
   const MAX_RETRIES = 4; // total attempts per request
-  const BASE_DELAY_MS = 500; // initial backoff
-  const MAX_DELAY_MS = 8000; // cap backoff
+  const BASE_DELAY_MS = 500; // initial backoff (non-429)
+  const MAX_DELAY_MS = 8000; // cap backoff (non-429)
+  const BASE_DELAY_429_MS = 5000; // initial backoff for 429 Too Many Requests
+  const MAX_DELAY_429_MS = 60000; // cap backoff for 429 (allow up to 1 min wait)
+  const DELAY_BETWEEN_CHUNKS_MS = 2000; // delay between API chunk requests (spread load)
   const MAX_NEW_STRINGS = 500; // hard cap to prevent abuse / oversized payloads
 
   const COMMENT_TRUNCATE_CHARS = 220; // truncate displayed text in PR comment
@@ -129,11 +132,28 @@ module.exports = async ({ github, context, core }) => {
           throw err;
         }
 
-        const exp = Math.min(MAX_DELAY_MS, BASE_DELAY_MS * Math.pow(2, attempt - 1));
-        const jitter = Math.floor(Math.random() * 250);
-        const delay = exp + jitter;
+        let delayMs;
+        if (res.status === 429) {
+          const retryAfterSec = res.headers.get("Retry-After");
+          if (retryAfterSec != null) {
+            const sec = parseInt(retryAfterSec, 10);
+            if (Number.isFinite(sec)) {
+              delayMs = Math.min(sec * 1000, MAX_DELAY_429_MS);
+            } else {
+              delayMs = Math.min(MAX_DELAY_429_MS, BASE_DELAY_429_MS * Math.pow(2, attempt - 1));
+            }
+          } else {
+            delayMs = Math.min(MAX_DELAY_429_MS, BASE_DELAY_429_MS * Math.pow(2, attempt - 1));
+          }
+        } else {
+          delayMs = Math.min(MAX_DELAY_MS, BASE_DELAY_MS * Math.pow(2, attempt - 1));
+        }
+        const jitter = Math.floor(Math.random() * 500);
+        const delay = delayMs + jitter;
 
-        core.warning(`Retryable error (attempt ${attempt}/${MAX_RETRIES}) ${url}: ${err.message}`);
+        core.warning(
+          `Retryable error (attempt ${attempt}/${MAX_RETRIES}) ${url}: ${err.message}. Waiting ${Math.round(delay / 1000)}s before retry.`
+        );
         await sleep(delay);
         lastErr = err;
       } catch (e) {
@@ -144,12 +164,15 @@ module.exports = async ({ github, context, core }) => {
 
         if (!retryable || attempt === MAX_RETRIES) throw e;
 
-        const exp = Math.min(MAX_DELAY_MS, BASE_DELAY_MS * Math.pow(2, attempt - 1));
-        const jitter = Math.floor(Math.random() * 250);
-        const delay = exp + jitter;
+        const delayMs =
+          status === 429
+            ? Math.min(MAX_DELAY_429_MS, BASE_DELAY_429_MS * Math.pow(2, attempt - 1))
+            : Math.min(MAX_DELAY_MS, BASE_DELAY_MS * Math.pow(2, attempt - 1));
+        const jitter = Math.floor(Math.random() * 500);
+        const delay = delayMs + jitter;
 
         core.warning(
-          `Retrying after error (attempt ${attempt}/${MAX_RETRIES}): ${String(e.message || e)}`
+          `Retrying after error (attempt ${attempt}/${MAX_RETRIES}): ${String(e.message || e)}. Waiting ${Math.round(delay / 1000)}s.`
         );
         await sleep(delay);
       }
@@ -317,7 +340,11 @@ module.exports = async ({ github, context, core }) => {
 
   try {
     let offset = 0;
-    for (const chunk of chunks) {
+    for (const [chunkIndex, chunk] of chunks.entries()) {
+      if (chunkIndex > 0) {
+        const gap = DELAY_BETWEEN_CHUNKS_MS + Math.floor(Math.random() * 500);
+        await sleep(gap);
+      }
       const result = await moderateBatch(chunk);
       const resultsArr = result?.results || [];
 

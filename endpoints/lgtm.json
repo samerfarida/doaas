@@ -10,7 +10,17 @@
       "No issues found, LGTM.",
       "Nice work, ship it!",
       "Approved. Clean implementation.",
-      "LGTM — tests pass, logic checks out."
+      "LGTM — tests pass, logic checks out.",
+      "LGTM. Merge when ready.",
+      "Approved. No nits from me.",
+      "Looks good to me. Go for it.",
+      "LGTM. Clean and readable.",
+      "Approved. Ready for main.",
+      "LGTM. Good changes.",
+      "Ship it when the pipeline is green.",
+      "Approved. Tests and style look good.",
+      "LGTM. No blockers here.",
+      "Approved. Nice work."
     ],
     "sarcastic": [
       "LGTM. I didn't read it but the CI is green.",
@@ -18,7 +28,17 @@
       "LGTM. My lawyer says I can't say more.",
       "Approved. I trust you. Mostly. Kind of.",
       "LGTM. The linter didn't complain. Good enough.",
-      "Looks good. I skimmed the last 3 lines. We're fine."
+      "Looks good. I skimmed the last 3 lines. We're fine.",
+      "LGTM. I read the title. That counts.",
+      "Approved. The bots said yes. I'm with the bots.",
+      "LGTM. My approval is as thorough as the average PR description.",
+      "Ship it. I'll blame the tests if it breaks.",
+      "Approved. I have meetings in 5. This is fine.",
+      "LGTM. No one else reviewed it either. Solidarity.",
+      "Looks good. I'm approving so I can close the tab.",
+      "LGTM. The diff was long. I trusted the summary.",
+      "Approved. If prod breaks we'll have a fun retro.",
+      "LGTM. I nodded. That's basically a review."
     ],
     "devops": [
       "LGTM. Pipeline green, coverage acceptable.",
@@ -26,7 +46,17 @@
       "LGTM; deploy to staging first per process.",
       "Approved. Infra changes look safe.",
       "LGTM. Monitoring and alerts in place.",
-      "Approved. Runbook updated. Good to go."
+      "Approved. Runbook updated. Good to go.",
+      "LGTM. Canary plan looks solid.",
+      "Approved. Rollback path documented.",
+      "LGTM. SLO impact assessed; acceptable.",
+      "Approved. Feature flags in place.",
+      "LGTM. No new critical alerts introduced.",
+      "Approved. Deploy during window only.",
+      "LGTM. Infra as code changes validated.",
+      "Approved. Observability hooks present.",
+      "LGTM. Dependency bumps look safe.",
+      "Approved. Good to merge after final checks."
     ],
     "chaos": [
       "LGTM. If it breaks prod, we didn't have this conversation.",
@@ -34,7 +64,17 @@
       "Approved. Hope the staging env was real.",
       "LGTM. Friday deploy. No fear. All fear.",
       "Looks good. I'm on PTO next week. Good luck.",
-      "Approved. The tests passed. The tests we have."
+      "Approved. The tests passed. The tests we have.",
+      "LGTM. Staging was green. Staging is always green.",
+      "Ship it. The pager is someone else's problem. Tonight.",
+      "Approved. I didn't run it locally. Neither did you.",
+      "LGTM. Merge and pray. Standard process.",
+      "Looks good. Our rollback is only two steps. Step one: cry.",
+      "Approved. Hope the canary doesn't get eaten.",
+      "LGTM. We'll fix it in prod. We always do.",
+      "Ship it. The deploy gods are feeling generous. Maybe.",
+      "Approved. Documentation: we'll add it later.",
+      "LGTM. If it's broken we'll find out. Together."
     ],
     "corporate": [
       "LGTM. Change advisory submitted.",
@@ -42,7 +82,17 @@
       "LGTM. Compliance check passed.",
       "Approved. Release notes updated.",
       "LGTM. Stakeholder sign-off documented.",
-      "Approved. Ready for deployment window."
+      "Approved. Ready for deployment window.",
+      "LGTM. Governance checklist complete.",
+      "Approved per change management policy.",
+      "LGTM. Risk assessment on file.",
+      "Approved. Communication plan executed.",
+      "LGTM. Post-release review scheduled.",
+      "Approved. Audit trail updated.",
+      "LGTM. Escalation path confirmed.",
+      "Approved. Rollback criteria documented.",
+      "LGTM. Stakeholder notification sent.",
+      "Approved. Ready for production promotion."
     ]
   }
 }
