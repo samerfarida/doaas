@@ -35,16 +35,26 @@ jobs:
           version: ${{ steps.tag_name.outputs.current_version }}
           validation_level: warn
 
+      - name: Get release message
+        id: release_msg
+        run: |
+          MSG=$(curl -s "https://doaas.dev/lgtm?format=text" || echo "Ship it!")
+          echo "message=$MSG" >> $GITHUB_OUTPUT
+          echo "$MSG"
+
       - name: Build release body
         id: release_body
         env:
           CHANGELOG_CHANGES: ${{ steps.changelog_reader.outputs.changes }}
+          RELEASE_MSG: ${{ steps.release_msg.outputs.message }}
         run: |
           {
+            echo "**$RELEASE_MSG**"
+            echo ""
             echo "Try it:"
             echo ""
             echo '```bash'
-            echo 'curl -s "https://doaas.dev"'
+            echo 'curl -s "https://doaas.dev/lgtm?format=text"'
             echo '```'
             echo ""
             echo "---"
