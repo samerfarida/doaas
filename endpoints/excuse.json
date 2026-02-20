@@ -10,7 +10,21 @@
       "I had a family emergency.",
       "Calendar conflict I didn't see.",
       "Meeting ran over; couldn't make it.",
-      "Got pulled into an urgent production issue."
+      "Got pulled into an urgent production issue.",
+      "VPN dropped right before the call.",
+      "Had a last-minute customer escalation.",
+      "Laptop battery died mid-meeting.",
+      "Another meeting ran over; couldn't make it.",
+      "Doctor's appointment ran late.",
+      "Childcare fell through at the last minute.",
+      "Flight delay; still in transit.",
+      "Power outage at home.",
+      "Critical bug in prod; had to jump in.",
+      "Calendar didn't sync; missed the invite.",
+      "Double-booked by mistake; chose the other one.",
+      "Car trouble this morning.",
+      "Internet outage in my area.",
+      "Unexpected interview conflict; had to prioritize."
     ],
     "chaos": [
       "A squirrel ate through the fiber line.",
@@ -18,7 +32,21 @@
       "The cat sat on the keyboard and closed everything.",
       "A bird flew into the power substation. Seriously.",
       "My keyboard developed a mind of its own.",
-      "The WiFi is haunted. I have evidence."
+      "The WiFi is haunted. I have evidence.",
+      "A meteor hit the data center. Local one.",
+      "My chair decided to recline. Aggressively. During the call.",
+      "The dog ate my Ethernet cable. Again.",
+      "Time zone shifted. I didn't get the memo.",
+      "My mic became sentient. It said no.",
+      "The building's WiFi is in a mood. I have witnesses.",
+      "A parade blocked the street. For 4 hours.",
+      "My coffee machine staged a coup. I had to negotiate.",
+      "The cloud was literal. Fog. Couldn't see the screen.",
+      "My keyboard learned a new language. It's not English.",
+      "The VPN thought I was in 2030. Time travel is messy.",
+      "A gremlin unplugged the router. I'm not even kidding.",
+      "The sun was in my eyes. I work in a basement.",
+      "My chair wheels went on strike. Solidarity."
     ],
     "sarcastic": [
       "I was busy aligning synergies.",
@@ -26,7 +54,21 @@
       "I thought it was optional. Like sleep.",
       "I had a conflict with my other meeting about this meeting.",
       "I was in a meeting about reducing meetings.",
-      "My OOO said I was out. I was in. The OOO lied."
+      "My OOO said I was out. I was in. The OOO lied.",
+      "I was optimizing my calendar. It's self-care.",
+      "I had a conflict with my conflict resolution meeting.",
+      "I was in a working session. Working. On my sanity.",
+      "The invite said optional. I opted. Out.",
+      "I was reducing meeting load. By not attending. Meta.",
+      "I had a 1:1 with my to-do list. It was urgent.",
+      "I was in a meeting about the meeting we're having now.",
+      "My calendar had a nervous breakdown. I'm supporting it.",
+      "I was aligning with my priorities. They said skip it.",
+      "I had a conflict with my focus time. Focus won.",
+      "The meeting moved. I didn't. We're both right.",
+      "I was in a deep work block. The deepest.",
+      "I had a prior commitment to my inbox. It's demanding.",
+      "I was in a sync. With myself. It ran over."
     ],
     "corporate": [
       "I had a conflicting stakeholder engagement.",
@@ -34,7 +76,20 @@
       "My calendar sync had a delay.",
       "I was in back-to-backs; couldn't transition in time.",
       "Double-booked; prioritizing per the RACI.",
-      "Resource allocation conflict; escalating."
+      "Resource allocation conflict; escalating.",
+      "Conflicting stakeholder engagement; had to prioritize.",
+      "Prior commitment to another program; couldn't move.",
+      "Calendar sync delay; invite arrived after the meeting.",
+      "Back-to-back commitments; no transition time.",
+      "Double-booked per RACI; higher-priority meeting won.",
+      "Initiative overlap; had to choose one.",
+      "Governance meeting took precedence.",
+      "Board prep conflicted; exec commitment.",
+      "Cross-functional sync had priority.",
+      "Compliance training overlapped; mandatory.",
+      "Vendor call ran over; couldn't leave.",
+      "Program review was scheduled first.",
+      "Stakeholder alignment meeting took priority."
     ],
     "toxic": [
       "Didn't think my presence was required.",
@@ -42,7 +97,19 @@
       "I had more important things to do.",
       "You didn't send a calendar invite. My fault?",
       "I prioritize deliverables over meetings.",
-      "Sorry, I block 2–4 for deep work. Your meeting lost."
+      "Sorry, I block 2–4 for deep work. Your meeting lost.",
+      "Didn't think my presence was required. Still don't.",
+      "I had more important things to do. I still do.",
+      "I prioritize deliverables over meetings. Consistently.",
+      "Deep work block. Your meeting didn't make the cut.",
+      "I don't do meetings before 10. Or after 3. Or during lunch.",
+      "That could've been a Slack. It still can be.",
+      "I was heads-down. Still am. By design.",
+      "My calendar is full. Of things that matter. To me.",
+      "I block focus time. Your meeting was not in the block.",
+      "I prioritize. You didn't make the list. Sorry not sorry.",
+      "That meeting had no agenda. So I had no attendance.",
+      "I was delivering. You were meeting. Different priorities."
     ]
   }
 }
