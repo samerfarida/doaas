@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Security** — Resolve minimatch ReDoS vulnerabilities via npm overrides; address object-injection lint warnings; scope `npm audit` to production deps in CI where appropriate.
 - **Lint and format** — Resolve issues in the moderation script and pipeline.
 
-### Dependencies
+### Changed
 
 - Bumped `wrangler` and `@cloudflare/workers-types` (Dependabot).
 
@@ -34,10 +34,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0] - 2026-02-11
 
-**We're live.** DOaaS is out in the wild — one API, zero seriousness, infinite DevOps one-liners.
-
 ### Added
 
+- **We're live.** DOaaS is out in the wild — one API, zero seriousness, infinite DevOps one-liners.
 - **Initial release:** DevOps-as-a-Service at [doaas.dev](https://doaas.dev)
 - `/help` – List all endpoints and usage
 - `/random` – Get a random message from any endpoint
