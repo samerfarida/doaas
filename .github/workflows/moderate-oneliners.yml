@@ -14,6 +14,12 @@ jobs:
   moderate:
     runs-on: ubuntu-latest
     steps:
+      # Stagger start when multiple PRs trigger at once to reduce 429 rate limits
+      - name: Stagger start (reduce API 429 when multiple PRs run)
+        run: |
+          delay=$((RANDOM % 91))
+          echo "Staggering moderation run by ${delay}s to spread API load..."
+          sleep "$delay"
       # In pull_request_target, this checks out the BASE repo code (trusted),
       # not the PR's fork code.
       - name: Checkout repository
