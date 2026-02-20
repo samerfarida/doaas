@@ -1092,7 +1092,6 @@ export const ENDPOINTS = {
         "Possibly. Pending the meeting about the meeting.",
         "Not sure. I'll check with the committee. The committee of one.",
         "Could be. Need to sync with myself. I'm double-booked.",
-        "Maybe. I've committed to committing. Eventually.",
         "Tentative yes. The strongest maybe I've got.",
         "Maybe. I'll put it in the backlog. The backlog of life.",
         "Possibly. If we can find the owner. We're still looking."
