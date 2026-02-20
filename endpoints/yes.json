@@ -10,7 +10,17 @@
       "Confirmed, moving forward.",
       "Approved. Go ahead.",
       "Sounds good. Proceed.",
-      "Affirmative. Let's do it."
+      "Affirmative. Let's do it.",
+      "Yes. Proceeding as discussed.",
+      "Approved. Let's go.",
+      "Confirmed. Proceed when ready.",
+      "Sounds good. Green light.",
+      "Yes. All good on my side.",
+      "Go for it. Approved.",
+      "Affirmative. Ready when you are.",
+      "Yes. No blockers.",
+      "Approved. Good to go.",
+      "Confirmed. Execute."
     ],
     "corporate": [
       "Approved per governance process.",
@@ -18,7 +28,21 @@
       "Within scope; authorized to proceed.",
       "Compliance confirmed. Green light.",
       "Resource allocation approved. Execute.",
-      "Change advisory approved. Proceed as planned."
+      "Change advisory approved. Proceed as planned.",
+      "Budget approved. Proceed.",
+      "Governance gate passed. Execute.",
+      "Stakeholder alignment confirmed. Go.",
+      "Risk accepted. Proceed per plan.",
+      "Portfolio priority confirmed. Proceed.",
+      "Board guidance followed. Green light.",
+      "Escalation path clear. Approved.",
+      "RACI confirmed. Proceed.",
+      "Compliance gate passed. Execute.",
+      "Program timeline approved. Go.",
+      "Investment committee sign-off. Proceed.",
+      "Scope approved. Resources allocated. Go.",
+      "Decision documented. Proceed.",
+      "Approved. Change log updated."
     ],
     "chaos": [
       "Yes. We'll regret this. But yes.",
@@ -26,7 +50,21 @@
       "Confirmed. Hope the rollback works.",
       "Yes. Sending prayers to the deploy gods.",
       "Proceed. I'll be in the war room. Emotionally.",
-      "Affirmative. The pager is charged. I'm not."
+      "Affirmative. The pager is charged. I'm not.",
+      "Yes. The staging env looked fine. Once.",
+      "Proceed. I've made peace with my choices.",
+      "Yes. We have a rollback. We think.",
+      "Approved. Hope the canary survives.",
+      "Go. The deploy window closes in 10.",
+      "Yes. Someone will be on call. Not me. Tonight.",
+      "Proceed. Documentation pending. So is sanity.",
+      "Affirmative. Merge and monitor. Mostly monitor.",
+      "Yes. We'll do the postmortem after.",
+      "Go for it. The runbook is a suggestion.",
+      "Approved. Staging passed. Staging always passes.",
+      "Yes. If it breaks we'll learn something.",
+      "Proceed. Coffee is standing by.",
+      "Confirmed. YOLO. I mean, we have a plan."
     ],
     "sarcastic": [
       "Yes. I have concerns. But yes.",
@@ -34,7 +72,21 @@
       "Confirmed. My calendar already said yes. I'm just catching up.",
       "Approved. The backlog said so. Who am I to argue?",
       "Sounds good. I'll document my objections elsewhere.",
-      "Affirmative. We're all going to pretend this was the plan."
+      "Affirmative. We're all going to pretend this was the plan.",
+      "Yes. The ticket said so. I'm just the messenger.",
+      "Approved. My objections are in a doc no one will read.",
+      "Sounds good. I'll add it to the retro. The long list.",
+      "Confirmed. The roadmap said yes. The roadmap is optimistic.",
+      "Yes. I've accepted our fate.",
+      "Proceed. My vote was the tiebreaker. Sorry.",
+      "Affirmative. We're committed now. No takebacks.",
+      "Yes. The meeting could have been an email. This is the email.",
+      "Approved. I'll note my concerns in the postmortem.",
+      "Sounds good. The sprint said we could. The sprint lies.",
+      "Yes. Stakeholders said jump. We're jumping.",
+      "Confirmed. The PM approved. The PM is on PTO.",
+      "Go. We'll document the decision. Eventually.",
+      "Approved. My calendar agreed. I'm outvoted."
     ],
     "devops": [
       "Yes. Pipeline is green. Ship it.",
@@ -42,7 +94,21 @@
       "Confirmed. Monitoring dashboards ready.",
       "Proceed. Canary at 5%. Watch the metrics.",
       "Go for deploy. Runbook updated. Good luck.",
-      "Affirmative. Infra ready. You're cleared for takeoff."
+      "Affirmative. Infra ready. You're cleared for takeoff.",
+      "Yes. Artifacts built. Registry updated. Go.",
+      "Approved. Canary config ready. Proceed.",
+      "Proceed. Alerts configured. Dashboards live.",
+      "Go for deploy. Rollback tested. Good luck.",
+      "Confirmed. Feature flags set. Ship when ready.",
+      "Yes. Pipeline green. Staging validated. Ship.",
+      "Approved. Runbook reviewed. On-call notified.",
+      "Proceed. SLO headroom acceptable. Deploy.",
+      "Affirmative. Blue-green ready. Switch when ready.",
+      "Yes. Monitoring in place. Proceed.",
+      "Go. Infra scaled. Cache warmed. Ready.",
+      "Approved. Database migrations tested. Proceed.",
+      "Confirmed. Load test passed. Ship it.",
+      "Yes. All systems go. You're cleared."
     ]
   }
 }

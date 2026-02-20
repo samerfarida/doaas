@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **More taglines (batch 1/3)** — New one-liners per mode for: `lgtm`, `alignment`, `audit`, `blame`, `burnout`, `compliance`, `deploy`, `excuse`, `incident`. Content follows CONTRIBUTING.md guardrails and is subject to PR moderation.
 
+- **More taglines (batch 3/3)** — New one-liners per mode for: `standup`, `thisisfine`, `yes`. Content follows CONTRIBUTING.md guardrails and is subject to PR moderation.
+
 ### Fixed
 
 - **Moderation workflow (429 rate limit)** — When multiple PRs trigger the moderation job at once, the workflow now staggers starts (random 0–90s delay) and the script uses longer backoff for HTTP 429, respects `Retry-After`, and adds a delay between API chunk requests to reduce concurrent load on the OpenAI Moderation API.
