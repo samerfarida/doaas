@@ -7,6 +7,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+
+- **Moderation workflow (429 rate limit)** — When multiple PRs trigger the moderation job at once, the workflow now staggers starts (random 0–90s delay) and the script uses longer backoff for HTTP 429, respects `Retry-After`, and adds a delay between API chunk requests to reduce concurrent load on the OpenAI Moderation API.
+
 ## [1.2.0] - 2026-02-19
 
 ### Added
