@@ -23,7 +23,7 @@ jobs:
       # In pull_request_target, this checks out the BASE repo code (trusted),
       # not the PR's fork code.
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Run moderation script
         uses: actions/github-script@v7
