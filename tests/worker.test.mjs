@@ -72,6 +72,18 @@ async function testOptionsCors() {
   assert.strictEqual(res.headers.get("Access-Control-Allow-Methods"), "GET, OPTIONS");
 }
 
+async function testMethodNotAllowed() {
+  for (const method of ["POST", "PUT", "PATCH", "DELETE", "HEAD"]) {
+    const req = new Request("https://example.com/blame", { method });
+    const res = await handleRequest(req);
+    assert.strictEqual(res.status, 405, `expected 405 for ${method}`);
+    assert.strictEqual(res.headers.get("Allow"), "GET, OPTIONS");
+    assert.strictEqual(res.headers.get("Content-Type"), "application/json; charset=utf-8");
+    const json = await res.json();
+    assert.strictEqual(json.error, "Method not allowed");
+  }
+}
+
 async function testBlameModeSpecific() {
   const blameEndpoint = ENDPOINTS.blame;
   const toxicExamples = blameEndpoint.examplesByMode?.toxic || [];
@@ -250,6 +262,7 @@ async function runTests() {
   await testPathNormalization();
   await testCorsOnGet();
   await testOptionsCors();
+  await testMethodNotAllowed();
   await testFormatShields();
   await testRandomFormatShields();
   await testFormatShieldsQueryParams();
