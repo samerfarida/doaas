@@ -92,6 +92,18 @@ export async function handleRequest(request: Request): Promise<Response> {
     });
   }
 
+  if (request.method !== "GET") {
+    return new Response(JSON.stringify({ error: "Method not allowed" }, null, 2), {
+      status: 405,
+      headers: {
+        ...CORS_HEADERS,
+        ...NO_STORE_HEADERS,
+        "Content-Type": "application/json; charset=utf-8",
+        Allow: "GET, OPTIONS",
+      },
+    });
+  }
+
   const url = new URL(request.url);
   const pathname = url.pathname.replace(/^\/+|\/+$/g, "").toLowerCase();
   const mode = (url.searchParams.get("mode") || "normal") as Mode;
