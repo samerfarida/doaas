@@ -9,6 +9,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.1] - 2026-04-26
+
+### Fixed
+
+- **Runtime version drift** — The root `/` discovery payload reported `"version": "1.3.0"` after the v1.4.0 release because `src/index.ts` had a hardcoded version string that wasn't bumped at release time (production was serving stale identification for the lifetime of v1.4.0 until this fix). The immediate symptom was patched by bumping the string to `1.4.0`, then the root cause was eliminated by sourcing the runtime version from a single place. (#76)
+
+### Changed
+
+- **Single source of truth for the runtime version** — `package.json`'s `version` is now the authoritative source. A new generator (`scripts/generate-version.mjs`, chained into `npm run generate`) writes `src/version.generated.ts`, which `src/index.ts` imports. The build script already runs `generate` before `tsc`, so every build path (Cloudflare, CI, local) picks up the live version automatically. From this release onward, bumping `package.json` is the only step needed to keep `https://doaas.dev/` in sync.
+- **CI drift guard** — The existing "ensure generated files committed" check in `.github/workflows/ci.yml` was extended to cover `src/version.generated.ts`, so a stale generated file fails CI loudly with a clear error pointing to the file.
+
+### Added
+
+- **Regression test** — `tests/worker.test.mjs` now asserts that the runtime root payload's `version` field equals `package.json`'s `version`. Drift fails the test with the message _"Did you forget to run 'npm run generate' after bumping the version?"_ — the exact invariant that was broken at v1.4.0.
+
 ## [1.4.0] - 2026-04-26
 
 ### Added
@@ -77,7 +92,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Scripts: `generate`, `validate`, `build`, `test`, `dev`, `deploy`
 - CI workflow and contribution guidelines
 
-[Unreleased]: https://github.com/samerfarida/doaas/compare/v1.4.0...HEAD
+[Unreleased]: https://github.com/samerfarida/doaas/compare/v1.4.1...HEAD
+[1.4.1]: https://github.com/samerfarida/doaas/releases/tag/v1.4.1
 [1.4.0]: https://github.com/samerfarida/doaas/releases/tag/v1.4.0
 [1.3.0]: https://github.com/samerfarida/doaas/releases/tag/v1.3.0
 [1.2.0]: https://github.com/samerfarida/doaas/releases/tag/v1.2.0
