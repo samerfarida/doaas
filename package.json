@@ -27,7 +27,7 @@
     "ajv": "^8.12.0"
   },
   "overrides": {
-    "minimatch": ">=10.2.1"
+    "minimatch": ">=10.2.4"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20260302.0",
