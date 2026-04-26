@@ -27,22 +27,22 @@
     "ajv": "^8.12.0"
   },
   "overrides": {
-    "minimatch": ">=10.2.1"
+    "minimatch": ">=10.2.4"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20260219.0",
-    "@eslint/js": "^9.15.0",
-    "@types/node": "^20.4.1",
-    "eslint": "^9.15.0",
+    "@cloudflare/workers-types": "^4.20260302.0",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.3.0",
+    "eslint": "^10.2.1",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-security": "^3.0.1",
+    "eslint-plugin-security": "^4.0.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.2.10",
-    "markdownlint-cli": "^0.47.0",
+    "lint-staged": "^16.4.0",
+    "markdownlint-cli": "^0.48.0",
     "prettier": "^3.4.2",
     "typescript": "^5.1.6",
-    "typescript-eslint": "^8.15.0",
-    "wrangler": "^4.67.0"
+    "typescript-eslint": "^8.57.2",
+    "wrangler": "^4.78.0"
   },
   "lint-staged": {
     "*.{ts,mjs,js}": [
