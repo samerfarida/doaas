@@ -4,7 +4,15 @@ import prettier from "eslint-config-prettier";
 import security from "eslint-plugin-security";
 
 export default tseslint.config(
-  { ignores: ["dist/**", "node_modules/**", ".wrangler/**", "**/endpoints.generated.ts"] },
+  {
+    ignores: [
+      "dist/**",
+      "node_modules/**",
+      ".wrangler/**",
+      "**/endpoints.generated.ts",
+      "**/version.generated.ts",
+    ],
+  },
   eslint.configs.recommended,
   security.configs.recommended,
   ...tseslint.configs.recommended,

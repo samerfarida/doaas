@@ -8,7 +8,7 @@
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
     "deploy:production": "wrangler versions upload --env=production",
-    "generate": "node scripts/generate-endpoints.mjs",
+    "generate": "node scripts/generate-endpoints.mjs && node scripts/generate-version.mjs",
     "validate": "node scripts/validate.mjs",
     "build": "npm run generate && tsc",
     "test": "npm run build && node tests/worker.test.mjs",

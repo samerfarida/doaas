@@ -46,13 +46,15 @@ jobs:
       - name: Check formatting
         run: npm run format:check
 
-      - name: Generate endpoints
+      - name: Generate build-time artifacts
         run: npm run generate
 
-      - name: Ensure generated endpoints are committed
+      - name: Ensure generated files are committed
         run: |
-          if [ -n "$(git status --porcelain src/endpoints.generated.ts)" ]; then
-            echo "::error::src/endpoints.generated.ts is out of date. Run 'npm run generate' and commit the file."
+          drift=$(git status --porcelain src/endpoints.generated.ts src/version.generated.ts)
+          if [ -n "$drift" ]; then
+            echo "::error::Generated files are out of date. Run 'npm run generate' and commit the changes:"
+            echo "$drift"
             exit 1
           fi
 

@@ -1,9 +1,17 @@
 import assert from "assert";
+import { readFileSync } from "fs";
 import { TextDecoder } from "util";
+import { fileURLToPath } from "url";
+import path from "path";
 import { ENDPOINTS } from "../dist/endpoints.generated.js";
 import { handleRequest } from "../dist/index.js";
 
 global.TextDecoder = TextDecoder;
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const PACKAGE_VERSION = JSON.parse(
+  readFileSync(path.resolve(__dirname, "..", "package.json"), "utf-8")
+).version;
 
 async function testRoot() {
   const req = new Request("https://example.com/");
@@ -18,6 +26,21 @@ async function testRoot() {
   assert(json.endpoints[0].description);
   assert(json.endpoints[0].path);
   assert(json.usage?.examples?.length > 0);
+}
+
+// Guards against the runtime `version` field drifting from package.json
+// (regression: 1.3.0 was served from production after package.json bumped
+// to 1.4.0). The version must flow from package.json -> generator ->
+// src/version.generated.ts -> runtime payload.
+async function testRootVersionMatchesPackageJson() {
+  const req = new Request("https://example.com/");
+  const res = await handleRequest(req);
+  const json = await res.json();
+  assert.strictEqual(
+    json.version,
+    PACKAGE_VERSION,
+    `root payload version "${json.version}" does not match package.json version "${PACKAGE_VERSION}". Did you forget to run 'npm run generate' after bumping the version?`
+  );
 }
 
 async function testHelp() {
@@ -248,6 +271,7 @@ async function testFormatShieldsHelpFallback() {
 
 async function runTests() {
   await testRoot();
+  await testRootVersionMatchesPackageJson();
   await testHelp();
   await testRootFormatText();
   await testRandom();
