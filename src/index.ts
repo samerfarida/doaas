@@ -1,5 +1,6 @@
 import type { EndpointsMap, Mode, Format } from "./types";
 import { ENDPOINTS } from "./endpoints.generated.js";
+import { VERSION } from "./version.generated.js";
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
@@ -128,7 +129,7 @@ export async function handleRequest(request: Request): Promise<Response> {
       service: "DOaaS",
       description:
         "DevOps-as-a-Service — endpoint responses for excuses, motivations, reality checks, and more",
-      version: "1.3.0",
+      version: VERSION,
       baseUrl: `${url.origin}/`,
       usage: {
         path: "/:endpoint",
