@@ -11,8 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- **Dependencies — npm** — Bumped `@cloudflare/workers-types`, `markdownlint-cli`, `typescript-eslint`, `wrangler`, `lint-staged`, `eslint`, `@eslint/js`, `eslint-plugin-security`, and `@types/node` (Dependabot). Aligned `package-lock.json` metadata with `package.json` (v1.3.0). Tightened `minimatch` override to `>=10.2.4` and refreshed the lockfile so `npm audit --audit-level=high` is clean.
-- **Dependencies — GitHub Actions** — Bumped `actions/checkout` to v6.0.2 (SHA-pinned), `actions/setup-node` to v6.3.0, `actions/upload-artifact` to v7.0.1, `actions/github-script` to v8, and `softprops/action-gh-release` to v3. Added `workflow_dispatch` to the Scorecards workflow for on-demand runs.
+- **Dependencies — npm** — Bumped `ajv`, `prettier`, and refreshed `@types/node` (patch/minor rollup), plus earlier bumps to `@cloudflare/workers-types`, `markdownlint-cli`, `typescript-eslint`, `wrangler`, `lint-staged`, `eslint`, `@eslint/js`, and `eslint-plugin-security` (Dependabot). Aligned `package-lock.json` metadata with `package.json` (v1.3.0). Tightened `minimatch` override to `>=10.2.4` and refreshed the lockfile so `npm audit --audit-level=high` is clean.
+- **Dependencies — GitHub Actions** — Bumped `actions/checkout` to v6.0.2 (SHA-pinned), `actions/setup-node` to v6.4.0, `actions/upload-artifact` to v7.0.1, `actions/github-script` to v9, and `softprops/action-gh-release` to v3. Added `workflow_dispatch` to the Scorecards workflow for on-demand runs.
 - **TypeScript 6** — Not merged yet: `typescript-eslint` v8 does not officially support TypeScript 6; revisit when `typescript-eslint` v9 is available (Dependabot PR can be closed or left open with a comment).
 
 ### Fixed
