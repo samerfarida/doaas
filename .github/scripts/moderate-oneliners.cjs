@@ -225,7 +225,7 @@ module.exports = async ({ github, context, core }) => {
       const headText = decodeContent(headResp.data.content, headResp.data.encoding);
 
       // Base (target branch) — may not exist if file is new
-      let baseText = "";
+      let baseText;
       try {
         const baseResp = await github.rest.repos.getContent({
           owner,
