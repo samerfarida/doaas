@@ -24,7 +24,7 @@
     "audit": "npm audit"
   },
   "dependencies": {
-    "ajv": "^8.12.0"
+    "ajv": "^8.20.0"
   },
   "overrides": {
     "minimatch": ">=10.2.4"
@@ -32,14 +32,14 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20260302.0",
     "@eslint/js": "^10.0.1",
-    "@types/node": "^25.3.0",
+    "@types/node": "^25.6.0",
     "eslint": "^10.2.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-security": "^4.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "markdownlint-cli": "^0.48.0",
-    "prettier": "^3.4.2",
+    "prettier": "^3.8.3",
     "typescript": "^5.1.6",
     "typescript-eslint": "^8.57.2",
     "wrangler": "^4.78.0"
