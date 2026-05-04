@@ -30,10 +30,10 @@
     "minimatch": ">=10.2.4"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20260302.0",
+    "@cloudflare/workers-types": "^4.20260504.1",
     "@eslint/js": "^10.0.1",
     "@types/node": "^25.6.0",
-    "eslint": "^10.2.1",
+    "eslint": "^10.3.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-security": "^4.0.0",
     "husky": "^9.1.7",
@@ -41,8 +41,8 @@
     "markdownlint-cli": "^0.48.0",
     "prettier": "^3.8.3",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.57.2",
-    "wrangler": "^4.78.0"
+    "typescript-eslint": "^8.59.1",
+    "wrangler": "^4.87.0"
   },
   "lint-staged": {
     "*.{ts,mjs,js}": [
