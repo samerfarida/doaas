@@ -9,6 +9,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.2] - 2026-07-01
+
+### Fixed
+
+- **CI `npm audit --audit-level=high`** — New advisories in transitive dependencies (`undici`, `ws`, `linkify-it` via `wrangler`/`miniflare`/`markdownlint-cli`) caused PR CI to fail even though workflow-only bumps were otherwise safe. Added npm `overrides` for `undici` (`>=7.28.0`), `ws` (`>=8.21.0`), and `linkify-it` (`>=5.0.1`), and bumped `markdownlint-cli` to `^0.49.0`, restoring a clean high-severity audit gate. (#85)
+
+### Changed
+
+- **Dependencies — npm (dev)** — Bumped `@cloudflare/workers-types`, `eslint`, `eslint-plugin-security`, `prettier`, and `typescript-eslint` (Dependabot #89). **`wrangler` stays at `^4.78.0`** — `4.106+` fails the required Cloudflare Workers Builds check on this project (same class of issue as Dependabot #83). **`undici` override stays below 8.x** — `>=8.5.0` also fails Workers Builds; Dependabot #88 was closed without merge.
+- **Dependencies — GitHub Actions** — Bumped `actions/checkout` to v7.0.0 (SHA-pinned) across all workflows and `github/codeql-action/upload-sarif` to v4.36.2 in the Scorecards workflow (#85).
+
 ## [1.4.1] - 2026-04-26
 
 ### Fixed
@@ -92,7 +103,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Scripts: `generate`, `validate`, `build`, `test`, `dev`, `deploy`
 - CI workflow and contribution guidelines
 
-[Unreleased]: https://github.com/samerfarida/doaas/compare/v1.4.1...HEAD
+[Unreleased]: https://github.com/samerfarida/doaas/compare/v1.4.2...HEAD
+[1.4.2]: https://github.com/samerfarida/doaas/compare/v1.4.1...v1.4.2
 [1.4.1]: https://github.com/samerfarida/doaas/releases/tag/v1.4.1
 [1.4.0]: https://github.com/samerfarida/doaas/releases/tag/v1.4.0
 [1.3.0]: https://github.com/samerfarida/doaas/releases/tag/v1.3.0
